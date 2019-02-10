@@ -27,6 +27,7 @@ const config = {
 
 gulp.task('clean', done => {
   del.sync(config.build);
+  del.sync(`${config.src}/assets/`);
   done();
 });
 
@@ -117,10 +118,7 @@ gulp.task('css', () => {
  * Scripts
  */
 gulp.task('babel', () => {
-  const jsFiles = [
-    // `${config.src}/libs/jquery/dist/jquery.js`, // Include later
-    `${config.src}/js/main.js`
-  ];
+  const jsFiles = [`${config.src}/js/main.js`];
 
   return gulp
     .src(jsFiles)
@@ -140,8 +138,17 @@ gulp.task('babel', () => {
         presets: ['@babel/env']
       })
     )
-    .pipe(concat('all.js'))
+    .pipe(concat('main.js'))
     .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(`${config.src}/assets/js`));
+});
+
+gulp.task('js:libs', () => {
+  let jsLibs = [`${config.src}/libs/jquery/dist/jquery.js`];
+
+  return gulp
+    .src(jsLibs)
+    .pipe(concat('libs.js'))
     .pipe(gulp.dest(`${config.src}/assets/js`));
 });
 
@@ -153,7 +160,7 @@ gulp.task('js', () => {
         toplevel: true
       })
     )
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(concat('all.min.js'))
     .pipe(gulp.dest(`${config.build}/js`));
 });
 
@@ -180,7 +187,7 @@ gulp.task(
   'build',
   gulp.series(
     'clean',
-    gulp.parallel('pug', 'sass', 'babel'),
+    gulp.parallel('pug', 'sass', 'babel', 'js:libs'),
     gulp.parallel('html', 'css', 'js', 'img', 'fonts')
   )
 );
