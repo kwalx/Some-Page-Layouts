@@ -1,6 +1,14 @@
 node_modules
 public
 src/assets
-src/libs/*
+
+src/libs/**
+
+# JQuery lib
+!src/libs/jquery/
+!src/libs/jquery/dist/
 !src/libs/jquery/dist/jquery.js
+
+# Normalize css lib
+!src/libs/normalize-scss/
 !src/libs/normalize-scss/_normalize.scss
