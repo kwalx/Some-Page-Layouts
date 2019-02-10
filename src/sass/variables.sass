@@ -1,0 +1,40 @@
+/* Variables */
+
+$max_width: 1200px
+
+$f_family_default: Arial, Helvetica, sans-serif
+$f_size: 14px
+$line_height: 1.4
+$color_default: #86878b
+
+$bg_color_default: #fff
+$bg_color_mark_section: #f5f5f5
+
+$text_icon_color: #ff8b38
+
+/* Mixins */
+// flex, wrap
+@mixin flex_row_wrap
+  display: flex
+  flex-flow: row wrap
+
+// flex, wrap, space-between
+@mixin flex_s_between
+  @include flex_row_wrap
+  justify-content: space-between
+
+// flex, wrap, space-around
+@mixin flex_s_around
+  @include flex_row_wrap
+  justify-content: space-around
+
+// heading underline
+@mixin heading_underline
+  $bg_color_sub_heading: #ff8b38
+  content: ""
+  width: 64px
+  height: 2px
+  background-color: $bg_color_sub_heading
+  position: absolute
+  bottom: 0
+  left: 0

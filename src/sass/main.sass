@@ -1,0 +1,632 @@
+@import "../libs/normalize-scss/_normalize.scss"
+
+@import "fonts.sass"
+
+@import "icon-fonts.sass"
+
+@import "variables.sass"
+
+html,
+body
+  box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+fieldset,
+dl,
+dd
+  margin: 0
+  padding: 0
+
+fieldset
+  border: none
+
+p
+  margin-bottom: 10px
+
+ul
+  list-style-type: none
+
+a
+  text-decoration: none
+
+picture
+  display: block
+
+img
+  width: 100%
+  height: auto
+  vertical-align: top
+
+body
+  font: #{$f_size}/#{$line_height} opensans-regular, $f_family_default
+  color: $color_default
+  background-color: $bg_color_default
+
+[class*="-container"]
+  width: 100%
+  max-width: $max_width
+  padding: 0 10px
+  margin: 0 auto
+
+[class*="-row"]
+  margin: 0 -10px
+
+.section-mark
+  background-color: $bg_color_mark_section
+
+// Headings
+.section-heading
+  font-family: raleway-regular, $f_family_default
+  font-size: 36px
+  text-transform: uppercase
+  padding-bottom: 25px
+  margin-bottom: 25px
+  position: relative
+
+.header-banner-heading
+  color: #fff
+  &::after
+    content: ""
+    width: 64px
+    height: 2px
+    background-color: #fff
+    position: absolute
+    left: 0
+    bottom: 0
+
+.block-heading
+  font-family: opensans-bold, $f_family_default
+  font-size: 20px
+  margin-bottom: 12px
+
+.sub-heading
+  position: relative
+  padding-bottom: 8px
+
+  &::after
+    @include heading_underline
+
+.features-description-heading
+  $features_heading_descr_color: #212121
+  font-family: opensans-bold, $f_family_default
+  font-size: 14px
+  color: $features_heading_descr_color
+  margin-bottom: 5px
+
+// Header
+.navbar-row
+  @include flex_s_between
+
+.header-navbar
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  padding: 10px
+  background-color: rgba(0, 0, 0, 1)
+  transition: all .3s
+  z-index: 111
+
+.header-logo
+  width: 85px
+  height: auto
+  display: block
+  margin: auto 0
+
+  a
+    display: block
+
+.nav-list
+  position: fixed
+  top: -100%
+  right: 0
+  left: 0
+  padding-top: 50px
+  text-align: center
+  transition: all .3s
+
+  li
+    margin: 8px
+    border-bottom: 1px solid #fff
+
+  a
+    display: block
+    color: #fff
+    padding: 8px 8px 10px
+
+  &.active
+    top: 0
+    bottom: 0
+    background-color: #000
+
+.nav-btn
+  position: relative
+  z-index: 10
+
+// Header banner
+.header-banner
+  background: #000 url("../img/bg-main-banner.jpg") no-repeat
+  background-size: cover
+  padding: 100px 10px 30px
+
+.banner-content
+  font-size: 16px
+  color: #fff
+  padding-bottom: 40px
+
+.banner-logo
+  display: block
+  max-width: 180px
+  height: auto
+  margin-bottom: 40px
+
+.banner-text
+  margin-bottom: 40px
+
+.btn-section
+  font-family: opensans-bold, $f_family_default
+  line-height: 1.2
+  font-size: 15px
+  color: #fff
+  padding: 9px 27px
+  display: inline-block
+
+.btn-banner
+  border: 2px solid #fff
+  background-color: transparent
+
+.btn-block
+  $bg_color_block_btn: #ff8b38
+  background-color: $bg_color_block_btn
+  border-radius: 5px
+
+// Banner form
+.banner-form-fieldset
+  background-color: #fff
+  border-radius: 5px
+  overflow: hidden
+  text-align: center
+
+.form-heading
+  font-family: opensans-bold, $f_family_default
+  font-size: 20px
+  color: #333
+  background-color: #f5f5f5
+  padding: 10px 15px
+  margin-bottom: 25px
+  width: 100%
+  text-align: center
+  text-transform: capitalize
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+
+.form-heading-mark
+  text-transform: uppercase
+  color: #ff8b38
+
+.banner-form-input
+  display: inline-block
+  width: 80%
+  border: none
+  background-color: transparent
+  border-bottom: 1px solid #d6d6d6
+  margin-bottom: 25px
+  padding: 8px
+
+.banner-form-btn
+  font-family: opensans-bold, $f_family_default
+  font-size: 15px
+  color: #fff
+  background-color: #ff9b51
+  width: 100%
+  border: none
+  padding: 15px
+  margin-top: 15px
+
+.banner-form-input::-webkit-input-placeholder
+  color: #bdbdbd
+
+.banner-form-input::-moz-placeholder
+  color: #bdbdbd
+
+.banner-form-input:-ms-input-placeholder
+  color: #bdbdbd
+
+.banner-form-input:-moz-placeholder
+  color: #bdbdbd
+
+input::-moz-placeholder
+  opacity: 1
+
+// Banner social
+.header-social
+  padding: 25px 10px
+  border-bottom: 1px solid #ccc
+
+.social-text
+  color: #86878b
+  line-height: 1.5
+
+.social-heading
+  font-family: opensans-bold, $f_family_default
+  font-size: 20px
+  color: #333
+  margin-bottom: 5px
+
+.social-icons
+  @include flex_s_around
+
+.soc-icon
+  min-width: 85px
+  display: flex
+
+.soc-icon-link
+  font-size: 38px
+  color: #ccc
+  margin: auto
+
+// Features section
+.features-block
+  padding: 50px 10px
+
+.features-tabs
+  margin: 0 auto 20px
+  text-align: center
+
+.tab-label
+  $bg_color_tab_label: #333
+  $border_color_tab_label: #c7c7c7
+  display: inline-block
+  background-color: $bg_color_tab_label
+  border: 1px solid $border_color_tab_label
+  text-align: center
+  border-radius: 4px
+
+.tab-label-link
+  $color_tab_label: #fff
+  color: $color_tab_label
+  display: block
+  padding: 10px 15px
+
+.tab-content
+  text-align: center
+
+.tab-block-image
+  width: 50%
+  max-width: 220px
+  margin: auto
+
+.tab-block
+  margin-bottom: 20px
+
+.block-text
+  margin-bottom: 30px
+
+.features-block-image
+  & img
+    max-width: 680px
+    margin-bottom: 20px
+    box-shadow: 3px 5px 15px #ccc
+
+.block-text-description
+  padding-left: 55px
+  position: relative
+  margin-bottom: 20px
+
+.block-text-ico
+  font-size: 16px
+  position: absolute
+  top: 0
+  left: 0
+  width: 38px
+  height: 38px
+  border: 1px solid $text_icon_color
+  color: $text_icon_color
+  border-radius: 50%
+
+  &::before
+    display: block
+    line-height: 34px
+    margin: auto
+
+
+// About section
+.about-section
+  padding: 50px 10px
+
+.section-heading-block
+  width: 85%
+  max-width: 680px
+  text-align: center
+  margin-right: auto
+  margin-left: auto
+  margin-bottom: 40px
+
+.section-block-heading
+  color: #212121
+  &::after
+    @include heading_underline
+    left: 50%
+    transform: translate(-50%, 0)
+
+.section-heading-block-slogan
+  $color_slogan: #86878b
+  font-size: 14px
+  font-style: normal
+  color: $color_slogan
+
+.about-content-list
+  text-align: center
+
+.about-content-item
+  margin-bottom: 35px
+  padding-right: 5px
+  padding-left: 5px
+
+.about-item-ico
+  color: $text_icon_color
+  font-size: 25px
+  line-height: 56px
+  width: 60px
+  height: 60px
+  border: 1px solid $text_icon_color
+  border-radius: 50%
+  margin: 0 auto 15px
+
+.about-item-heading
+  $color_item_heading: #333
+  font-family: opensans-bold, $f_family_default
+  font-size: 20px
+  color: $color_item_heading
+  margin-bottom: 10px
+
+// Pricing section
+.pricing-section
+  padding: 50px 10px
+
+.pricing-card
+  text-align: center
+  margin: 0 5px 30px
+
+$color_price_card: #fff
+$mark_color_pricing_header: #ff8b38
+.pricing-card-header
+  $bg_pricing_card_header: #333
+  color: $color_price_card
+  background-color: $bg_pricing_card_header
+  border-bottom: 4px solid $mark_color_pricing_header
+
+.plan-name
+  font-family: opensans-bold, $f_family_default
+  font-size: 20px
+  color: $color_price_card
+  border-bottom: 1px solid $color_price_card
+  padding: 10px
+
+.plan-price
+  font-family: raleway-regular, $f_family_default
+  font-size: 35px
+  font-style: normal
+  display: block
+  padding: 10px
+
+.plan-term
+  display: block
+  padding-bottom: 15px
+
+.plan-popular
+  background-color: $mark_color_pricing_header
+  padding: 10px
+
+.pricing-card-body
+  $bg_pricing_card_body: #fff
+  background-color: $bg_pricing_card_body
+  text-transform: uppercase
+
+.pricing-card-info
+  $border_color_pricing_card_info: $bg_color_mark_section
+  border-top: 1px solid $border_color_pricing_card_info
+  padding: 10px
+
+// Reviews section
+.reviews-section
+  padding: 50px 10px
+
+.reviews-block-item
+  max-width: 500px
+
+.user-comment
+  $bg_user_comment: #f5f5f5
+  background-color: $bg_user_comment
+  border-radius: 5px
+  padding: 20px 12px
+  margin-bottom: 20px
+  position: relative
+
+  &::after
+    content: ""
+    border-top: 16px solid $bg_user_comment
+    border-right: 15px solid transparent
+    border-left: 15px solid transparent
+    position: absolute
+    bottom: -15px
+    left: 20px
+
+.block-user-name
+  padding: 5px 5px 5px 20px
+
+.user-info
+  display: flex
+  justify-content: flex-start
+
+.user-avatar
+  width: 70px
+  height: 70px
+  border-radius: 50%
+  overflow: hidden
+
+.user-name,
+.user-position
+  display: block
+
+.user-name
+  font-family: opensans-bold, $f_family_default
+  font-size: 20px
+  font-style: normal
+  color: #333
+
+// Content banner section
+.content-banner-section
+  background: #000 url("../img/bg-content-banner.jpg") no-repeat
+  background-size: cover
+  color: #fff
+  padding: 50px 0
+  text-align: center
+
+$color_content_banner: #fff
+.content-banner-heading
+  color: $color_content_banner
+
+  &::after
+    background-color: $color_content_banner
+
+.content-banner-slogan
+  font-family: raleway-regular, f_family_default
+  font-size: 16px
+  font-style: normal
+  color: $color_content_banner
+
+// Contact section
+.contact-section
+  padding: 50px 0
+
+.contact-section-content
+  padding: 0 10px
+
+
+// Tablet
+@media screen and (min-width: 680px)
+  // Header
+  .nav-list
+    position: static
+    padding: 0
+
+    li
+      border: none
+      display: inline-block
+
+    a:hover
+      opacity: .8
+
+  .nav-btn
+    display: none
+
+  // Header banner
+  .banner-row
+    @include flex_s_between
+
+  .banner-content
+    max-width: 580px
+
+  .banner-form
+    max-width: 360px
+
+  // Banner social
+  .social-row
+    @include flex_s_around
+
+  .social-text
+    flex-basis: 35%
+
+  .social-icons
+    flex-basis: 60%
+
+  // Feature section
+  .features-row
+    @include flex_s_around
+
+    &.row-reverse
+      flex-flow: wrap row-reverse
+
+  .features-block-image,
+  .features-block-text
+    flex-basis: 45%
+
+  .features-block-image
+    margin-top: 25px
+
+  // About section
+  .about-content-list
+    @include flex_s_around
+
+  // Pricing section
+  .pricing-plans
+    @include flex_s_around
+    align-items: flex-end
+
+  .about-content-item,
+  .pricing-card
+    flex-basis: 30%
+    min-width: 280px
+
+
+// Desktop
+@media screen and (min-width: 980px)
+  // Header
+  .header-banner
+    padding-top: 170px
+    padding-bottom: 100px
+
+  .soc-icon-link:hover
+    opacity: .8
+
+  // Features section
+  .features-tabs
+    flex-basis: 20%
+
+  .features-tabs-block
+    flex-basis: 80%
+
+  .tab-label
+    display: block
+    max-width: 100px
+
+  .tab-label-link
+    padding: 25px
+
+    &:hover
+      opacity: .8
+
+  .tab-content
+    display: flex
+    flex-flow: wrap row-reverse
+    justify-content: space-around
+    text-align: left
+
+  .tab-block-image
+    flex-basis: 35%
+    max-width: 250px
+
+  .tab-block
+    flex-basis: 60%
+
+
+@media screen and (min-width: 1200px)
+  .header-banner,
+  .header-social,
+  .features-block,
+  .about-section,
+  .pricing-section,
+  .reviews-section
+    padding-right: 0
+    padding-left: 0

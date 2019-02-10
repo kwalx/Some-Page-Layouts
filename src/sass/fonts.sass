@@ -1,0 +1,16 @@
+/**
+ * Fonts
+ */
+
+@mixin font-face($family, $filename, $folder, $style, $weight)
+  @font-face
+    font-family: $family
+    src: url("../#{$folder}/#{$filename}.woff") format("woff"),url("../#{$folder}/#{$filename}.woff2") format("woff2")
+    font-style: $style
+    font-weight: $weight
+
+@include font-face("opensans-regular", "opensans-regular-webfont", "fonts", normal, normal)
+
+@include font-face("opensans-bold", "opensans-bold-webfont", "fonts", normal, normal)
+
+@include font-face("raleway-regular", "raleway-regular-webfont", "fonts", normal, normal)
