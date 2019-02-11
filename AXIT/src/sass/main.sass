@@ -64,6 +64,27 @@ body
 .section-mark
   background-color: $bg_color_mark_section
 
+.form-input-field
+  color: #000
+  border: none
+  background-color: transparent
+  border-bottom: 1px solid #d6d6d6
+
+.form-input-field::-webkit-input-placeholder
+  color: #bdbdbd
+
+.form-input-field::-moz-placeholder
+  color: #bdbdbd
+
+.form-input-field:-ms-input-placeholder
+  color: #bdbdbd
+
+.form-input-field:-moz-placeholder
+  color: #bdbdbd
+
+input::-moz-placeholder
+  opacity: 1
+
 // Headings
 .section-heading
   font-family: raleway-regular, $f_family_default
@@ -179,6 +200,7 @@ body
   font-size: 15px
   color: #fff
   padding: 9px 27px
+  border: none
   display: inline-block
 
 .btn-banner
@@ -217,9 +239,6 @@ body
 .banner-form-input
   display: inline-block
   width: 80%
-  border: none
-  background-color: transparent
-  border-bottom: 1px solid #d6d6d6
   margin-bottom: 25px
   padding: 8px
 
@@ -232,21 +251,6 @@ body
   border: none
   padding: 15px
   margin-top: 15px
-
-.banner-form-input::-webkit-input-placeholder
-  color: #bdbdbd
-
-.banner-form-input::-moz-placeholder
-  color: #bdbdbd
-
-.banner-form-input:-ms-input-placeholder
-  color: #bdbdbd
-
-.banner-form-input:-moz-placeholder
-  color: #bdbdbd
-
-input::-moz-placeholder
-  opacity: 1
 
 // Banner social
 .header-social
@@ -508,10 +512,22 @@ $color_content_banner: #fff
 
 // Contact section
 .contact-section
-  padding: 50px 0
+  padding: 50px 10px
 
-.contact-section-content
-  padding: 0 10px
+.contact-form-input,
+.contact-form-msg
+  width: 100%
+  padding: 8px
+  margin-bottom: 20px
+
+.contact-form-msg
+  height: 80px
+  resize: vertical
+
+.wr-contact-form-btn
+  text-align: center
+  margin-top: 35px
+
 
 
 // Tablet
@@ -579,6 +595,17 @@ $color_content_banner: #fff
     flex-basis: 30%
     min-width: 280px
 
+  // Contact section
+  .contact-form-content
+    @include flex_s_around
+
+  .contact-form-input,
+  .contact-form-msg
+    flex-basis: 46%
+    min-width: 280px
+    margin-right: 20px
+    margin-left: 20px
+
 
 // Desktop
 @media screen and (min-width: 980px)
@@ -627,6 +654,7 @@ $color_content_banner: #fff
   .features-block,
   .about-section,
   .pricing-section,
-  .reviews-section
+  .reviews-section,
+  .contact-section
     padding-right: 0
     padding-left: 0
