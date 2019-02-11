@@ -267,7 +267,7 @@ input::-moz-placeholder
   color: #333
   margin-bottom: 5px
 
-.social-icons
+.banner-social-icons
   @include flex_s_around
 
 .soc-icon
@@ -528,6 +528,32 @@ $color_content_banner: #fff
   text-align: center
   margin-top: 35px
 
+// Footer
+.footer
+  $color_footer: #ccc
+  $bg_footer: #000
+  color: $color_footer
+  background-color: $bg_footer
+  padding: 20px 10px
+  text-align: center
+
+.footer-social-icons
+  text-align: center
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+
+  .soc-icon
+    margin-bottom: 15px
+
+  .soc-icon-link
+    font-size: 22px
+
+.copyright
+  $color_copyright: #fff
+  color: $color_copyright
+  font-size: 12px
+
 
 
 // Tablet
@@ -564,7 +590,7 @@ $color_content_banner: #fff
   .social-text
     flex-basis: 35%
 
-  .social-icons
+  .banner-social-icons
     flex-basis: 60%
 
   // Feature section
