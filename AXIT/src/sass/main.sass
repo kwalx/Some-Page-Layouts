@@ -106,7 +106,9 @@ input::-moz-placeholder
     bottom: 0
 
 .block-heading
+  $color_block_heading: #212121
   font-family: opensans-bold, $f_family_default
+  color: $color_block_heading
   font-size: 20px
   margin-bottom: 12px
 
@@ -517,12 +519,11 @@ $color_content_banner: #fff
 .contact-form-input,
 .contact-form-msg
   width: 100%
-  padding: 8px
-  margin-bottom: 20px
+  padding: 18px 8px
 
 .contact-form-msg
-  height: 80px
   resize: vertical
+  height: 100%
 
 .wr-contact-form-btn
   text-align: center
@@ -625,8 +626,7 @@ $color_content_banner: #fff
   .contact-form-content
     @include flex_s_around
 
-  .contact-form-input,
-  .contact-form-msg
+  .contact-form-block
     flex-basis: 46%
     min-width: 280px
     margin-right: 20px

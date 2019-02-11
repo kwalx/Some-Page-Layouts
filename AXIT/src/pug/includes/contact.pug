@@ -9,9 +9,11 @@ section.contact-section#contact-section
       form(name="contact-form" action="#" method="get").contact-form
         fieldset.contact-form-fieldset
           .contact-form-content
-            input(type="text" name="contact-form-name" placeholder="Name").form-input-field.contact-form-input
-            input(type="email" name="contact-form-email" placeholder="Email").form-input-field.contact-form-input
-            input(type="text" name="contact-form-subject" placeholder="Subject").form-input-field.contact-form-input
-            textarea(name="contact-form-message" placeholder="Message").form-input-field.contact-form-msg
+            .contact-form-block
+              input(type="text" name="contact-form-name" placeholder="Name").form-input-field.contact-form-input
+              input(type="email" name="contact-form-email" placeholder="Email").form-input-field.contact-form-input
+              input(type="text" name="contact-form-subject" placeholder="Subject").form-input-field.contact-form-input
+            .contact-form-block
+              textarea(name="contact-form-message" placeholder="Message").form-input-field.contact-form-msg
           .wr-contact-form-btn
             button(type="submit").btn-section.btn-block Send Message
