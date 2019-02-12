@@ -9,6 +9,15 @@ src/libs/**
 !src/libs/jquery/dist/
 !src/libs/jquery/dist/jquery.js
 
+# Owl.carousel js
+!src/libs/owl.carousel/
+!src/libs/owl.carousel/dist/
+!src/libs/owl.carousel/dist/owl.carousel.js
+
+# Owl.carousel css
+!src/libs/owl.carousel/dist/assets/
+!src/libs/owl.carousel/dist/assets/owl.carousel.css
+
 # Normalize css lib
 !src/libs/normalize-scss/
 !src/libs/normalize-scss/_normalize.scss
