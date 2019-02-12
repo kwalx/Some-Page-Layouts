@@ -20,4 +20,4 @@ src/libs/**
 
 # Normalize css lib
 !src/libs/normalize-scss/
-!src/libs/normalize-scss/_normalize.scss
+!src/libs/normalize-scss/normalize.css

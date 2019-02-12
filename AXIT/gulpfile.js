@@ -106,6 +106,7 @@ gulp.task('sass', () => {
 
 gulp.task('css:libs', () => {
   const cssFiles = [
+    `${config.src}/libs/normalize-scss/normalize.css`,
     `${config.src}/libs/owl.carousel/dist/assets/owl.carousel.css`
   ];
 
