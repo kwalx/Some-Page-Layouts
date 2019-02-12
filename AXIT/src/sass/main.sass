@@ -291,12 +291,16 @@ input::-moz-placeholder
 
 .tab-label
   $bg_color_tab_label: #333
+  $bg_tab_label_active: #151515
   $border_color_tab_label: #c7c7c7
   display: inline-block
   background-color: $bg_color_tab_label
   border: 1px solid $border_color_tab_label
   text-align: center
   border-radius: 4px
+
+  &.active
+    background-color: $bg_tab_label_active
 
 .tab-label-link
   $color_tab_label: #fff
@@ -310,7 +314,7 @@ input::-moz-placeholder
 .tab-block-image
   width: 50%
   max-width: 220px
-  margin: auto
+  margin: 0 auto 30px
 
 .tab-block
   margin-bottom: 20px
@@ -595,7 +599,8 @@ $color_content_banner: #fff
     flex-basis: 60%
 
   // Feature section
-  .features-row
+  .features-row,
+  .wr-tabs
     @include flex_s_around
 
     &.row-reverse
