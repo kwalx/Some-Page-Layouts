@@ -99,8 +99,19 @@ gulp.task('sass', () => {
     .pipe(csscomb())
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer('> 0.1%')]))
-    .pipe(concat('all.css'))
+    .pipe(concat('main.css'))
     .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(`${config.src}/assets/css`));
+});
+
+gulp.task('css:libs', () => {
+  const cssFiles = [
+    `${config.src}/libs/owl.carousel/dist/assets/owl.carousel.css`
+  ];
+
+  return gulp
+    .src(cssFiles)
+    .pipe(concat('libs.css'))
     .pipe(gulp.dest(`${config.src}/assets/css`));
 });
 
@@ -110,7 +121,7 @@ gulp.task('css', () => {
   return gulp
     .src(`${config.src}/assets/css/*.css`)
     .pipe(postcss(plugins))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(concat('all.min.css'))
     .pipe(gulp.dest(`${config.build}/css`));
 });
 
@@ -144,7 +155,10 @@ gulp.task('babel', () => {
 });
 
 gulp.task('js:libs', () => {
-  let jsLibs = [`${config.src}/libs/jquery/dist/jquery.js`];
+  let jsLibs = [
+    `${config.src}/libs/jquery/dist/jquery.js`,
+    `${config.src}/libs/owl.carousel/dist/owl.carousel.min.js`
+  ];
 
   return gulp
     .src(jsLibs)
@@ -187,7 +201,7 @@ gulp.task(
   'build',
   gulp.series(
     'clean',
-    gulp.parallel('pug', 'sass', 'babel', 'js:libs'),
+    gulp.parallel('pug', 'sass', 'css:libs', 'babel', 'js:libs'),
     gulp.parallel('html', 'css', 'js', 'img', 'fonts')
   )
 );
