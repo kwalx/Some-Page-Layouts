@@ -1,12 +1,31 @@
 $(document).ready(function() {
   /* Navigation */
-  const navigation = document.querySelector('.header-navigation');
-  const navigationBtn = navigation.querySelector('.nav-btn');
+  (function() {
+    // const navigation = document.querySelector('.header-navigation');
+    // const navigationBtn = navigation.querySelector('.nav-btn');
+    // const navigationList = navigation.querySelector('.nav-list');
 
-  navigationBtn.addEventListener('click', () => {
-    const navigationList = navigation.querySelector('.nav-list');
-    navigationList.classList.toggle('active');
-  });
+    // navigationBtn.addEventListener('click', () => {
+    //   navigationList.classList.toggle('active');
+    // });
+
+    $('.nav-btn').on('click', function() {
+      $('.nav-list').toggleClass('active');
+    });
+
+    $('#main-menu').on('click', 'a', function(e) {
+      e.preventDefault();
+
+      $('.nav-list').removeClass('active');
+
+      let id = $(this).attr('href');
+      let top;
+
+      top = $(id).offset().top - $('.header-navbar').height();
+
+      $('body,html').animate({ scrollTop: top }, 1000);
+    });
+  })();
 
   /* Features section Tabs */
   (function() {
@@ -25,7 +44,7 @@ $(document).ready(function() {
         .parent()
         .addClass('active');
 
-      var href = $(this).attr('href');
+      let href = $(this).attr('href');
 
       $('.tab').each(function() {
         if ($(this).attr('id') == href) {

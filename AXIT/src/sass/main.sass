@@ -174,8 +174,25 @@ input::-moz-placeholder
     background-color: #000
 
 .nav-btn
+  $bg_nav_btn: #ccc
   position: relative
   z-index: 10
+  width: 40px
+  height: 31px
+  border-radius: 5px
+  border: 1px solid $bg_nav_btn
+  background-color: transparent
+
+  &::after
+    content: ""
+    width: 80%
+    height: 3px
+    background-color: $bg_nav_btn
+    border-radius: 2px
+    position: absolute
+    top: 5px
+    left: 10%
+    box-shadow: 0 8px 0 $bg_nav_btn, 0 16px 0 $bg_nav_btn
 
 // Header banner
 .header-banner
@@ -621,7 +638,7 @@ $color_content_banner: #fff
   // Pricing section
   .pricing-plans
     @include flex_s_around
-    align-items: flex-end
+    align-items: center
 
   .about-content-item,
   .pricing-card
