@@ -4,12 +4,6 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    <!--[if lte IE 9]>
-      link(rel="stylesheet", href="css/ie/ie9.min.css")
-    <![endif]-->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     title AXIT
   body
     //- Header
@@ -37,6 +31,14 @@ html(lang="en")
     //- Footer
     include ../includes/footer.pug
 
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
     link(rel="stylesheet", href="css/all.min.css")
+
+    <!--[if lte IE 9]>
+      link(rel="stylesheet", href="css/ie/ie9.min.css")
+    <![endif]-->
 
     script(src="js/all.min.js")

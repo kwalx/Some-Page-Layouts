@@ -1,5 +1,6 @@
 // IE 9 styles
 
+.navbar-row,
 .banner-row,
 .social-row,
 .wr-tabs,
@@ -14,17 +15,23 @@
     display: table
     clear: both
 
+.header-logo,
 .banner-content,
 .social-text,
 .features-tabs,
 .features-block-image
   float: left
 
+.header-navigation,
 .banner-form,
 .banner-social-icons,
 .features-tabs-block,
 .features-block-text
   float: right
+
+// Header
+.header-logo
+  margin: 10px 10px 10px
 
 // Header social
 .social-text
@@ -32,10 +39,27 @@
 
 .banner-social-icons
   width: 60%
+  display: block
+  text-align: right
+
+.soc-icon
+  display: inline-block
+
+// Tabs
+.tab-content
+  display: block
+
+.tab-block
+  width: 60%
 
 // Features section
 .features-tabs
   width: 20%
+  float: left
+
+.tab-block-image
+  width: 35%
+  float: right
 
 .features-tabs-block
   width: 80%
@@ -77,6 +101,9 @@
   text-align: center
 
 @media screen and (max-width: 680px)
+  .banner-social-icons
+    text-align: center
+
   .banner-content,
   .social-text,
   .features-tabs,
