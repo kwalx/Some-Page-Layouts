@@ -192,7 +192,7 @@ gulp.task('babel', () => {
 gulp.task('js:libs', () => {
   let jsLibs = [
     `${config.src}/libs/jquery/dist/jquery.js`,
-    `${config.src}/libs/owl.carousel/dist/owl.carousel.min.js`
+    `${config.src}/libs/owl.carousel/dist/owl.carousel.js`
   ];
 
   return gulp
