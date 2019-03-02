@@ -81,10 +81,10 @@ gulp.task('html', () => {
  * Styles
  */
 gulp.task('sass', () => {
-  const styleFiles = [`${config.src}/sass/main.sass`];
+  const sassStyleFiles = [`${config.src}/sass/main.sass`];
 
   return gulp
-    .src(styleFiles)
+    .src(sassStyleFiles)
     .pipe(
       plumber({
         errorHandler: notify.onError(err => {
@@ -104,6 +104,29 @@ gulp.task('sass', () => {
     .pipe(gulp.dest(`${config.src}/assets/css`));
 });
 
+gulp.task('sass:ie', () => {
+  const sassIEStyleFiles = [`${config.src}/sass/ie/ie9.sass`];
+
+  return gulp
+    .src(sassIEStyleFiles)
+    .pipe(
+      plumber({
+        errorHandler: notify.onError(err => {
+          return {
+            title: 'SASS IE ERROR!',
+            message: err.message
+          };
+        })
+      })
+    )
+    .pipe(sass())
+    .pipe(csscomb())
+    .pipe(sourcemaps.init())
+    .pipe(postcss([autoprefixer('> 0.1%')]))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(`${config.src}/assets/css/ie`));
+});
+
 gulp.task('css:libs', () => {
   const cssFiles = [
     `${config.src}/libs/normalize-scss/normalize.css`,
@@ -114,6 +137,17 @@ gulp.task('css:libs', () => {
     .src(cssFiles)
     .pipe(concat('libs.css'))
     .pipe(gulp.dest(`${config.src}/assets/css`));
+});
+
+gulp.task('css:ie', () => {
+  const plugins = [cssnano()];
+  const cssIEfiles = [`${config.src}/assets/css/ie/ie9.css`];
+
+  return gulp
+    .src(cssIEfiles)
+    .pipe(postcss(plugins))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(`${config.build}/css/ie`));
 });
 
 gulp.task('css', () => {
@@ -202,14 +236,18 @@ gulp.task(
   'build',
   gulp.series(
     'clean',
-    gulp.parallel('pug', 'sass', 'css:libs', 'babel', 'js:libs'),
-    gulp.parallel('html', 'css', 'js', 'img', 'fonts')
+    gulp.parallel('pug', 'sass', 'sass:ie', 'css:libs', 'babel', 'js:libs'),
+    gulp.parallel('html', 'css', 'css:ie', 'js', 'img', 'fonts')
   )
 );
 
 gulp.task('watch', () => {
   gulp.watch(`${config.src}/pug/**/*.pug`, gulp.series('pug', 'html'));
   gulp.watch(`${config.src}/sass/**/*.sass`, gulp.series('sass', 'css'));
+  gulp.watch(
+    `${config.src}/sass/ie/**/*.sass`,
+    gulp.series('sass:ie', 'css:ie')
+  );
   gulp.watch(`${config.src}/js/**/*.js`, gulp.series('babel', 'js'));
   gulp.watch(`${config.src}/img/**/*`, gulp.series('img'));
   gulp.watch(`${config.src}/fonts/**/*`, gulp.series('fonts'));
