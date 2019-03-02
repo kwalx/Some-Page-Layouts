@@ -1,0 +1,103 @@
+// IE 9 styles
+
+.banner-row,
+.social-row,
+.wr-tabs,
+.features-row,
+.about-content-list,
+.pricing-plans,
+.contact-form-content
+  display: block
+
+  &::after
+    content: ""
+    display: table
+    clear: both
+
+.banner-content,
+.social-text,
+.features-tabs,
+.features-block-image
+  float: left
+
+.banner-form,
+.banner-social-icons,
+.features-tabs-block,
+.features-block-text
+  float: right
+
+// Header social
+.social-text
+  width: 35%
+
+.banner-social-icons
+  width: 60%
+
+// Features section
+.features-tabs
+  width: 20%
+
+.features-tabs-block
+  width: 80%
+
+.features-block-image,
+.features-block-text
+  width: 45%
+
+.row-reverse .features-block-text
+  float: left
+
+.row-reverse .features-block-image
+  float: right
+
+// About section
+.about-content-list
+  text-align: center
+
+.about-content-item
+  display: inline-block
+  width: 30%
+
+// Pricings section
+.pricing-plans
+  text-align: center
+  vertical-align: center
+
+.pricing-card
+  display: inline-block
+  width: 30%
+
+// Contacts section
+.contact-form-content
+  text-align: center
+
+.contact-form-block
+  display: inline-block
+  width: 46%
+  text-align: center
+
+@media screen and (max-width: 680px)
+  .banner-content,
+  .social-text,
+  .features-tabs,
+  .features-block-image
+    float: none
+
+  .banner-form,
+  .banner-social-icons,
+  .features-tabs-block,
+  .features-block-text,
+  .row-reverse .features-block-text,
+  .row-reverse .features-block-image
+    float: none
+
+  .social-text,
+  .banner-social-icons,
+  .features-tabs,
+  .features-tabs-block,
+  .features-block-image,
+  .features-block-text,
+  .about-content-item,
+  .pricing-card,
+  .contact-form-block
+    width: 100%
