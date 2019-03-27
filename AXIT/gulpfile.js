@@ -152,11 +152,15 @@ gulp.task('css:ie', () => {
 
 gulp.task('css', () => {
   const plugins = [cssnano()];
+  const cssFiles = [
+    `${config.src}/assets/css/libs.css`,
+    `${config.src}/assets/css/main.css`
+  ];
 
   return gulp
     .src(`${config.src}/assets/css/*.css`)
     .pipe(postcss(plugins))
-    .pipe(concat('all.min.css'))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(`${config.build}/css`));
 });
 
