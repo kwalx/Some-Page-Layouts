@@ -90,7 +90,7 @@ textarea::-moz-placeholder
 // Headings
 .section-heading
   font-family: raleway-regular, $f_family_default
-  font-size: 36px
+  font-size: 26px
   text-transform: uppercase
   padding-bottom: 25px
   margin-bottom: 25px
@@ -198,8 +198,7 @@ textarea::-moz-placeholder
 
 // Header banner
 .header-banner
-  background: #000 url("../img/bg-main-banner.jpg") no-repeat
-  background-size: cover
+  background: no-repeat center / cover #000 url("../img/bg-main-banner.jpg")
   padding: 100px 10px 30px
 
 .banner-content
@@ -475,6 +474,7 @@ $mark_color_pricing_header: #ff8b38
 
 .reviews-block-item
   max-width: 681px
+  cursor: move
 
 .user-comment
   $bg_user_comment: #f5f5f5
@@ -518,8 +518,7 @@ $mark_color_pricing_header: #ff8b38
 
 // Content banner section
 .content-banner-section
-  background: #000 url("../img/bg-content-banner.jpg") no-repeat
-  background-size: cover
+  background: no-repeat center / cover #000 url("../img/bg-content-banner.jpg")
   color: #fff
   padding: 50px 0
   text-align: center
@@ -611,6 +610,9 @@ $color_content_banner: #fff
     display: none
 
   // Header banner
+  .section-heading
+    font-size: 36px
+
   .banner-row
     @include flex_s_between
 
