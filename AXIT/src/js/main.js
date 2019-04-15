@@ -1,14 +1,6 @@
 $(document).ready(function() {
   /* Navigation */
   (function() {
-    // const navigation = document.querySelector('.header-navigation');
-    // const navigationBtn = navigation.querySelector('.nav-btn');
-    // const navigationList = navigation.querySelector('.nav-list');
-
-    // navigationBtn.addEventListener('click', () => {
-    //   navigationList.classList.toggle('active');
-    // });
-
     $('.nav-btn').on('click', function() {
       $('.nav-list').toggleClass('active');
     });
