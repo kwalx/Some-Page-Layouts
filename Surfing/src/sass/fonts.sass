@@ -1,0 +1,18 @@
+/**
+ * Fonts
+ */
+
+@mixin font-face($family, $filename, $folder, $style, $weight)
+  @font-face
+    font-family: $family
+    src: url("../#{$folder}/#{$filename}.woff") format("woff"),url("../#{$folder}/#{$filename}.woff2") format("woff2")
+    font-style: $style
+    font-weight: $weight
+
+@include font-face("playfair_displaybold", "playfairdisplay-bold-webfont", "fonts", normal, normal)
+
+@include font-face("playfair_displayregular", "playfairdisplay-regular-webfont", "fonts", normal, normal)
+
+@include font-face("poppins_lightregular", "poppins-light-webfont", "fonts", normal, normal)
+
+@include font-face("poppinsregular", "poppins-regular-webfont", "fonts", normal, normal)

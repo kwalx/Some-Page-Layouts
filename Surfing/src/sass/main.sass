@@ -1,0 +1,304 @@
+@import "fonts.sass"
+
+@import "variables.sass"
+
+html,
+body
+  box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+fieldset,
+dl,
+dd
+  margin: 0
+  padding: 0
+
+fieldset
+  border: none
+
+p
+  margin-bottom: 10px
+
+ul
+  list-style-type: none
+
+a
+  text-decoration: none
+
+picture
+  display: block
+
+img
+  width: 100%
+  height: auto
+  vertical-align: top
+
+body
+  font: #{$f_size}/#{$line_height} poppinsregular, $f_family_default
+  color: $color_default
+  background-color: $bg_color_default
+
+[class*="-container"]
+  width: 100%
+  max-width: $max_width
+  padding: 0 10px
+  margin: 0 auto
+
+[class*="-row"]
+  margin: 0 -10px
+
+.header
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 11
+  background-color: $bg_color_default
+
+.block-content
+  @include flex_row_wrap
+  @include flex_s_between
+  padding: 10px
+
+.header-logo
+  width: 17px
+  height: auto
+  display: block
+
+.header-navigation
+  display: flex
+  align-self: center
+
+.nav-btn
+  width: 40px
+  height: 30px
+  display: block
+  background-image: repeating-linear-gradient($nav_btn_line, $nav_btn_line 4px, transparent 4px, transparent 12px)
+  position: relative
+  z-index: 1
+
+.nav-list
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 150%
+  text-align: center
+  padding-top: 60px
+  background-color: rgba(255, 255, 255, .9)
+  transition: all .4s
+
+  &.active
+    left: 0
+
+.nav-list-link
+  font-family: poppinsregular, $f_family_default
+  font-size: 10px
+  text-transform: uppercase
+  color: #0b0c11
+  display: block
+  padding: 10px 20px
+
+// Main
+main
+  padding-top: 70px
+
+// Banner
+.banner-carousel
+  padding-bottom: 5px
+
+.banner-content-inner
+  display: flex
+
+.text-content
+  margin-right: -16%
+  position: relative
+  top: 0
+  left: 0
+  margin-top: 5%
+  max-width: 400px
+
+.img-content
+  width: 80%
+
+.banner-heading
+  font-family: playfair_displaybold, $f_family_default
+  font-size: 24px
+  color: #0b0c11
+  line-height: 1.2
+  margin-bottom: 5px
+
+.mark-text
+  font-family: poppinsregular, $f_family_default
+  letter-spacing: 3px
+  font-size: 11px
+  color: $color_mark_text
+  display: block
+  text-transform: uppercase
+  margin-bottom: 5px
+
+// banner carousel navigation
+.owl-nav
+  position: absolute
+  left: 40px
+  bottom: 0
+
+  & button
+    margin: 0 10px
+
+.banner-nav
+  width: 30px
+  height: 30px
+  display: inline-block
+  border-radius: 50%
+  background-color: $color_mark_text
+  position: relative
+
+  img
+    width: auto
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+@mixin background-opacity($color, $opacity: 0.3)
+  background: $color
+  background: rgba($color, $opacity)
+
+.disabled .banner-nav
+  @include background-opacity($color_mark_text, 0.7)
+  cursor: default
+
+// Info
+.wrap-quote
+  font-size: 20px
+  color: $color_section_block
+  text-align: center
+  width: 75%
+  max-width: 650px
+  margin: 0 auto 10px
+  position: relative
+  padding-bottom: 50px
+
+  &::after
+    content: ""
+    @include vertical_line
+
+.quote
+  font-family: playfair_displayregular, $f_family_default
+  margin: 0 0 20px
+
+.quote-author
+  font-size: 11px
+  text-transform: uppercase
+  letter-spacing: 2px
+
+.info-media
+  margin-bottom: 20px
+
+.wrap-img
+  margin-bottom: 20px
+
+.info-media-text
+  color: $color_info_block
+
+.btn-more
+  font-size: 11px
+  color: $color_section_block
+  text-transform: uppercase
+  letter-spacing: 2px
+  display: inline-block
+  position: relative
+  padding-bottom: 8px
+
+  &::after
+    content: ""
+    width: 100%
+    height: 2px
+    background-color: $bg_color_vertical_line
+    position: absolute
+    bottom: 0
+    left: 0
+
+// Shop
+.heading-block
+  width: 75%
+  max-width: 650px
+  margin: 0 auto
+  text-align: center
+
+
+// Tablet
+@media screen and (min-width: 680px)
+  // Banner
+  .banner-heading
+    font-size: 44px
+
+  // Info
+  .wrap-quote
+    font-size: 26px
+
+  .block-content-info
+    justify-content: space-between
+    flex-direction: row-reverse
+    flex-wrap: nowrap
+
+  .info-media-video
+    position: relative
+    left: 0
+    width: 60%
+    margin-left: -8%
+    margin-top: 5%
+
+  .info-media-img
+    width: 50%
+
+  .info-media-text
+    padding: 20px 19% 20px 10%
+
+  .btn-more
+    margin-top: 35px
+
+
+// Desktop
+@media screen and (min-width: 980px)
+  .block-content
+    justify-content: flex-start
+    padding-right: 50px
+    padding-left: 70px
+
+  // Header
+  .wrap-header-logo
+    flex-basis: 20%
+
+  .header-navigation
+    flex-basis: 70%
+
+  .nav-btn
+    display: none
+
+  .nav-list
+    position: static
+    text-align: left
+    padding: 0
+
+    & li
+      display: inline-block
+
+  // Info
+  .wrap-quote
+    padding-bottom: 120px
+    margin-bottom: 30px
+
+    &::after
+      height: 90px
