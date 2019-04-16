@@ -26,9 +26,20 @@ $(document).ready(function() {
   /* Shop carousel */
   (function() {
     $('.owl-carousel.shop-owl-carousel').owlCarousel({
-      items: 1,
       nav: true,
-      autoHeight: true
+      autoHeight: true,
+      margin: 0,
+      responsive: {
+        320: {
+          items: 1
+        },
+        680: {
+          items: 2
+        },
+        980: {
+          items: 3
+        }
+      }
     });
   })();
 });

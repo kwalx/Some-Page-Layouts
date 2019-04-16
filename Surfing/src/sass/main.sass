@@ -237,6 +237,84 @@ main
   margin: 0 auto
   text-align: center
 
+.tagline
+  $tagline_color: #5da8ef
+  font-family: poppinsregular, $f_family_default
+  font-size: 11px
+  color: $tagline_color
+  text-transform: uppercase
+  letter-spacing: 2px
+  display: inline-block
+  margin-bottom: 5px
+
+.heading
+  $heading_color: $color_section_block
+  font-family: playfair_displaybold, $f_family_default
+  font-size: 30px
+  color: $heading_color
+
+.product
+  position: relative
+
+  &::before
+    $product_bg_color: #e8e8e8
+    content: ""
+    position: absolute
+    top: 38%
+    right: 10%
+    bottom: 0
+    left: 10%
+    background-color: $product_bg_color
+
+  img
+    position: relative
+    right: 10%
+    max-width: 240px
+    margin: auto
+
+.product-info
+  position: absolute
+  top: 45%
+  right: 2px
+  max-width: 150px
+
+.product-title
+  $color_product_title: #7a7a7a
+  font-family: poppins_lightregular, $f_family_default
+  font-size: 11px
+  text-transform: uppercase
+  letter-spacing: 2px
+  color: $color_product_title
+  margin-bottom: 2px
+
+.product-name
+  $color_product_name: #333
+  font-family: playfair_displayregular, $f_family_default
+  font-size: 21px
+  color: $color_product_name
+  margin-bottom: 15px
+
+.product-price
+  width: 60%
+  min-width: 100px
+  margin: 0 auto
+
+.product-price-value
+  $product_price_color: #ce60a8
+  font-family: poppins_lightregular, $f_family_default
+  font-size: 18px
+  color: $product_price_color
+  display: block
+  margin-bottom: 5px
+
+.procuct-buy-link
+  $procuct_buy_color: #333
+  font-family: poppinsregular, $f_family_default
+  font-size: 12px
+  color: $procuct_buy_color
+  text-transform: uppercase
+  display: inline-block
+
 
 // Tablet
 @media screen and (min-width: 680px)
@@ -268,6 +346,9 @@ main
 
   .btn-more
     margin-top: 35px
+
+  .heading
+    font-size: 42px
 
 
 // Desktop
