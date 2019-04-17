@@ -57,6 +57,11 @@ body
 [class*="-row"]
   margin: 0 -10px
 
+.page-section
+  margin-bottom: 20px
+
+/* Header */
+
 .header
   position: fixed
   top: 0
@@ -109,11 +114,11 @@ body
   display: block
   padding: 10px 20px
 
-// Main
+/* Main */
 main
   padding-top: 70px
 
-// Banner
+/* Banner */
 .banner-carousel
   padding-bottom: 5px
 
@@ -179,7 +184,7 @@ main
   @include background-opacity($color_mark_text, 0.7)
   cursor: default
 
-// Info
+/* Info */
 .wrap-quote
   font-size: 20px
   color: $color_section_block
@@ -206,6 +211,57 @@ main
 .info-media
   margin-bottom: 20px
 
+.info-media-inner
+  position: relative
+
+.info-media-video-link
+  display: block
+
+.info-media-video
+  position: relative
+
+.video-media
+  width: 100%
+  height: 100%
+  border: none
+
+.video-btn
+  $bg_button: #5da8ef
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: $bg_button
+  width: 68px
+  height: 68px
+  border-radius: 50%
+  border: none
+  outline: none
+  display: none
+  opacity: .7
+
+  &::before
+    content: ""
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 8px 0 8px 13px
+    border-color: transparent transparent transparent #fff
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.info-media-inner:hover .video-btn,
+.video-btn:focus
+  opacity: 1
+
+.video-enabled .info-media-inner
+  cursor: pointer
+
+.video-enabled .video-btn
+  display: block
+
 .wrap-img
   margin-bottom: 20px
 
@@ -213,11 +269,12 @@ main
   color: $color_info_block
 
 .btn-more
-  font-size: 11px
+  $bg_link_underline: $bg_color_vertical_line
   color: $color_section_block
+  font-size: 11px
+  font-weight: bold
   text-transform: uppercase
   letter-spacing: 2px
-  display: inline-block
   position: relative
   padding-bottom: 8px
 
@@ -225,12 +282,12 @@ main
     content: ""
     width: 100%
     height: 2px
-    background-color: $bg_color_vertical_line
+    background-color: $bg_link_underline
     position: absolute
     bottom: 0
     left: 0
 
-// Shop
+/* Shop */
 .heading-block
   width: 75%
   max-width: 650px
@@ -315,9 +372,16 @@ main
   text-transform: uppercase
   display: inline-block
 
+.shop-row-link
+  text-align: center
+  padding: 20px
 
-// Tablet
+
+/* Tablet */
 @media screen and (min-width: 680px)
+  .page-section
+    margin-bottom: 50px
+
   // Banner
   .banner-heading
     font-size: 44px
@@ -332,7 +396,6 @@ main
     flex-wrap: nowrap
 
   .info-media-video
-    position: relative
     left: 0
     width: 60%
     margin-left: -8%
@@ -351,7 +414,7 @@ main
     font-size: 42px
 
 
-// Desktop
+/* Desktop */
 @media screen and (min-width: 980px)
   .block-content
     justify-content: flex-start

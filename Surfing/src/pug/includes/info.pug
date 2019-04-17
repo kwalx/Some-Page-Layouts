@@ -1,4 +1,4 @@
-section.info
+section.info.page-section
   .info-container
     .info-row
       .block-content
@@ -10,7 +10,12 @@ section.info
     .info-row
       .block-content.block-content-info
         .info-media.info-media-video
-          img(src="img/img-info-2.jpg", alt="")
+          .info-media-inner
+            a(href="https://www.youtube.com/watch?v=xU3iCjnlqx8").info-media-video-link
+              picture
+                source(srcset="https://i.ytimg.com/vi_webp/xU3iCjnlqx8/maxresdefault.webp", type="image/webp")
+                img(src="https://i.ytimg.com/vi/xU3iCjnlqx8/maxresdefault.jpg", alt="Wave").video-media
+            button(type="button", aria-label="Start video").video-btn
 
         .info-media.info-media-img
           .wrap-img
