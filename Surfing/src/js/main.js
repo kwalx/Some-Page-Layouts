@@ -5,8 +5,10 @@ $(document).ready(function() {
 
     if ($('.nav-list').hasClass('active')) {
       $('.nav-list').removeClass('active');
+      $('body').removeClass('overflow-hid');
     } else {
       $('.nav-list').addClass('active');
+      $('body').addClass('overflow-hid');
     }
   });
 
