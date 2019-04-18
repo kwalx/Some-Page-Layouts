@@ -75,16 +75,20 @@ body
 
 /* Header */
 .header
+  $color_header_shadow: #ccc
   position: fixed
   top: 0
   right: 0
   left: 0
   z-index: 11
   background-color: $bg_color_default
+  box-shadow: 0 1px 3px $color_header_shadow
+
+  & .block-content
+    @include flex_row_wrap
+    @include flex_s_between
 
 .block-content
-  @include flex_row_wrap
-  @include flex_s_between
   padding: 10px
 
 .header-logo
@@ -406,6 +410,9 @@ main
   color: $color_heading
   margin-bottom: .5em
 
+.training-page-heading
+  position: relative
+
   &::after
     $bg_color_underline: $bg_color_vertical_line
     content: ""
@@ -432,9 +439,106 @@ main
   $color_text: $color_info_block
   color: $color_text
 
+/* Contacts */
+.contacts-heading
+  text-align: center
+  width: 80%
+  max-width: 600px
+  margin: 0 auto
+
+.contacts-text
+  text-align: center
+
+.subscribe-form
+  width: 100%
+  max-width: 600px
+  margin: 0 auto 20px
+
+.wrap-input
+  position: relative
+
+.input-field
+  $bg_color_input: #f5f5f5
+  width: 100%
+  display: block
+  background-color: $bg_color_input
+  border: none
+  padding: 18px 60px 18px 10px
+  box-shadow: inset 1px 1px 2px 1px #efefef
+
+.btn-submit
+  $bg_color_btn: $color_mark_text
+  $color: #fff
+  background-color: $bg_color_btn
+  color: $color
+  font-size: 24px
+  text-align: center
+  vertical-align: middle
+  width: 50px
+  height: 100%
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  cursor: pointer
+  border: none
+  opacity: .9
+
+  &:hover
+    opacity: 1
+
+.address-img
+  margin-bottom: 20px
+
+.contacts-block-heading
+  $color: #0b0c11
+  font-family: poppins_lightregular, $f_family_default
+  font-size: 10px
+  font-weight: bold
+  color: $color
+  letter-spacing: 2px
+  text-transform: uppercase
+  margin-bottom: 20px
+
+.address-content
+  $color_address_content: $color_section_block
+  font-family: playfair_displaybold, $f_family_default
+  font-size: 18px
+  font-style: normal
+  color: $color_address_content
+  display: block
+  margin-bottom: 20px
+
+  & span
+    padding-left: 6%
+
+.btn-contacts
+  $color_btn_contacts: $color_mark_text
+  font-family: poppins_lightregular, $f_family_default
+  font-size: 10px
+  font-weight: bold
+  color: $color_btn_contacts
+  letter-spacing: 2px
+  text-transform: uppercase
+  padding-bottom: 8px
+  position: relative
+
+  &::after
+    content: ""
+    width: 100%
+    height: 2px
+    background-color: $color_btn_contacts
+    position: absolute
+    bottom: 0
+    left: 0
+
 
 /* Tablet */
 @media screen and (min-width: 680px)
+  .block-content
+    @include flex_row_wrap
+    @include flex_s_between
+
   .page-section
     margin-bottom: 50px
 
@@ -496,6 +600,19 @@ main
     & .training-img
       width: 40%
 
+  // Contacts
+  .address-block-content
+    justify-content: space-between
+    padding-right: 10px
+    padding-left: 10px
+
+  .address-img
+    width: 47%
+
+  .address-block
+    width: 47%
+    padding-top: 5%
+
 
 /* Desktop */
 @media screen and (min-width: 980px)
@@ -535,3 +652,12 @@ main
 
   .bg-heading
     font-size: 120px
+
+  // Contacts
+  .address-block-content
+    justify-content: space-between
+    padding-right: 10px
+    padding-left: 10px
+
+  .address-content
+    font-size: 28px

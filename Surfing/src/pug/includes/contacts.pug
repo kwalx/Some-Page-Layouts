@@ -1,0 +1,31 @@
+section.contacts.page-section
+  .contacts-container
+    .contacts-row
+      .block-content
+        .contacts-heading
+          h2.page-heading Join the Club
+          .contacts-text
+            p By better understanding the various aspects of surfing, you will improve faster and have more fun in the water
+
+    .contacts-row
+      .block-content
+        form(name="subscribe-form", action="#", method="post").subscribe-form
+          fieldset
+            div.wrap-input
+              input(type="email", name="user-email", placeholder="Your E-mail").input-field
+              button.btn-submit &#10095;
+
+    .contacts-row
+      .block-content.address-block-content
+        .address-img
+          picture
+            source(srcset="img/img-address.webp", type="image/webp")
+            img(src="img/img-address.jpg", alt="Our Camp")
+
+        .address-block
+          h3.contacts-block-heading Our Camp
+          address.address-content
+            span CA 91932, USA<br>
+            span Imperial Beach<br>
+            span 560 Silver Strand Blvd
+          a(href="#", target="_blank").btn-contacts Get in Touch
