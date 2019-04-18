@@ -15,6 +15,7 @@ h1,
 h2,
 h3,
 h4,
+h6,
 ul,
 p,
 fieldset,
@@ -48,6 +49,9 @@ body
   color: $color_default
   background-color: $bg_color_default
 
+  &.overflow-hid
+    overflow: hidden
+
 [class*="-container"]
   width: 100%
   max-width: $max_width
@@ -60,8 +64,16 @@ body
 .page-section
   margin-bottom: 20px
 
-/* Header */
+.vertical-line
+  position: relative
+  height: 50px
+  margin: 10px 0 30px
 
+  &::after
+    content: ""
+    @include vertical_line
+
+/* Header */
 .header
   position: fixed
   top: 0
@@ -185,6 +197,13 @@ main
   cursor: default
 
 /* Info */
+.hidden-heading
+  visibility: hidden
+  display: none
+  width: 1px
+  height: 1px
+  font-size: 1px
+
 .wrap-quote
   font-size: 20px
   color: $color_section_block
@@ -193,11 +212,6 @@ main
   max-width: 650px
   margin: 0 auto 10px
   position: relative
-  padding-bottom: 50px
-
-  &::after
-    content: ""
-    @include vertical_line
 
 .quote
   font-family: playfair_displayregular, $f_family_default
@@ -276,7 +290,9 @@ main
   text-transform: uppercase
   letter-spacing: 2px
   position: relative
+  display: inline-block
   padding-bottom: 8px
+  margin-bottom: 25px
 
   &::after
     content: ""
@@ -376,11 +392,55 @@ main
   text-align: center
   padding: 20px
 
+/* Training */
+.training-row
+  margin-bottom: 35px
+
+.training-heading
+  position: relative
+
+.page-heading
+  $color_heading: $color_section_block
+  font-family: playfair_displaybold, $f_family_default
+  font-size: 30px
+  color: $color_heading
+  margin-bottom: .5em
+
+  &::after
+    $bg_color_underline: $bg_color_vertical_line
+    content: ""
+    width: .6em
+    height: 2px
+    background-color: $bg_color_underline
+    position: absolute
+    bottom: 3px
+    left: 0
+
+.bg-heading
+  $color_heading_bgackground: #f9f9f9
+  font-family: poppinsregular, $f_family_default
+  font-size: 80px
+  font-weight: bold
+  line-height: 1
+  color: $color_heading_bgackground
+  position: absolute
+  bottom: 0
+  left: 0
+  z-index: -1
+
+.training-text
+  $color_text: $color_info_block
+  color: $color_text
+
 
 /* Tablet */
 @media screen and (min-width: 680px)
   .page-section
     margin-bottom: 50px
+
+  .vertical-line
+    height: 90px
+    margin: 15px 0 50px
 
   // Banner
   .banner-heading
@@ -410,8 +470,31 @@ main
   .btn-more
     margin-top: 35px
 
-  .heading
-    font-size: 42px
+  // Training
+  .training-row
+    margin-bottom: 50px
+
+  .top-row
+    margin-bottom: 65px
+
+    & .block-content
+      justify-content: space-between
+
+  .training-text-block
+    width: 40%
+    padding: 35px 10px 5px 4%
+
+  .training-img
+    width: 55%
+
+  .training-row-reverse
+
+    & .block-content
+      flex-direction: row-reverse
+      justify-content: center
+
+    & .training-img
+      width: 40%
 
 
 /* Desktop */
@@ -440,9 +523,15 @@ main
       display: inline-block
 
   // Info
-  .wrap-quote
-    padding-bottom: 120px
-    margin-bottom: 30px
+  .heading
+    font-size: 42px
 
-    &::after
-      height: 90px
+  // Training
+  .training-text-block
+    padding-top: 52px
+
+  .page-heading
+    font-size: 42px
+
+  .bg-heading
+    font-size: 120px
