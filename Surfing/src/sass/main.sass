@@ -134,6 +134,7 @@ body
   font-size: 10px
   text-transform: uppercase
   color: #0b0c11
+  letter-spacing: $letter_spacing
   display: block
   padding: 10px 20px
 
@@ -167,8 +168,9 @@ main
   margin-bottom: 5px
 
 .mark-text
+  $letter_spacing: 3px
   font-family: poppinsregular, $f_family_default
-  letter-spacing: 3px
+  letter-spacing: $letter_spacing
   font-size: 11px
   color: $color_mark_text
   display: block
@@ -182,7 +184,7 @@ main
   bottom: 0
 
   & button
-    margin: 0 10px
+    display: inline-block
 
 .banner-nav
   width: 30px
@@ -190,6 +192,7 @@ main
   display: inline-block
   border-radius: 50%
   background-color: $color_mark_text
+  vertical-align: middle
   position: relative
 
   img
@@ -198,6 +201,21 @@ main
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+
+.banner-slide-counter
+  $color_slide_counter: #262626
+  font-family: poppinsregular, $f_family_default
+  font-size: 11px
+  font-weight: bold
+  color: $color_slide_counter
+  width: 50px
+  display: inline-block
+  vertical-align: middle
+  padding: 0 5px
+
+.slide-counter-mark
+  $color_slide_counter_mark: $color_mark_text
+  color: $color_slide_counter_mark
 
 @mixin background-opacity($color, $opacity: 0.3)
   background: $color
@@ -231,7 +249,7 @@ main
 .quote-author
   font-size: 11px
   text-transform: uppercase
-  letter-spacing: 2px
+  letter-spacing: $letter_spacing
 
 .info-media
   margin-bottom: 20px
@@ -299,7 +317,7 @@ main
   font-size: 11px
   font-weight: bold
   text-transform: uppercase
-  letter-spacing: 2px
+  letter-spacing: $letter_spacing
   position: relative
   display: inline-block
   padding-bottom: 8px
@@ -327,7 +345,7 @@ main
   font-size: 11px
   color: $tagline_color
   text-transform: uppercase
-  letter-spacing: 2px
+  letter-spacing: $letter_spacing
   display: inline-block
   margin-bottom: 5px
 
@@ -367,7 +385,7 @@ main
   font-family: poppins_lightregular, $f_family_default
   font-size: 11px
   text-transform: uppercase
-  letter-spacing: 2px
+  letter-spacing: $letter_spacing
   color: $color_product_title
   margin-bottom: 2px
 
@@ -473,6 +491,37 @@ main
   padding: 18px 60px 18px 10px
   box-shadow: inset 1px 1px 2px 1px #efefef
 
+.input-field::-webkit-input-placeholder
+  font-size: 11px
+  font-weight: bold
+  text-transform: uppercase
+  color: $color_placeholder
+  letter-spacing: $letter_spacing
+
+.input-field::-moz-placeholder
+  font-size: 11px
+  font-weight: bold
+  text-transform: uppercase
+  color: $color_placeholder
+  letter-spacing: $letter_spacing
+
+.input-field:-ms-input-placeholder
+  font-size: 11px
+  font-weight: bold
+  text-transform: uppercase
+  color: $color_placeholder
+  letter-spacing: $letter_spacing
+
+.input-field:-moz-placeholder
+  font-size: 11px
+  font-weight: bold
+  text-transform: uppercase
+  color: $color_placeholder
+  letter-spacing: $letter_spacing
+
+input::-moz-placeholder
+  opacity: 1
+
 .btn-submit
   $bg_color_btn: $color_mark_text
   $color: #fff
@@ -503,7 +552,7 @@ main
   font-size: 10px
   font-weight: bold
   color: $color
-  letter-spacing: 2px
+  letter-spacing: $letter_spacing
   text-transform: uppercase
   margin-bottom: 20px
 
@@ -525,7 +574,7 @@ main
   font-size: 10px
   font-weight: bold
   color: $color_btn_contacts
-  letter-spacing: 2px
+  letter-spacing: $letter_spacing
   text-transform: uppercase
   padding-bottom: 8px
   position: relative

@@ -46,14 +46,31 @@ $(document).ready(function() {
 
   /* Banner carousel */
   (function() {
-    $('.owl-carousel.banner-owl-carousel').owlCarousel({
+    let owl = $('.owl-carousel.banner-owl-carousel');
+
+    owl.owlCarousel({
       items: 1,
       nav: true,
       navText: [
-        '<span class="banner-nav"><img src="img/bg-arrow-prev.png" alt="prev"></span>',
+        '<span class="banner-nav"><img src="img/bg-arrow-prev.png" alt="prev"></span><span class="banner-slide-counter"></span>',
         '<span class="banner-nav"><img src="img/bg-arrow-next.png" alt="next"></span>'
       ],
-      autoHeight: true
+      autoHeight: true,
+      onInitialized: function(e) {
+        $('.banner-slide-counter').html(
+          '<span class="slide-counter-mark">1</span> / ' + this.items().length
+        );
+      }
+    });
+
+    owl.on('changed.owl.carousel', function(e) {
+      $('.banner-slide-counter').html(
+        '<span class="slide-counter-mark">' +
+          ++e.page.index +
+          '</span>' +
+          ' / ' +
+          e.item.count
+      );
     });
   })();
 
