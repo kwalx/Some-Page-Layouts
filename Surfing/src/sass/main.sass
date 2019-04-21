@@ -82,7 +82,14 @@ body
   left: 0
   z-index: 11
   background-color: $bg_color_default
-  box-shadow: 0 1px 3px $color_header_shadow
+  padding-top: 8px
+  padding-bottom: 8px
+  transition: all .25s
+
+  &.header-shadow
+    box-shadow: 0 1px 3px $color_header_shadow
+    padding-top: 0
+    padding-bottom: 0
 
   & .block-content
     @include flex_row_wrap

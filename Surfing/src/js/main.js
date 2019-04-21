@@ -13,7 +13,7 @@ $(document).ready(function() {
       }
     });
 
-    $('.scrolling-navigation').on('click', 'a', function(e) {
+    $('.anchor-link-navigation').on('click', 'a', function(e) {
       e.preventDefault();
 
       $('.nav-list').removeClass('active');
@@ -31,6 +31,16 @@ $(document).ready(function() {
       e.preventDefault();
 
       $('body,html').animate({ scrollTop: 0 }, 1000);
+    });
+
+    $(window).scroll(function() {
+      let h = $(window).scrollTop();
+
+      if (h > $('.header').height()) {
+        $('.header').addClass('header-shadow');
+      } else {
+        $('.header').removeClass('header-shadow');
+      }
     });
   })();
 
