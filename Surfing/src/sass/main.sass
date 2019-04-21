@@ -92,7 +92,7 @@ body
   padding: 10px
 
 .header-logo
-  width: 17px
+  width: 16px
   height: auto
   display: block
 
@@ -532,6 +532,33 @@ main
     bottom: 0
     left: 0
 
+/* Footer */
+.footer
+  padding-top: 15px
+  padding-bottom: 15px
+
+.footer-logo
+  width: 16px
+  margin: 0 auto 20px
+
+.footer-navigation
+  margin: 0 auto 20px
+  text-align: center
+
+  li
+    margin-bottom: 8px
+
+  a
+    $color_footer_link: #0b0c11
+    font-size: 10px
+    text-transform: uppercase
+    color: $color_footer_link
+    padding: 5px
+
+.footer-social
+  @include flex_s_around
+  margin: 0 auto
+
 
 /* Tablet */
 @media screen and (min-width: 680px)
@@ -612,6 +639,19 @@ main
   .address-block
     width: 47%
     padding-top: 5%
+
+  /* Footer */
+  .footer
+    .block-content
+      display: block
+
+  .footer-navigation,
+  .footer-social
+    @include flex_row_wrap
+    justify-content: center
+
+    li
+      margin: 0 20px
 
 
 /* Desktop */
