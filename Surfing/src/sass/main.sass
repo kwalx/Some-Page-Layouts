@@ -74,6 +74,9 @@ body
     content: ""
     @include vertical_line
 
+.bg-mark
+  background-color: rgba(255, 255, 255, .7)
+
 /* Header */
 .header
   $color_header_shadow: #ccc
@@ -158,6 +161,8 @@ main
   writing-mode: vertical-lr
   transform: rotate(180deg)
   white-space: nowrap
+  padding-right: 2px
+  display: inline-block
 
 .carousel-contain
   width: 96%
@@ -640,6 +645,9 @@ input::-moz-placeholder
 
 /* Tablet */
 @media screen and (min-width: 680px)
+  .bg-mark
+    background-color: transparent
+
   .block-content
     @include flex_row_wrap
     @include flex_s_between
