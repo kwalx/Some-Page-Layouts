@@ -35,6 +35,11 @@ $letter_spacing: 2px
   @include flex_row_wrap
   justify-content: space-around
 
+@mixin flex_start_row-reverse
+  display: flex
+  align-items: flex-start
+  flex-direction: row-reverse
+
 // vertical line
 @mixin vertical_line
   width: 2px

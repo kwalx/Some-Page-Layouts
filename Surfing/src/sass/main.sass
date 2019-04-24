@@ -38,6 +38,7 @@ a
 
 picture
   display: block
+  width: 100%
 
 img
   width: 100%
@@ -146,19 +147,38 @@ main
 .banner-carousel
   padding-bottom: 5px
 
+.wrap-slogan
+  @include flex_start_row-reverse
+
+.vertical-slogan
+  font-size: 9px
+  font-weight: bold
+  letter-spacing: $letter_spacing
+  text-transform: uppercase
+  writing-mode: vertical-lr
+  transform: rotate(180deg)
+  white-space: nowrap
+
+.carousel-contain
+  width: 96%
+
 .banner-content-inner
   display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
 
 .text-content
-  margin-right: -16%
   position: relative
   top: 0
   left: 0
   margin-top: 5%
-  max-width: 400px
+  margin-right: -60%
+  width: 90%
+  max-width: 490px
 
 .img-content
-  width: 80%
+  width: 85%
 
 .banner-heading
   font-family: playfair_displaybold, $f_family_default
@@ -213,6 +233,7 @@ main
   display: inline-block
   vertical-align: middle
   padding: 0 5px
+  position: relative
 
 .slide-counter-mark
   $color_slide_counter_mark: $color_mark_text
@@ -622,6 +643,19 @@ input::-moz-placeholder
   .block-content
     @include flex_row_wrap
     @include flex_s_between
+
+  .vertical-slogan
+    font-size: 10px
+
+  .wrap-slogan
+    @include flex_start_row-reverse
+
+  .text-content
+    margin-right: -30%
+    width: 100%
+
+  .img-content
+    width: 75%
 
   .page-section
     margin-bottom: 50px

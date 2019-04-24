@@ -24,13 +24,13 @@ $(document).ready(function() {
 
       top = $(id).offset().top - $('.header').height();
 
-      $('body,html').animate({ scrollTop: top }, 1000);
+      $('body,html').animate({ scrollTop: top }, 700);
     });
 
     $('.scroll-top').on('click', 'a', function(e) {
       e.preventDefault();
 
-      $('body,html').animate({ scrollTop: 0 }, 1000);
+      $('body,html').animate({ scrollTop: 0 }, 700);
     });
 
     $(window).scroll(function() {
@@ -51,6 +51,7 @@ $(document).ready(function() {
     owl.owlCarousel({
       items: 1,
       nav: true,
+      margin: 10,
       navText: [
         '<span class="banner-nav"><img src="img/bg-arrow-prev.png" alt="prev"></span><span class="banner-slide-counter"></span>',
         '<span class="banner-nav"><img src="img/bg-arrow-next.png" alt="next"></span>'
