@@ -642,6 +642,21 @@ input::-moz-placeholder
   @include flex_s_around
   margin: 0 auto
 
+.copyright-block
+  font-size: 12px
+  color: inherit
+  text-align: center
+  padding: 15px 0
+
+.copyright-link
+  $color_copyright_link: $color_default
+  $color_copyright_link_hover: $color_mark_text
+  color: $color_copyright_link
+  font-weight: bold
+
+  &:hover
+    color: $color_copyright_link_hover
+
 
 /* Tablet */
 @media screen and (min-width: 680px)
