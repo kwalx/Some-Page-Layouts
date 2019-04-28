@@ -448,6 +448,40 @@ main
   text-align: center
   padding: 20px
 
+.shop-navigation
+  position: absolute
+  top: 50%
+  left: 0
+  transform: translateY(-50%)
+  width: 100%
+
+  &.disabled
+    display: none
+
+  .owl-prev,
+  .owl-next
+    font-size: 30px
+    position: absolute
+    top: 0
+    background-color: transparent
+    border: none
+    height: 100px
+    width: 36px
+    opacity: .75
+
+    &:hover
+      opacity: 1
+
+    &.disabled
+      opacity: .25
+      cursor: default
+
+  .owl-prev
+    left: 0
+
+  .owl-next
+    right: 0
+
 /* Training */
 .training-row
   margin-bottom: 35px
