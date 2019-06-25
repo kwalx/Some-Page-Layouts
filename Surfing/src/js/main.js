@@ -33,10 +33,10 @@ $(document).ready(function() {
       $('body,html').animate({ scrollTop: 0 }, 700);
     });
 
-    $(window).scroll(function() {
-      let h = $(window).scrollTop();
+    $(window).on('scroll', function() {
+      let scrollPos = $(window).scrollTop();
 
-      if (h > $('.header').height()) {
+      if (scrollPos > $('.header').height()) {
         $('.header').addClass('header-shadow');
       } else {
         $('.header').removeClass('header-shadow');
@@ -80,7 +80,11 @@ $(document).ready(function() {
     $('.owl-carousel.shop-owl-carousel').owlCarousel({
       items: 3,
       nav: true,
-      navText: ['', 'prev'],
+      navContainerClass: 'shop-navigation',
+      navText: [
+        '<span class="nav-shop-left nav-shop">&#10094;</span>',
+        '<span class="nav-shop-right nav-shop">&#10095;</span>'
+      ],
       autoHeight: true,
       responsive: {
         320: {
