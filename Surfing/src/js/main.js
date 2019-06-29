@@ -33,6 +33,7 @@ $(document).ready(function() {
       $('body,html').animate({ scrollTop: 0 }, 700);
     });
 
+    /* Header bottom shadow on scrolling */
     $(window).on('scroll', function() {
       let scrollPos = $(window).scrollTop();
 
@@ -43,6 +44,7 @@ $(document).ready(function() {
       }
     });
 
+    /* Active link on scrolling */
     $(window).on('scroll', function() {
       const $sections = $('section');
 
