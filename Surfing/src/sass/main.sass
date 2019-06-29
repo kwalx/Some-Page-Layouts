@@ -142,6 +142,10 @@ body
   display: block
   padding: 10px 20px
 
+  &:hover,
+  &.active
+    color: $color_mark_text
+
 /* Main */
 main
   padding-top: 70px
@@ -671,6 +675,9 @@ input::-moz-placeholder
     text-transform: uppercase
     color: $color_footer_link
     padding: 5px
+
+    &:hover
+      color: $color_mark_text
 
 .footer-social
   @include flex_s_around

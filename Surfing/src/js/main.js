@@ -42,6 +42,22 @@ $(document).ready(function() {
         $('.header').removeClass('header-shadow');
       }
     });
+
+    $(window).on('scroll', function() {
+      const $sections = $('section');
+
+      $sections.each(function(i, el) {
+        const top = $(el).offset().top - 100;
+        const bottom = top + $(el).height();
+        const scroll = $(window).scrollTop();
+        const id = $(el).attr('id');
+
+        if (scroll > top && scroll < bottom) {
+          $('a.active').removeClass('active');
+          $('a[href="#' + id + '"]').addClass('active');
+        }
+      });
+    });
   })();
 
   /* Banner carousel */
