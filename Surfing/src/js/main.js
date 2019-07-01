@@ -137,6 +137,15 @@ $(document).ready(function() {
       video.addEventListener('click', () => {
         let iframe = createIframe(id);
 
+        /* Remove function for ie */
+        if (!('remove' in Element.prototype)) {
+          Element.prototype.remove = function() {
+            if (this.parentNode) {
+              this.parentNode.removeChild(this);
+            }
+          };
+        }
+
         link.remove();
         button.remove();
         video.appendChild(iframe);
