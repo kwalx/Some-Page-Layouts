@@ -120,6 +120,14 @@ $(document).ready(function() {
 
   /* Video (Info section) */
   (function() {
+    function isIE() {
+      var userBrowser = navigator.userAgent.toLowerCase();
+      return userBrowser.indexOf('msie') != -1
+        ? parseInt(userBrowser.split('msie')[1])
+        : false;
+    }
+    if (isIE() == 9) return false;
+
     function findVideos() {
       let videos = document.querySelectorAll('.info-media-video');
 
@@ -134,7 +142,9 @@ $(document).ready(function() {
       let button = video.querySelector('.video-btn');
       let id = parseMediaURL(media);
 
-      video.addEventListener('click', () => {
+      video.addEventListener('click', (e) => {
+        e.preventDefault();
+
         let iframe = createIframe(id);
 
         /* Remove function for ie */

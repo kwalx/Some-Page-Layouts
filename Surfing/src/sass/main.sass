@@ -243,6 +243,7 @@ main
   vertical-align: middle
   padding: 0 5px
   position: relative
+  cursor: default
 
 .slide-counter-mark
   $color_slide_counter_mark: $color_mark_text
@@ -447,6 +448,9 @@ main
   color: $procuct_buy_color
   text-transform: uppercase
   display: inline-block
+
+  &:hover
+    color: $color_mark_text
 
 .shop-row-link
   text-align: center
@@ -682,6 +686,9 @@ input::-moz-placeholder
 .footer-social
   @include flex_s_around
   margin: 0 auto
+
+  img
+    vertical-align: middle
 
 .copyright-block
   font-size: 12px
