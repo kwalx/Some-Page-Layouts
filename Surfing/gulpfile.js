@@ -25,7 +25,7 @@ const config = {
   build: 'public'
 };
 
-gulp.task('clean', done => {
+gulp.task('clean', (done) => {
   del.sync(config.build);
   del.sync(`${config.src}/assets/`);
   done();
@@ -49,7 +49,7 @@ gulp.task('pug', () => {
     .src(`${config.src}/pug/layout/*.pug`)
     .pipe(
       plumber({
-        errorHandler: notify.onError(err => {
+        errorHandler: notify.onError((err) => {
           return {
             title: 'PUG ERROR!',
             message: err.message
@@ -81,13 +81,13 @@ gulp.task('html', () => {
  * Styles
  */
 gulp.task('sass', () => {
-  const sassStyleFiles = [`${config.src}/sass/main.sass`];
+  const sassStyleFiles = [ `${config.src}/sass/main.sass` ];
 
   return gulp
     .src(sassStyleFiles)
     .pipe(
       plumber({
-        errorHandler: notify.onError(err => {
+        errorHandler: notify.onError((err) => {
           return {
             title: 'SASS ERROR!',
             message: err.message
@@ -98,20 +98,20 @@ gulp.task('sass', () => {
     .pipe(sass())
     .pipe(csscomb())
     .pipe(sourcemaps.init())
-    .pipe(postcss([autoprefixer('> 0.1%')]))
+    .pipe(postcss([ autoprefixer('> 0.1%') ]))
     .pipe(concat('main.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${config.src}/assets/css`));
 });
 
 gulp.task('sass:ie', () => {
-  const sassIEStyleFiles = [`${config.src}/sass/ie/ie9.sass`];
+  const sassIEStyleFiles = [ `${config.src}/sass/ie/ie9.sass` ];
 
   return gulp
     .src(sassIEStyleFiles)
     .pipe(
       plumber({
-        errorHandler: notify.onError(err => {
+        errorHandler: notify.onError((err) => {
           return {
             title: 'SASS IE ERROR!',
             message: err.message
@@ -122,7 +122,7 @@ gulp.task('sass:ie', () => {
     .pipe(sass())
     .pipe(csscomb())
     .pipe(sourcemaps.init())
-    .pipe(postcss([autoprefixer('> 0.1%')]))
+    .pipe(postcss([ autoprefixer('> 0.1%') ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${config.src}/assets/css/ie`));
 });
@@ -140,8 +140,8 @@ gulp.task('css:libs', () => {
 });
 
 gulp.task('css:ie', () => {
-  const plugins = [cssnano()];
-  const cssIEfiles = [`${config.src}/assets/css/ie/ie9.css`];
+  const plugins = [ cssnano() ];
+  const cssIEfiles = [ `${config.src}/assets/css/ie/ie9.css` ];
 
   return gulp
     .src(cssIEfiles)
@@ -151,7 +151,7 @@ gulp.task('css:ie', () => {
 });
 
 gulp.task('css', () => {
-  const plugins = [cssnano()];
+  const plugins = [ cssnano() ];
   const cssFiles = [
     `${config.src}/assets/css/libs.css`,
     `${config.src}/assets/css/main.css`
@@ -168,14 +168,14 @@ gulp.task('css', () => {
  * Scripts
  */
 gulp.task('babel', () => {
-  const jsFiles = [`${config.src}/js/main.js`];
+  const jsFiles = [ `${config.src}/js/main.js` ];
 
   return gulp
     .src(jsFiles)
     .pipe(sourcemaps.init())
     .pipe(
       plumber({
-        errorHandler: notify.onError(err => {
+        errorHandler: notify.onError((err) => {
           return {
             title: 'JS ERROR!',
             message: err.message
@@ -185,7 +185,7 @@ gulp.task('babel', () => {
     )
     .pipe(
       babel({
-        presets: ['@babel/env']
+        presets: [ '@babel/env' ]
       })
     )
     .pipe(concat('main.js'))
