@@ -1,0 +1,64 @@
+@import "variables.scss";
+
+@import "fonts.scss";
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+ul,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: none;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: $max_width;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 -10px;
+}
+
+body {
+  font: #{$f_size}/#{$line_height} $f_family_default;
+  background-color: $bg_color_default;
+  color: $color_default;
+}
+
+/* Header */
+.header__top {
+  color: $color_header_top;
+  background-color: $bg_header_top;
+}
+
+.register-acc__item {
+  color: $color_header_top;
+}

@@ -1,0 +1,16 @@
+/**
+ * Fonts
+ */
+
+@mixin font-face($family, $filename, $folder, $style, $weight, $f_display_value) {
+  @font-face {
+    font-family: $family;
+    src: url("../#{$folder}/#{$filename}.woff") format("woff"),
+      url("../#{$folder}/#{$filename}.woff2") format("woff2");
+    font-style: $style;
+    font-weight: $weight;
+    font-display: $f_display_value;
+  }
+}
+
+@include font-face("open_sans_bold", "open-sans-bold-webfont", "fonts", normal, normal, swap);
