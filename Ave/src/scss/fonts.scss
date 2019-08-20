@@ -13,4 +13,6 @@
   }
 }
 
-@include font-face("open_sans_bold", "open-sans-bold-webfont", "fonts", normal, normal, swap);
+@include font-face("montserrat_bold", "montserrat-bold", "fonts", normal, normal, swap);
+@include font-face("montserrat_regular", "montserrat-regular", "fonts", normal, normal, swap);
+@include font-face("montserrat_light", "montserrat-light", "fonts", normal, normal, swap);
