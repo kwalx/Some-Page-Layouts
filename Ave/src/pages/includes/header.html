@@ -1,25 +1,30 @@
 <header class="header">
-  <!-- Header top -->
-  <div class="header__top">
+  <!-- Header banner -->
+  <div class="header__banner">
+    //= ../includes/banner.html
+  </div>
+  <!-- Header banner end -->
+
+  <!-- SubHeader -->
+  <div class="subheader">
     <div class="container">
-      <div class="row">
+      <div class="row subheader__row">
         <div class="currency">
-          <label>Currency:&nbsp;
-            <select name="currency">
+          <label>
+            Currency:&nbsp;<select name="currency" class="currency__select">
               <option value="gbp">GBP</option>
               <option value="usd">USD</option>
             </select>
           </label>
         </div>
-        <div class="register-acc"><a href="#" class="register-acc__item">Register</a><a href="#"
-            class="register-acc__item">Sign in</a></div>
-        <div class="cart"><a href="#"></a></div>
+        <div class="register-block">
+          <div class="register-acc"><a href="#" class="register-acc__item">Register</a><a href="#"
+              class="register-acc__item">Sign in</a></div>
+          <div class="cart-container"><a href="#" class="cart">Cart</a></div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- Header top end -->
+  <!-- SubHeader end -->
 
-  <!-- Header banner -->
-  <div class="header__banner">Banner</div>
-  <!-- Header banner end -->
 </header>
