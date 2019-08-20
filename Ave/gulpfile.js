@@ -16,6 +16,9 @@ const autoprefixer = require('autoprefixer');
 const csscomb = require('gulp-csscomb');
 const cssnano = require('cssnano');
 
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+
 const config = {
   src: 'src',
   build: 'build',
@@ -137,6 +140,40 @@ gulp.task('css:public', () => {
 });
 
 /**
+ * Scripts
+ */
+gulp.task('babel', () => {
+  const jsFiles = [ `${config.src}/js/main.js` ];
+
+  return gulp
+    .src(jsFiles)
+    .pipe(sourcemaps.init())
+    .pipe(plumber(errorNotifier('JS Errror!')))
+    .pipe(
+      babel({
+        presets: [ '@babel/env' ]
+      })
+    )
+    .pipe(concat('main.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(`${config.build}/js`));
+});
+
+gulp.task('js:public', () => {
+  let jsFiles = [ `${config.build}/js/main.js` ];
+
+  return gulp
+    .src(jsFiles)
+    .pipe(
+      uglify({
+        toplevel: true
+      })
+    )
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(`${config.public}/js`));
+});
+
+/**
  * Images
  */
 gulp.task('img', () => {
@@ -176,6 +213,7 @@ gulp.task('fonts:public', () => {
 gulp.task('watch', () => {
   gulp.watch(`${config.src}/pages/**/*.html`, gulp.series('html'));
   gulp.watch(`${config.src}/scss/**/*.scss`, gulp.series('scss'));
+  gulp.watch(`${config.src}/js/**/*.js`, gulp.series('babel'));
   gulp.watch(`${config.src}/img/**/*`, gulp.series('img'));
   gulp.watch(`${config.src}/fonts/**/*`, gulp.series('fonts'));
 });
@@ -185,7 +223,7 @@ gulp.task('watch', () => {
  */
 gulp.task(
   'build',
-  gulp.series('clean', 'html', 'scss', 'img', 'css:libs', 'fonts')
+  gulp.series('clean', 'html', 'scss', 'babel', 'img', 'css:libs', 'fonts')
 );
 
 /**
@@ -202,6 +240,7 @@ gulp.task(
     'build',
     'html:public',
     'css:public',
+    'js:public',
     'img:public',
     'fonts:public'
   )
