@@ -14,6 +14,7 @@ body {
 }
 
 body,
+h1,
 ul,
 p {
   padding: 0;
@@ -45,106 +46,24 @@ p {
 
 .row {
   margin: 0 -10px;
+  padding: 0 5px;
 }
 
 body {
   font: #{$f_size}/#{$line_height} "montserrat_regular", $f_family_default;
   background-color: $bg_color_default;
   color: $color_default;
-  padding: 0 5px;
 }
 
 /* Header */
-.subheader__row {
-  color: $color_header_top;
-  background-color: $bg_header_top;
-  text-align: center;
-  padding: 15px 5px;
-}
-
-.currency {
-  margin-bottom: 20px;
-
-  &__select {
-    color: $color_header_top;
-    background-color: transparent;
-    border: none;
-  }
-}
-
-.register-acc {
-  margin-bottom: 20px;
-
-  &__item {
-    color: $color_header_top;
-    padding: 15px;
-  }
-}
-
-.cart-container {
-}
-
-.cart {
-  color: $color_header_top;
-  padding: 15px;
-}
-
-// Banner
-.banner {
-  background: url(../img/bg-banner.png) no-repeat;
-}
-
-.logo {
-  display: inline-block;
-}
-
-.section-nav {
-  text-align: center;
-}
-
-.page-nav-inner {
-  &.close {
-    display: none;
-  }
-}
+@import "header.scss";
 
 /* Tablet */
 @media screen and (min-width: 520px) {
   body {
     padding: 0;
   }
-
-  /* Header */
-
-  .header {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .subheader__row,
-  .register-block {
-    @include flex_space_between;
-  }
-
-  .currency,
-  .register-acc {
-    margin-bottom: 0;
-  }
-
-  .cart {
-    margin-left: 30px;
-  }
 }
 
 @media screen and (min-width: 980px) {
-  // Banner
-  .btn-menu {
-    display: none;
-  }
-
-  .page-nav-inner {
-    &.close {
-      display: block;
-    }
-  }
 }
