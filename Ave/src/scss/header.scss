@@ -6,6 +6,12 @@
 }
 
 .supheader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
   &__row {
     color: $color_header_top;
     background-color: $bg_header_top;
@@ -15,6 +21,13 @@
     text-align: center;
     padding: 10px 0;
     margin: 0 auto;
+    transition: all .4s;
+  }
+}
+
+.sticky {
+  & .supheader__inner {
+    padding-bottom: 0;
   }
 }
 
@@ -49,10 +62,12 @@
 // Banner
 .header__banner-home {
   background-color: $bg_banner_home;
+  padding-top: 40px;
 }
 
 .banner {
-  background: url(../img/bg-banner.png) no-repeat;
+  background: url(../img/bg-banner.png) no-repeat left/contain;
+  padding-top: 88px;
 }
 
 .logo {
@@ -60,11 +75,42 @@
 }
 
 .section-nav {
-  padding: 15px 0;
-  text-align: center;
+  &__inner {
+    padding: 15px 0;
+    text-align: center;
+  }
+}
+
+.page-navigation {
+  transition: all .3s;
+
+  &.overlay {
+    background-color: rgba($color: #fff, $alpha: .95);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+  }
+}
+
+.btn-menu {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
 }
 
 .page-nav-inner {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-50%);
+  transition: all .3s;
+  display: block;
+
   &.close {
     display: none;
   }
@@ -162,19 +208,53 @@ input::-moz-placeholder {
 
 @media screen and (min-width: 980px) {
   .supheader {
+    position: static;
+
     &__inner {
       width: 85%;
     }
   }
 
+  .sticky {
+    & .supheader__inner {
+      padding-bottom: 10px;
+    }
+  }
+
+  .desktop-sticky {
+    & .section-nav {
+      background-color: #fff;
+      position: fixed;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      transition: top .3s;
+    }
+
+    & .section-nav__inner {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+
   // Banner
-  .banner__content {
-    padding: 50px 0;
+  .banner {
+    padding-top: 0;
+
+    &__content {
+      padding: 50px 0;
+    }
+  }
+
+  .header__banner-home {
+    padding-top: 0;
   }
 
   .section-nav {
-    padding: 30px 0 20px;
-    @include flex_space_between;
+    &__inner {
+      padding: 30px 0 20px;
+      @include flex_space_between;
+    }
   }
 
   .btn-menu {
@@ -182,6 +262,8 @@ input::-moz-placeholder {
   }
 
   .page-nav-inner {
+    position: relative;
+
     &.close {
       @include flex_space_between;
       align-items: center;
