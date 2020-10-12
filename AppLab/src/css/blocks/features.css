@@ -1,0 +1,153 @@
+/* Features */
+
+.features {
+  margin-bottom: 30px;
+}
+
+.features__inner {
+  display: grid;
+}
+
+@media (width >= 480px) {
+  .features__inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 1em;
+  }
+
+  .features__text-block {
+    order: 1;
+  }
+}
+
+@media (width <= 880px) {
+  .features__inner {
+    grid-template-columns: none;
+  }
+}
+
+/* Heading */
+
+.features_section-title {
+  margin-bottom: 24px;
+}
+
+.features__list_heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+@media (width >= 480px) {
+  .features__list_heading {
+    margin-bottom: 18px;
+  }
+}
+
+.features__list_heading--perfomance {
+  color: var(--basic-tomato);
+}
+
+.features__list_heading--prototyping {
+  color: var(--basic-blue);
+}
+
+.features__list_heading--editing {
+  color: var(--basic-green);
+}
+
+@media (width <= 880px) {
+  .features_section-title {
+    max-width: 70%;
+  }
+}
+
+@media (width <= 480px) {
+  .features_section-title {
+    max-width: 90%;
+  }
+}
+
+/* Slogan */
+
+.features_slogan {
+  margin-bottom: 40px;
+}
+
+@media (width >= 480px) {
+  .features_slogan {
+    margin-bottom: 80px;
+  }
+}
+
+@media (width <= 880px) {
+  .features_slogan {
+    max-width: 70%;
+  }
+}
+
+@media (width <= 480px) {
+  .features_slogan {
+    max-width: 90%;
+  }
+}
+
+/* Item */
+
+.features__item {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 110px;
+  position: relative;
+}
+
+@media (width >= 480px) {
+  .features__item {
+    margin-bottom: 55px;
+  }
+}
+
+.features__item--perfomance::before,
+.features__item--prototyping::before,
+.features__item--editing::before {
+  content: "";
+  width: 91px;
+  height: 91px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.features__item--perfomance::before {
+  background: url(../img/ico-features-apps-1.png);
+}
+
+.features__item--prototyping::before {
+  background: url(../img/ico-features-apps-2.png);
+}
+
+.features__item--editing::before {
+  background: url(../img/ico-features-apps-3.png);
+}
+
+/* Image */
+
+@media (width <= 880px) {
+  .features__image-block {
+    max-width: 200px;
+    justify-self: end;
+    margin-bottom: -242px;
+  }
+}
+
+@media (width <= 480px) {
+  .features__image-block {
+    max-width: 300px;
+    justify-self: center;
+    margin-bottom: 0;
+  }
+}

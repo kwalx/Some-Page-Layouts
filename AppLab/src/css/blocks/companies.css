@@ -1,0 +1,40 @@
+/* Companies */
+
+.companies__inner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Title */
+
+.companies__title {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--special-blue);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  max-width: 70%;
+}
+
+/* List */
+.companies__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* Item */
+
+.companies__item {
+  display: flex;
+  flex-grow: 1;
+  min-width: 200px;
+  margin-bottom: 30px;
+}
+
+/* Image container */
+.companies__image-container {
+  margin: auto;
+}

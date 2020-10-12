@@ -1,0 +1,151 @@
+/* Home */
+
+.main-banner {
+  background: url(img/bg-banner-town-shadow.png) bottom/contain no-repeat,
+    var(--light-gray);
+}
+
+.main-banner__inner {
+  display: grid;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (width >= 480px) {
+  .main-banner__inner {
+    grid-template-columns: 50% 30%;
+    justify-content: space-around;
+    column-gap: 15px;
+    align-items: center;
+  }
+}
+
+@media (width < 480px) {
+  .main-banner__inner {
+    grid-template-columns: 65% 25%;
+    column-gap: 20px;
+  }
+
+  .decoration__item {
+    display: none;
+  }
+}
+
+/* Title */
+
+.main-banner__top-text {
+  background-color: var(--extra-gray);
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  border-radius: 1em;
+  position: relative;
+  white-space: nowrap;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Text */
+
+.top-text__icon {
+  background: url(img/ico-home-mark-text.png) center/19px 19px no-repeat,
+    var(--basic-orange);
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+.main-banner__title {
+  margin-bottom: 20px;
+}
+
+/* Image */
+
+.image-block {
+  padding-top: 40px;
+}
+
+/* Decoration */
+
+.decoration {
+  z-index: -1;
+}
+
+.decoration__item {
+  width: 26px;
+  height: 26px;
+  background-color: var(--basic-orange);
+  padding: 6px;
+  position: absolute;
+}
+
+.decoration__circle::before,
+.decoration__square::before {
+  content: "";
+  background-color: var(--light-gray);
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.decoration__circle,
+.decoration__circle::before {
+  border-radius: 50%;
+}
+
+.decoration__circle-1 {
+  background: linear-gradient(
+    to top,
+    var(--special-tomato),
+    var(--basic-tomato)
+  );
+  top: 20px;
+  right: 18%;
+}
+
+.decoration__circle-2 {
+  background: linear-gradient(
+    to top,
+    var(--special-tomato),
+    var(--basic-tomato)
+  );
+  right: 8%;
+  bottom: 2%;
+}
+
+.decoration__circle-3 {
+  background: linear-gradient(
+    to top,
+    var(--special-tomato),
+    var(--basic-tomato)
+  );
+  bottom: 10%;
+  left: 20%;
+}
+
+.decoration__circle-4 {
+  background: var(--light-blue);
+  top: 7%;
+  left: -2%;
+}
+
+.decoration__square {
+  background-color: var(--light-blue);
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.decoration__square-1 {
+  top: 30%;
+  left: 20%;
+}

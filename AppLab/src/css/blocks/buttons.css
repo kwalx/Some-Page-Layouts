@@ -1,0 +1,25 @@
+/* Buttons */
+
+.page-button {
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+@media (width >= 736px) {
+  .page-button {
+    padding: 18px 25px;
+  }
+}
+
+.text-block__buttons {
+  margin-top: 30px;
+  display: grid;
+  justify-content: start;
+  grid-template-columns: max-content max-content;
+  column-gap: 20px;
+  align-items: center;
+}

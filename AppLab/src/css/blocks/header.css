@@ -1,0 +1,28 @@
+/* Header */
+
+.header {
+  background-color: var(--light-gray);
+}
+
+.header__container {
+  display: grid;
+  padding: 10px 8px 10px 8px;
+}
+
+@media (width >= 736px) {
+  .header__container {
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    padding: 20px 5px;
+  }
+}
+
+/* Logo */
+
+.logo__link {
+  display: inline-block;
+}
+
+.header__logo {
+  z-index: 1;
+}

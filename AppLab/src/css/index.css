@@ -1,0 +1,16 @@
+/* Global */
+
+@import "fonsts.css";
+@import "variables.css";
+@import "box-model.css";
+
+/* Blocks */
+
+@import "blocks/page.css";
+@import "blocks/header.css";
+@import "blocks/menu.css";
+@import "blocks/buttons.css";
+@import "blocks/home.css";
+@import "blocks/companies.css";
+@import "blocks/features.css";
+@import "blocks/about-smart";

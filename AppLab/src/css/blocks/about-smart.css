@@ -1,0 +1,74 @@
+/* Top Block */
+
+.about-smart__top-block {
+  margin-bottom: 45px;
+}
+
+/* Title */
+
+.about-smart__title {
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.about-smart__list_heading {
+  margin-bottom: 15px;
+}
+
+.about-smart__list_heading--payouts {
+  color: var(--basic-tomato);
+}
+
+.about-smart__list_heading--effect {
+  color: var(--basic-blue);
+}
+
+.about-smart__list_heading--rewards {
+  color: var(--basic-green);
+}
+
+/* Title line */
+
+.about-smart__title::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--special-gray);
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+
+/* Slogan */
+
+.about-smart__slogan {
+}
+
+/* Item */
+
+.about-smart__item {
+  margin-bottom: 45px;
+}
+
+/* Item ico */
+
+.about-smart__item::before {
+  content: "";
+  background-repeat: no-repeat;
+  width: 91px;
+  height: 91px;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.about-smart__item--payouts::before {
+  background: url(../img/ico-about-smart-1.png);
+}
+
+.about-smart__item--effect::before {
+  background: url(../img/ico-about-smart-2.png);
+}
+
+.about-smart__item--reward::before {
+  background: url(../img/ico-about-smart-3.png);
+}
