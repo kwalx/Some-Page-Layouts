@@ -1,0 +1,41 @@
+/* Section */
+
+.about-design {
+  border-bottom: 1px solid var(--extra-gray);
+  padding-bottom: 40px;
+}
+
+/* Inner */
+
+@media (width >= 560px) {
+  .about-design__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 6%;
+  }
+}
+
+/* Text block */
+
+@media (width >= 560px) {
+  .about-design__text-block {
+    order: 1;
+  }
+}
+
+/* Text block */
+
+.about-design__text-block {
+  margin-bottom: 25px;
+}
+
+/* Title */
+
+.about-design__title {
+  margin-bottom: 15px;
+}
+
+/* Slogan */
+.about-design__slogan {
+  margin-bottom: 15px;
+}

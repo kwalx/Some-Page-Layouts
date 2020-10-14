@@ -1,0 +1,97 @@
+/* Inner */
+
+.services__inner {
+  text-align: center;
+}
+
+/* Title */
+
+.services__title {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (width >= 720px) {
+  .services__title {
+    max-width: 41%;
+  }
+}
+
+/* Slogan */
+
+.services__slogan {
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+
+@media (width >= 720px) {
+  .services__slogan {
+    max-width: 56%;
+  }
+}
+
+/* List */
+
+@media (width >= 720px) {
+  .services__list {
+    --gap-value: 3%;
+    --gap-column: 3;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      calc((100% - var(--gap-value) * var(--gap-column)) / var(--gap-column))
+    );
+    justify-content: center;
+    grid-gap: var(--gap-value);
+  }
+}
+
+@media (width >= 780px) {
+  .services__list {
+    --gap-value: 7%;
+  }
+}
+
+/* Item */
+
+.services__item {
+  margin-bottom: 45px;
+}
+
+/* Ico */
+
+.services__item::before {
+  content: "";
+  width: 91px;
+  height: 91px;
+  display: block;
+  background-repeat: no-repeat;
+  margin-right: auto;
+  margin-bottom: 25px;
+  margin-left: auto;
+}
+
+.services__item:nth-child(1)::before {
+  background: url(../img/ico-services-1.png);
+}
+
+.services__item:nth-child(2)::before {
+  background: url(../img/ico-services-2.png);
+}
+
+.services__item:nth-child(3)::before {
+  background: url(../img/ico-services-3.png);
+}
+
+.services__item:nth-child(4)::before {
+  background: url(../img/ico-services-4.png);
+}
+
+.services__item:nth-child(5)::before {
+  background: url(../img/ico-services-5.png);
+}
+
+.services__item:nth-child(6)::before {
+  background: url(../img/ico-services-6.png);
+}

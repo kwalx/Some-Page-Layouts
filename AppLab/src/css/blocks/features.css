@@ -103,7 +103,7 @@
   position: relative;
 }
 
-@media (width >= 480px) {
+@media (width >= 560px) {
   .features__item {
     margin-bottom: 55px;
   }

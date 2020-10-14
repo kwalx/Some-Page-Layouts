@@ -4,11 +4,27 @@
   margin-bottom: 45px;
 }
 
+@media (width >= 480px) {
+  .about-smart__top-block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+  }
+}
+
 /* Title */
 
 .about-smart__title {
   padding-bottom: 40px;
   position: relative;
+}
+
+@media (width >= 480px) {
+  .about-smart__title {
+    flex-basis: 45%;
+    padding-right: 4%;
+    padding-bottom: 0;
+  }
 }
 
 .about-smart__list_heading {
@@ -39,9 +55,44 @@
   left: 0;
 }
 
+@media (width >= 480px) {
+  .about-smart__title::before {
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
 /* Slogan */
 
-.about-smart__slogan {
+@media (width >= 480px) {
+  .about-smart__slogan {
+    flex-basis: 45%;
+    padding-left: 4%;
+  }
+}
+
+/* List */
+
+.about-smart__list {
+  text-align: center;
+}
+
+@media (width >= 720px) {
+  .about-smart__list {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4%;
+  }
+}
+
+@media (width >= 780px) {
+  .about-smart__list {
+    grid-gap: 8%;
+  }
 }
 
 /* Item */
@@ -58,7 +109,16 @@
   width: 91px;
   height: 91px;
   display: block;
+  margin-right: auto;
   margin-bottom: 25px;
+  margin-left: auto;
+}
+
+@media (width >= 720px) {
+  .about-smart__item::before {
+    margin-right: unset;
+    margin-left: unset;
+  }
 }
 
 .about-smart__item--payouts::before {

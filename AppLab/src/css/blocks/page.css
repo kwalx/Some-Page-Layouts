@@ -1,3 +1,5 @@
+/* Page */
+
 .page {
   font-family: "Poppins";
   line-height: 1.2;
@@ -8,10 +10,35 @@
   overflow: hidden;
 }
 
+/* Section */
+
+.page-section {
+  margin-bottom: 50px;
+}
+
 /* Section Title */
 
 .section-title {
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--special-blue);
+  margin-bottom: 15px;
+}
+
+@media (width >= 640px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+/* Section slogan */
+
+.section-slogan {
+  margin-bottom: 15px;
+}
+
+/* Block heading */
+
+.block-heading {
+  margin-bottom: 15px;
 }
