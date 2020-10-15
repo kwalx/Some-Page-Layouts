@@ -1,3 +1,3 @@
 # Project Surfing
----
-Link - [click here](https://kwalx.github.io/projects/Surfing "Surfing")
+
+GitHub Pages [link](https://kwalx.github.io)
