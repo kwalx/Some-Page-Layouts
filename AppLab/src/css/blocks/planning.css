@@ -1,0 +1,93 @@
+/* Inner */
+
+.planning__inner {
+  text-align: center;
+  display: grid;
+}
+
+@media (width >= 680px) {
+  .planning__inner {
+    grid-template-columns: 55% 45%;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* Title */
+
+.planning__title {
+  max-width: 430px;
+}
+
+/* Slogan */
+
+.planning__slogan {
+  max-width: 450px;
+}
+
+/* List */
+
+.planning__list {
+  display: grid;
+}
+
+@media (width >= 860px) {
+  .planning__list {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8%;
+  }
+}
+
+/* Item */
+
+.planning__item {
+  margin-bottom: 45px;
+}
+
+.planning__item::before {
+  content: "";
+  width: 91px;
+  height: 91px;
+  display: block;
+  background-repeat: no-repeat;
+  margin-right: auto;
+  margin-bottom: 25px;
+  margin-left: auto;
+}
+
+@media (width >= 680px) {
+  .planning__item::before {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.planning__development::before {
+  background: url(img/ico-planning-development.png);
+}
+
+.planning__ux::before {
+  background: url(img/ico-planning-ux.png);
+}
+
+.planning__cloud::before {
+  background: url(img/ico-planning-cloud.png);
+}
+
+.planning__support::before {
+  background: url(img/ico-planning-support.png);
+}
+
+/* Image block */
+
+.planning__image-block {
+  max-width: 300px;
+  margin: auto;
+}
+
+@media (width >= 680px) {
+  .planning__image-block {
+    max-width: 100%;
+    margin: 0;
+  }
+}
