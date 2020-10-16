@@ -1,9 +1,5 @@
 /* Features */
 
-.features {
-  margin-bottom: 30px;
-}
-
 .features__inner {
   display: grid;
 }

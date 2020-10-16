@@ -35,6 +35,7 @@
   .planning__list {
     grid-template-columns: 1fr 1fr;
     grid-gap: 8%;
+    margin-bottom: 25px;
   }
 }
 
@@ -76,6 +77,14 @@
 
 .planning__support::before {
   background: url(img/ico-planning-support.png);
+}
+
+/* Button */
+
+@media (width < 860px) {
+  .planning__button {
+    margin-bottom: 50px;
+  }
 }
 
 /* Image block */
