@@ -9,6 +9,10 @@
   display: inline-block;
 }
 
+.page-button:hover {
+  opacity: .9;
+}
+
 @media (width >= 736px) {
   .page-button {
     padding: 18px 25px;

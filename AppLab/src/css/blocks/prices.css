@@ -1,0 +1,173 @@
+/* Title */
+
+.prices__title {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (width >= 720px) {
+  .prices__title {
+    max-width: 51%;
+  }
+}
+
+/* Slogan */
+
+.prices__slogan {
+  text-align: center;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+
+@media (width >= 720px) {
+  .prices__slogan {
+    max-width: 56%;
+    margin-bottom: 75px;
+  }
+}
+
+/* Plans */
+
+.plans {
+  max-width: 680px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Plan choose */
+
+.plans__choose {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+  padding: 4px;
+  border: 1px solid var(--extra-gray);
+  border-radius: var(--choose-button-radius);
+  overflow: hidden;
+}
+
+/* Option */
+
+.option {
+  display: block;
+  border-radius: var(--choose-button-radius);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Radio buttons */
+
+.radio__button {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--basic-gray);
+  display: block;
+  padding: 15px 30px 16px;
+  border-radius: var(--choose-button-radius);
+}
+
+.radio__input:checked + .radio__button {
+  font-weight: bold;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.radio:hover {
+  cursor: pointer;
+  opacity: .9;
+}
+
+.radio:hover .radio__input:not(:checked) + .radio__button {
+  color: var(--basic-blue);
+}
+
+/* List */
+
+@media (width >= 720px) {
+  .plans__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8%;
+    justify-content: space-around;
+  }
+}
+
+/* Item (Plan) */
+
+.plans__item {
+  text-align: center;
+  margin-bottom: 70px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  box-shadow: 0 20px 30px 0 var(--extra-gray);
+  align-self: start;
+}
+
+.plans__item:hover {
+  border: 1px solid var(--extra-gray);
+  box-shadow: none;
+}
+
+@media (width < 720px) {
+  .plans__item {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 320px;
+  }
+}
+
+/* Item (Plan) top */
+
+.plan__top {
+  padding-top: 55px;
+  padding-bottom: 35px;
+}
+
+/* Cost */
+
+.plan__cost {
+  margin-bottom: 20px;
+}
+
+/* Cost currency */
+
+.cost__currency {
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--special-blue);
+}
+
+/* Cost value */
+
+.cost__value {
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--special-blue);
+}
+
+/* Item (Plan) name */
+
+.plan__name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--special-blue);
+}
+
+/* Item (Plan) body */
+
+.plan__body {
+  padding-bottom: ;
+}
+
+/* Item (Plan) info */
+
+.plan__info {
+  margin-bottom: 25px;
+}
