@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import babel from 'gulp-babel';
 import postcss from 'gulp-postcss';
 import replace from 'gulp-replace';
+import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import pimport from 'postcss-import';
@@ -25,6 +26,15 @@ export const html = () => {
     .pipe(sync.stream());
 };
 
+// Libs css
+
+export const libs_css = () => {
+  return gulp
+    .src('node_modules/@glidejs/glide/dist/css/glide.core.css')
+    .pipe(gulp.dest('src/css/libs'))
+    .pipe(sync.stream({ once: true }));
+};
+
 // Styles
 
 export const styles = () => {
@@ -32,6 +42,7 @@ export const styles = () => {
     .src('src/css/index.css')
     .pipe(postcss([ pimport, minmax, autoprefixer, csso ]))
     .pipe(replace(/\.\.\//g, ''))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist'))
     .pipe(sync.stream());
 };
@@ -40,9 +51,10 @@ export const styles = () => {
 
 export const scripts = () => {
   return gulp
-    .src('src/js/index.js')
+    .src([ 'src/js/index.js', 'node_modules/@glidejs/glide/dist/glide.js' ])
     .pipe(babel())
     .pipe(terser())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist'))
     .pipe(sync.stream());
 };
@@ -54,16 +66,6 @@ export const copy = () => {
     .src([ 'src/fonts/**/*', 'src/img/**/*' ], { base: 'src' })
     .pipe(gulp.dest('dist'))
     .pipe(sync.stream({ once: true }));
-};
-
-// Paths
-
-export const paths = () => {
-  return gulp
-    .src('dist/*.html')
-    .pipe(replace(/(<link rel="stylesheet" href=")css\/(index.css">)/, '$1$2'))
-    .pipe(replace(/(<script src=")js\/(index.js">)/, '$1$2'))
-    .pipe(gulp.dest('dist'));
 };
 
 // Server
@@ -81,7 +83,7 @@ export const server = () => {
 // Watch
 
 export const watch = () => {
-  gulp.watch('src/*html', gulp.series(html, paths));
+  gulp.watch('src/*html', gulp.series(html));
   gulp.watch('src/css/**/*.css', gulp.series(styles));
   gulp.watch('src/js/**/*.js', gulp.series(scripts));
   gulp.watch([ 'src/fonts/**/*', 'src/img/**/*' ], gulp.series(copy));
@@ -90,7 +92,7 @@ export const watch = () => {
 // Dafualt
 
 export default gulp.series(
+  libs_css,
   gulp.parallel(html, styles, scripts, copy),
-  paths,
   gulp.parallel(watch, server)
 );

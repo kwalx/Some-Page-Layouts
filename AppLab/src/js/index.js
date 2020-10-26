@@ -1,3 +1,5 @@
+// Menu
+
 (() => {
   const page = document.querySelector('.page');
   const menu = document.querySelector('.menu');
@@ -12,4 +14,10 @@
     menuButton.classList.toggle('menu__button--open');
     menuList.classList.toggle('menu__list--open');
   });
+})();
+
+// Glide slider
+
+(() => {
+  new Glide('.glide').mount();
 })();
