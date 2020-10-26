@@ -1,3 +1,9 @@
+/* Prices */
+
+.prices {
+  border-bottom: 1px solid var(--extra-gray);
+}
+
 /* Title */
 
 .prices__title {
