@@ -4,7 +4,8 @@
 
 /* Global */
 
-@import "fonsts.css";
+@import "fonts.css";
+@import "font-icons.css";
 @import "variables.css";
 @import "box-model.css";
 
@@ -22,3 +23,4 @@
 @import "blocks/services.css";
 @import "blocks/planning.css";
 @import "blocks/prices.css";
+@import "blocks/reviews.css";

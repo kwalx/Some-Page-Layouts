@@ -19,5 +19,11 @@
 // Glide slider
 
 (() => {
-  new Glide('.glide').mount();
+  const config = {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1
+  };
+
+  new Glide('.glide', config).mount();
 })();

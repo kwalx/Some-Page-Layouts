@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AppLab</title>
-  <script src="glide.min.js"></script>
   <link rel="stylesheet" href="index.min.css">
 </head>
 
@@ -341,14 +340,89 @@
     <!-- /Prices -->
 
     <!-- Reviews -->
-    <section class="reviews">
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">0</li>
-            <li class="glide__slide">1</li>
-            <li class="glide__slide">2</li>
-          </ul>
+    <section class="page-section reviews">
+      <div class="page-container reviews__inner">
+        <div class="slider-block">
+          <h2 class="section-title reviews__title">Meet Client Satisfaction by using product</h2>
+          <p class="section-slogan reviews__slogan">The rise of mobile devices transforms the way we consume. elevant
+            channels such as Facebook.</p>
+          <div class="reviews__slider">
+            <div class="glide slider-container">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide slide-review">
+                    <h4 class="slide-review__heading">User friendly & Customizable</h4>
+                    <div class="slide-review__text">
+                      <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of
+                        the day, going forward, a new normal that has evolved from generation X is on the runway heading
+                        towards a streamlined cloud solution. User generated content in real-time will have multiple
+                        touchpoints for offshoring.</p>
+                    </div>
+                    <div class="slide-review__user user">
+                      <div class="user__photo">
+                        <picture>
+                          <source srcset="img/img-Zoltan-Nemeth.webp" type="image/webp">
+                          <img src="img/img-Zoltan-Nemeth.png" alt="User">
+                        </picture>
+                      </div>
+                      <div class="user__info">
+                        <p><em class="user__name">Zoltan Nemeth</em></p>
+                        <p><em class="user__position">CEO of Pixler Lab</em></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide slide-review">
+                    <h4 class="slide-review__heading">Smart</h4>
+                    <div class="slide-review__text">
+                      <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of
+                        the day, going forward, a new normal that has evolved from generation X is on the runway heading
+                        towards a streamlined cloud solution.</p>
+                    </div>
+                    <div class="slide-review__user user">
+                      <div class="user__photo">
+                        <picture>
+                          <source srcset="img/img-Donald-Hendrix.webp" type="image/webp">
+                          <img src="img/img-Donald-Hendrix.jpg" alt="User">
+                        </picture>
+                      </div>
+                      <div class="user__info">
+                        <p><em class="user__name">Donald Hendrix</em></p>
+                        <p><em class="user__position">CEO</em></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide slide-review">
+                    <h4 class="slide-review__heading">Customizable</h4>
+                    <div class="slide-review__text">
+                      <p>User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                    </div>
+                    <div class="slide-review__user user">
+                      <div class="user__photo">
+                        <picture>
+                          <source srcset="img/img-Jelena-Lucic.jpg" type="image/webp">
+                          <img src="img/img-Jelena-Lucic.jpg" alt="User">
+                        </picture>
+                      </div>
+                      <div class="user__info">
+                        <p><em class="user__name">Jelena Lucic</em></p>
+                        <p><em class="user__position">Designer</em></p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__arrows reviews__controls" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="icon-left"></i></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="icon-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__image-block">
+          <picture>
+            <source srcset="img/img-reviews-photo.webp" type="image/webp">
+            <img src="img/img-reviews-photo.png" alt="Map photo">
+          </picture>
         </div>
       </div>
     </section>
@@ -356,6 +430,7 @@
   </main>
   <!-- /Main -->
 
+  <script src="glide.min.js"></script>
   <script src="index.min.js"></script>
 </body>
 
