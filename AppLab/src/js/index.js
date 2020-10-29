@@ -27,3 +27,15 @@
 
   new Glide('.glide', config).mount();
 })();
+
+// FAQ
+
+(() => {
+  const faq_items = document.querySelectorAll('.faq__item');
+
+  faq_items.forEach((item) => {
+    item.addEventListener('click', function() {
+      this.classList.toggle('faq__item--open');
+    });
+  });
+})();

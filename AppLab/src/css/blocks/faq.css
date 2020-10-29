@@ -1,0 +1,48 @@
+/* Item */
+
+.faq__item {
+  background-color: #f5f7fa;
+  padding: 3em;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* Heading */
+
+.faq__heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--special-blue);
+}
+
+.faq__item--open .faq__heading {
+  margin-bottom: 35px;
+}
+
+/* Text */
+
+.faq__text {
+  height: 0;
+  overflow: hidden;
+}
+
+.faq__item--open .faq__text {
+  height: 100%;
+}
+
+/* Cross */
+
+.faq__item::before {
+  content: "\00002B";
+  font-size: 25px;
+  line-height: 0;
+  color: var(--special-blue);
+  position: absolute;
+  top: 50%;
+  right: 1.5em;
+  transform: translateX(-50%);
+}
+
+.faq__item--open::before {
+  display: none;
+}
