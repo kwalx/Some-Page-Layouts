@@ -9,8 +9,10 @@
   menuButton.addEventListener('click', () => {
     let expanded = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', !expanded);
+
     page.classList.toggle('page--open');
     menu.classList.toggle('menu--open');
+
     menuButton.classList.toggle('menu__button--open');
     menuList.classList.toggle('menu__list--open');
   });
@@ -36,6 +38,12 @@
   faq_items.forEach((item) => {
     item.addEventListener('click', function() {
       this.classList.toggle('faq__item--open');
+      if (this.querySelector('.faq__text').style.maxHeight) {
+        this.querySelector('.faq__text').style.maxHeight = null;
+      } else {
+        this.querySelector('.faq__text').style.maxHeight =
+          this.querySelector('.faq__text').scrollHeight + 'px';
+      }
     });
   });
 })();
