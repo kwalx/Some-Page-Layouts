@@ -1,0 +1,54 @@
+/* Section */
+
+.download {
+  margin-bottom: 0;
+}
+
+/* Inner */
+
+@media (width >= 680px) {
+  .download__inner {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    justify-content: space-between;
+  }
+}
+
+/* Text block */
+
+.download__text-block {
+  padding-top: 35px;
+}
+
+@media (width >= 920px) {
+  .download__text-block {
+    padding-top: 80px;
+  }
+}
+
+/* Slogan */
+
+.download__slogan {
+  margin-bottom: 40px;
+}
+
+/* Stores */
+
+.download__stores {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(125px, 185px));
+  justify-content: flex-start;
+  grid-gap: 5%;
+}
+
+@media (width <= 680px) {
+  .download__stores {
+    justify-content: center;
+  }
+}
+
+/* Image */
+
+.download__image {
+  vertical-align: bottom;
+}
