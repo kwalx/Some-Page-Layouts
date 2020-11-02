@@ -44,11 +44,11 @@
   display: block;
 }
 
-@media (width >= 736px) {
+@media (width >= 790px) {
   .menu__list {
     display: grid;
     grid-auto-flow: column;
-    column-gap: 10px;
+    column-gap: 25px;
     transform: translateY(0);
     position: static;
     width: unset;
@@ -79,6 +79,10 @@
   padding-bottom: 8px;
 }
 
+.menu__link:hover {
+  color: var(--basic-blue);
+}
+
 .menu__link--current {
   color: var(--basic-black);
 }
@@ -96,10 +100,14 @@
   z-index: 1;
 }
 
-@media (width >= 736px) {
+@media (width >= 790px) {
   .menu__button {
     display: none;
   }
+}
+
+.menu__link--button:hover {
+  color: var(--special-light-gray);
 }
 
 /* Icon */
