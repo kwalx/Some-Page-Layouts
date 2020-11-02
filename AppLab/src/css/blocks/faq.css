@@ -61,7 +61,7 @@
 
 .faq__item--open,
 .faq__item:hover {
-  background-color: var(--special-dark-gray);
+  background-color: var(--special-light-gray);
 }
 
 /* Heading */
