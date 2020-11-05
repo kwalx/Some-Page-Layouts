@@ -18,7 +18,7 @@
   left: 0;
 }
 
-@media (width >= 736px) {
+@media (width >= 800px) {
   .header__container {
     align-items: center;
   }
@@ -44,7 +44,7 @@
   display: block;
 }
 
-@media (width >= 790px) {
+@media (width >= 800px) {
   .menu__list {
     display: grid;
     grid-auto-flow: column;
@@ -64,7 +64,7 @@
   margin-bottom: 10px;
 }
 
-@media (width >= 736px) {
+@media (width >= 800px) {
   .menu__item {
     margin-bottom: 0;
   }
@@ -100,7 +100,7 @@
   z-index: 1;
 }
 
-@media (width >= 790px) {
+@media (width >= 800px) {
   .menu__button {
     display: none;
   }
