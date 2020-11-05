@@ -2,6 +2,12 @@
 
 .header {
   background-color: var(--light-gray);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: top .3s;
+  z-index: 3;
 }
 
 .header__container {
