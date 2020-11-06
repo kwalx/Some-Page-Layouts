@@ -1,3 +1,26 @@
+// Hide header on scroll
+
+(() => {
+  const page = document.querySelector('.page');
+  const pageHeader = document.querySelector('.header');
+  let pageHeaderHeight = pageHeader.offsetHeight;
+  let scrollPos = window.pageYOffset;
+
+  page.style.paddingTop = `${pageHeaderHeight}px`;
+
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+
+    if (scrollPos > currentScrollPos) {
+      pageHeader.style.top = '0';
+    } else {
+      pageHeader.style.top = `-${pageHeaderHeight * 1.5}px`;
+    }
+
+    scrollPos = currentScrollPos;
+  };
+})();
+
 // Menu
 
 (() => {
