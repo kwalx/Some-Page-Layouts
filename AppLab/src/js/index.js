@@ -41,6 +41,38 @@
   });
 })();
 
+// Scroll navigation
+
+(() => {
+  const page = document.querySelector('.page');
+  const menu = document.querySelector('.menu');
+  const menuButton = document.querySelector('.menu__button');
+  const menuList = document.querySelector('.menu__list');
+
+  document.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      let href = this.getAttribute('href').substr(1);
+      const scrollTarget = document.getElementById(href);
+      const topOffset = document.querySelector('.header').offsetHeight;
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+
+      window.scrollBy({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      page.classList.remove('page--open');
+      menu.classList.remove('menu--open');
+
+      menuButton.classList.remove('menu__button--open');
+      menuList.classList.remove('menu__list--open');
+    });
+  });
+})();
+
 // Glide slider
 
 (() => {
