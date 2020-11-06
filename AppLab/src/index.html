@@ -17,7 +17,7 @@
             class="logo__image"></a>
       </div>
       <nav class="header__menu menu">
-        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list">
+        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list" aria-label="Menu">
           <svg class="menu__icon" aria-hidden="true" width="32" height="32">
             <use class="menu__icon-menu" href="img/sprite.svg#menu"></use>
             <use class="menu__icon-cross" href="img/sprite.svg#cross"></use>
@@ -414,8 +414,10 @@
                 </ul>
               </div>
               <div class="glide__arrows reviews__controls" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="icon-left"></i></button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="icon-right"></i></button>
+                <button type="button" class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="left"><i
+                    class="icon-left"></i></button>
+                <button type="button" class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="right"><i
+                    class="icon-right"></i></button>
               </div>
             </div>
           </div>
@@ -529,14 +531,19 @@
           <li class="footer-nav__item"><a href="#faq" class="footer-nav__link nav-link">FAQ</a></li>
         </ul>
         <ul class="footer-social">
-          <li class="footer-social__item"><a href="#" class="footer-social__ico icon-facebook"></a></li>
-          <li class="footer-social__item"><a href="#" class="footer-social__ico icon-twitter"></a></li>
-          <li class="footer-social__item"><a href="#" class="footer-social__ico icon-slack"></a></li>
-          <li class="footer-social__item"><a href="#" class="footer-social__ico icon-github-squared"></a></li>
+          <li class="footer-social__item"><a href="https://www.facebook.com/" aria-label="Facebook"
+              class="footer-social__ico icon-facebook"></a></li>
+          <li class="footer-social__item"><a href="https://twitter.com/" aria-label="Twitter"
+              class="footer-social__ico icon-twitter"></a>
+          </li>
+          <li class="footer-social__item"><a href="https://slack.com/" aria-label="Slack"
+              class="footer-social__ico icon-slack"></a></li>
+          <li class="footer-social__item"><a href="https://github.com" aria-label="GitHub"
+              class="footer-social__ico icon-github-squared"></a></li>
         </ul>
         <small class="footer__copyright">Copyright© Arifur Rahman Tushar 2019. All rights reserved</small>
-        <p class="template-author">Designed by <a href="https://dribbble.com/ArifurRahman" class="template-author__link"
-            target="_blank">Arifur Rahman Tushar</a></p>
+        <p class="template-author">Designed by <a href="https://dribbble.com/ArifurRahman" rel="noopener"
+            class="template-author__link" target="_blank">Arifur Rahman Tushar</a></p>
       </div>
     </footer>
     <!-- /Footer -->
