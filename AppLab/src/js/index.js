@@ -88,16 +88,21 @@
 // FAQ
 
 (() => {
-  const faq_items = document.querySelectorAll('.faq__item');
+  const questionBtns = document.querySelectorAll('.question__js');
 
-  faq_items.forEach((item) => {
-    item.addEventListener('click', function() {
-      this.classList.toggle('faq__item--open');
-      if (this.querySelector('.faq__text').style.maxHeight) {
-        this.querySelector('.faq__text').style.maxHeight = null;
+  questionBtns.forEach((questionBtn) => {
+    questionBtn.addEventListener('click', (el) => {
+      el.preventDefault();
+
+      const question = el.target.closest('.faq__item');
+
+      if (!question.classList.contains('faq__item--open')) {
+        question.classList.add('faq__item--open');
+        question.querySelector('.faq__text').style.maxHeight =
+          question.querySelector('.faq__text').scrollHeight + 'px';
       } else {
-        this.querySelector('.faq__text').style.maxHeight =
-          this.querySelector('.faq__text').scrollHeight + 'px';
+        question.classList.remove('faq__item--open');
+        question.querySelector('.faq__text').style.maxHeight = null;
       }
     });
   });
