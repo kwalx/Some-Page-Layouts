@@ -1,0 +1,14 @@
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.radio__input + .focus-style--neutral {
+  outline: 3px solid var(--special-neutral);
+  outline-offset: 2px;
+}
+
+.focus-style--neutral:focus {
+  outline: 3px solid var(--special-neutral);
+  outline-offset: 2px;
+  opacity: 1;
+}

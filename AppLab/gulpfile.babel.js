@@ -3,6 +3,7 @@ import babel from 'gulp-babel';
 import postcss from 'gulp-postcss';
 import replace from 'gulp-replace';
 import rename from 'gulp-rename';
+import concat from 'gulp-concat';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import pimport from 'postcss-import';
@@ -51,10 +52,25 @@ export const styles = () => {
 
 export const scripts = () => {
   return gulp
-    .src([ 'src/js/index.js', 'node_modules/@glidejs/glide/dist/glide.js' ])
+    .src('src/js/index.js')
     .pipe(babel())
     .pipe(terser())
     .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('dist'))
+    .pipe(sync.stream());
+};
+
+// Libs js
+
+export const libs_js = () => {
+  return gulp
+    .src([
+      'node_modules/focus-visible/dist/focus-visible.js',
+      'node_modules/@glidejs/glide/dist/glide.js'
+    ])
+    .pipe(concat('libs.min.js'))
+    .pipe(babel())
+    .pipe(terser())
     .pipe(gulp.dest('dist'))
     .pipe(sync.stream());
 };
@@ -93,6 +109,6 @@ export const watch = () => {
 
 export default gulp.series(
   libs_css,
-  gulp.parallel(html, styles, scripts, copy),
+  gulp.parallel(html, styles, scripts, libs_js, copy),
   gulp.parallel(watch, server)
 );
