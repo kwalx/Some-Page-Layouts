@@ -2,13 +2,12 @@
   outline: none;
 }
 
-.radio__input + .focus-style--neutral {
-  outline: 3px solid var(--special-neutral);
-  outline-offset: 2px;
-}
-
 .focus-style--neutral:focus {
   outline: 3px solid var(--special-neutral);
   outline-offset: 2px;
   opacity: 1;
+}
+
+.radio__input.focus-visible:focus + .radio__button {
+  box-shadow: 0 0 1px 3px var(--special-neutral);
 }

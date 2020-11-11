@@ -65,7 +65,6 @@
   border-radius: var(--choose-button-radius);
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 /* Radio buttons */
@@ -77,6 +76,7 @@
   display: block;
   padding: 15px 30px 16px;
   border-radius: var(--choose-button-radius);
+  overflow: hidden;
 }
 
 .radio__input:checked + .radio__button {
