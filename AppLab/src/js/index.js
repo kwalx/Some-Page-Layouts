@@ -73,6 +73,47 @@
   });
 })();
 
+// Check plan
+
+(() => {
+  const plans = document.querySelector('.plans');
+  const buttons = plans.querySelectorAll('.radio__input');
+  const costPeriods = plans.querySelectorAll('.cost__cost-period');
+  const costValues = plans.querySelectorAll('.cost__value');
+
+  const getPeriod = (period) => {
+    costPeriods.forEach((item) => {
+      if (period == 'annually') {
+        item.textContent = 'Annually';
+      } else if (period == 'monthly') {
+        item.textContent = 'Monthly';
+      } else {
+        return false;
+      }
+    });
+  };
+
+  const getPeriodValue = (period) => {
+    costValues.forEach((item) => {
+      if (period == 'annually') {
+        item.textContent = item.textContent * 11;
+      } else if (period == 'monthly') {
+        item.textContent = item.textContent / 11;
+      } else {
+        return false;
+      }
+    });
+  };
+
+  buttons.forEach((item) => {
+    item.addEventListener('change', (e) => {
+      let id = e.target.getAttribute('id');
+      getPeriodValue(id);
+      getPeriod(id);
+    });
+  });
+})();
+
 // Glide slider
 
 (() => {
