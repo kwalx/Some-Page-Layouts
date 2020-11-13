@@ -108,10 +108,6 @@
 .features__item--perfomance::before,
 .features__item--prototyping::before,
 .features__item--editing::before {
-  content: "";
-  width: 91px;
-  height: 91px;
-  background-repeat: no-repeat;
   position: absolute;
   top: 50%;
   left: 0;
@@ -119,15 +115,15 @@
 }
 
 .features__item--perfomance::before {
-  background: url(../img/ico-features-apps-1.png);
+  background-position: -121px -122px;
 }
 
 .features__item--prototyping::before {
-  background: url(../img/ico-features-apps-2.png);
+  background-position: -10px -10px;
 }
 
 .features__item--editing::before {
-  background: url(../img/ico-features-apps-3.png);
+  background-position: -232px -122px;
 }
 
 /* Image */

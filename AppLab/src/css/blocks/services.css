@@ -62,36 +62,31 @@
 /* Ico */
 
 .services__item::before {
-  content: "";
-  width: 91px;
-  height: 91px;
-  display: block;
-  background-repeat: no-repeat;
   margin-right: auto;
   margin-bottom: 25px;
   margin-left: auto;
 }
 
 .services__item:nth-child(1)::before {
-  background: url(../img/ico-services-1.png);
+  background-position: -121px -233px;
 }
 
 .services__item:nth-child(2)::before {
-  background: url(../img/ico-services-2.png);
+  background-position: -232px -233px;
 }
 
 .services__item:nth-child(3)::before {
-  background: url(../img/ico-services-3.png);
+  background-position: -343px -10px;
 }
 
 .services__item:nth-child(4)::before {
-  background: url(../img/ico-services-4.png);
+  background-position: -343px -233px;
 }
 
 .services__item:nth-child(5)::before {
-  background: url(../img/ico-services-5.png);
+  background-position: -454px -10px;
 }
 
 .services__item:nth-child(6)::before {
-  background: url(../img/ico-services-6.png);
+  background-position: -454px -121px;
 }

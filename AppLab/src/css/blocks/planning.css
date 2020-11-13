@@ -46,11 +46,6 @@
 }
 
 .planning__item::before {
-  content: "";
-  width: 91px;
-  height: 91px;
-  display: block;
-  background-repeat: no-repeat;
   margin-right: auto;
   margin-bottom: 25px;
   margin-left: auto;
@@ -64,19 +59,19 @@
 }
 
 .planning__development::before {
-  background: url(img/ico-planning-development.png);
+  background-position: -121px -233px;
 }
 
 .planning__ux::before {
-  background: url(img/ico-planning-ux.png);
+  background-position: -10px -233px;
 }
 
 .planning__cloud::before {
-  background: url(img/ico-planning-cloud.png);
+  background-position: -343px -10px;
 }
 
 .planning__support::before {
-  background: url(img/ico-planning-support.png);
+  background-position: -343px -121px;
 }
 
 /* Button */

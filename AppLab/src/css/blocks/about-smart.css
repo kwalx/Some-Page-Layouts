@@ -104,11 +104,6 @@
 /* Item ico */
 
 .about-smart__item::before {
-  content: "";
-  background-repeat: no-repeat;
-  width: 91px;
-  height: 91px;
-  display: block;
   margin-right: auto;
   margin-bottom: 25px;
   margin-left: auto;
@@ -122,13 +117,13 @@
 }
 
 .about-smart__item--payouts::before {
-  background: url(../img/ico-about-smart-1.png);
+  background-position: -121px -10px;
 }
 
 .about-smart__item--effect::before {
-  background: url(../img/ico-about-smart-2.png);
+  background-position: -232px -10px;
 }
 
 .about-smart__item--reward::before {
-  background: url(../img/ico-about-smart-3.png);
+  background-position: -10px -122px;
 }

@@ -1,0 +1,13 @@
+/* Sprites */
+
+.features__item::before,
+.about-smart__item::before,
+.services__item::before,
+.planning__item::before {
+  content: "";
+  background-image: url(../img/css-sprites.png);
+  background-repeat: no-repeat;
+  width: 91px;
+  height: 91px;
+  display: block;
+}
