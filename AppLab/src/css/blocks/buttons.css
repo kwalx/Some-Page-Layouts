@@ -23,7 +23,13 @@
   margin-top: 30px;
   display: grid;
   justify-content: start;
-  grid-template-columns: max-content max-content;
-  column-gap: 20px;
+  grid-template-columns: auto;
+  grid-gap: 20px;
   align-items: center;
+}
+
+@media (width >= 780px) {
+  .text-block__buttons {
+    grid-template-columns: max-content max-content;
+  }
 }

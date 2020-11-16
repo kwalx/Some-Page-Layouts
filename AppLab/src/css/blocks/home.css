@@ -75,6 +75,15 @@
   padding-top: 40px;
 }
 
+@media (width <= 450px) {
+  .image-block {
+    max-width: 115px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+  }
+}
+
 /* Decoration */
 
 .decoration {
