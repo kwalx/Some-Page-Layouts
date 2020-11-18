@@ -122,6 +122,7 @@
 .glide__arrow:hover {
   color: var(--basic-blue);
   background-color: var(--extra-gray);
+  cursor: pointer;
 }
 
 .glide__arrow--left {
