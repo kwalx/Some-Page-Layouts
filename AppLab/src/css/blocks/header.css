@@ -7,7 +7,7 @@
   right: 0;
   left: 0;
   transition: top .3s;
-  z-index: 3;
+  z-index: 10;
 }
 
 .header__container {

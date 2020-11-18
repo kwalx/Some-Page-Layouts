@@ -36,6 +36,8 @@
 /* Title */
 
 .main-banner__top-text {
+  font-size: 15px;
+  line-height: 17px;
   background-color: var(--extra-gray);
   display: inline-block;
   padding-top: 5px;
@@ -57,8 +59,8 @@
   background: url(img/ico-home-mark-text.png) center/19px 19px no-repeat,
     var(--basic-orange);
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 27px;
+  height: 27px;
   position: absolute;
   top: 0;
   left: 0;
@@ -69,19 +71,16 @@
   margin-bottom: 20px;
 }
 
+@media (width <= 450px) {
+  .main-banner__text-block {
+    padding-right: 10px;
+  }
+}
+
 /* Image */
 
 .image-block {
   padding-top: 40px;
-}
-
-@media (width <= 450px) {
-  .image-block {
-    max-width: 115px;
-    position: absolute;
-    top: 25px;
-    right: 0;
-  }
 }
 
 /* Decoration */
