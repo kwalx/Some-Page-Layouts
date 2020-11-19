@@ -113,11 +113,13 @@
   border-radius: 8px;
   align-self: start;
   border: 1px solid var(--extra-gray);
+  transition: all .3s;
 }
 
 .plans__item:hover {
   border: 1px solid transparent;
   box-shadow: 0 20px 30px 0 var(--extra-gray);
+  transform: translateY(-4px);
 }
 
 @media (width < 720px) {
