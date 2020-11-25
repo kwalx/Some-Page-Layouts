@@ -99,7 +99,7 @@ export const server = () => {
 // Watch
 
 export const watch = () => {
-  gulp.watch('src/*html', gulp.series(html));
+  gulp.watch('src/*.html', gulp.series(html));
   gulp.watch('src/css/**/*.css', gulp.series(styles));
   gulp.watch('src/js/**/*.js', gulp.series(scripts));
   gulp.watch([ 'src/fonts/**/*', 'src/img/**/*' ], gulp.series(copy));
