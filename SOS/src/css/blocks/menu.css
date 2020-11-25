@@ -1,0 +1,35 @@
+/* Menu */
+
+.header__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Button */
+
+.menu__button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* List */
+
+.menu__list {
+  display: none;
+}
+
+/* Links */
+
+.menu__link {
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--basic-white);
+  text-transform: uppercase;
+}

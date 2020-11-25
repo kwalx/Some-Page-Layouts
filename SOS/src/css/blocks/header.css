@@ -1,0 +1,45 @@
+/* Header */
+
+.header {
+  background: #72572a url(img/bg-header-banner.jpg) center / cover no-repeat;
+  height: 100vh;
+  padding-top: 10px;
+}
+
+.header__top {
+  position: relative;
+}
+
+/* Logo */
+
+.logo,
+.logo__link {
+  display: inline-block;
+}
+
+/* Block */
+
+.header__block {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 22px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Platforms */
+
+.platforms {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 5px;
+  justify-content: flex-start;
+}
+
+.platforms__icon {
+  fill: #ffb548;
+}
+
+.platforms__link:hover .platforms__icon {
+  fill: #ffd392;
+}
