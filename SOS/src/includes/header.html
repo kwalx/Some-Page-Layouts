@@ -7,10 +7,14 @@
             alt="SOS" class="logo__img"></a>
       </strong>
 
-      <nav class="header__menu menu">
-        <button class="menu__button focus-style--neutral" type="button" aria-expanded="false" aria-controls="menu__list"
-          aria-label="Menu">menu</button>
-        <ul class="menu__list">
+      <nav class="header__menu menu" aria-label="Main menu">
+        <button class="menu__button menu-button" type="button" aria-expanded="true" aria-controls="menu__list"
+          aria-label="Menu">
+          <span class="menu-button__line menu-button__line--inactive"></span>
+          <span class="menu-button__line menu-button__line--inactive"></span>
+          <span class="menu-button__line menu-button__line--active"></span>
+        </button>
+        <ul class="menu__list" aria-expanded="false">
           <li class="menu__item"><a href="#"
               class="menu__link menu__link--current nav-link focus-style--neutral">MAIN</a></li>
           <li class="menu__item"><a href="#"
@@ -25,27 +29,41 @@
         </ul>
       </nav>
 
-      <div class="header__block">
-        <div class="lang"><select name="" id="" class="lang__select"></select></div>
-        <div class="platforms">
-          <a href="#" class="platforms__link">
-            <svg class="platforms__icon" aria-hidden="true" width="32" height="32">
-              <use class="icon-xbox" href="img/sprite.svg#xbox"></use>
-            </svg>
-          </a>
-          <a href="#" class="platforms__link">
-            <svg class="platforms__icon" aria-hidden="true" width="32" height="32">
-              <use class="icon-steam" href="img/sprite.svg#steam"></use>
-            </svg>
-          </a>
-        </div>
+      <div class="lang">
+        <button class="lang__button" type="button" aria-expanded="true" aria-label="Language"
+          aria-controls="Language menu">ENG</button>
+        <ul id="language-menu" class="lang__list" aria-expanded="false" role="menu">
+          <li class="lang__item" lang="ru" role="menuitem"><a href="#" class="lang__link" title="Russian">RUS</a></li>
+          <li class="lang__item" lang="fr" role="menuitem"><a href="#" class="lang__link" title="French">FRA</a></li>
+        </ul>
+      </div>
+
+      <div class="platforms">
+        <a href="#" class="platforms__link" aria-label="Xbox platform link">
+          <svg class="platforms__icon" width="30" height="30" aria-hidden="true">
+            <use class="icon-xbox" href="img/sprite.svg#xbox"></use>
+          </svg>
+        </a>
+        <a href="#" class="platforms__link" aria-label="Steam platform link">
+          <svg class="platforms__icon" width="30" height="30" aria-hidden="true">
+            <use class="icon-steam" href="img/sprite.svg#steam"></use>
+          </svg>
+        </a>
       </div>
     </div>
 
-    <div class="header__banner">
-      <h1 class="section-heading">SURVIVE AT ALL COSTS</h1>
-      <p class="section-tagline">Experience new social battle royale game</p>
-      <a href="#" class="page-button"><span>Buy Now on Steam</span><span>$14.99</span></a>
+    <div class="header__banner banner">
+      <h1 class="banner__heading">SURVIVE AT ALL COSTS</h1>
+      <p class="banner__tagline">Experience new social battle royale game</p>
+      <a href="#" class="page-button banner__button banner-button"><span class="banner-button__item">Buy Now on
+          Steam</span><span class="banner-button__item">$14.99</span>
+      </a>
     </div>
+
+    <a href="#" class="header__scroll-link">THE STORY
+      <svg class="header__scroll-icon" width="23" height="12" aria-hidden="true">
+        <use class="icon-scroll" href="img/sprite.svg#scroll"></use>
+      </svg>
+    </a>
   </div>
 </header>

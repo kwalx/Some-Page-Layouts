@@ -1,0 +1,49 @@
+/* Global button */
+
+.page-button {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--basic-dark);
+  background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+  padding: 13px;
+  border-radius: 4px;
+}
+
+@media (width >= 870px) {
+  .page-button {
+    padding: 17px;
+  }
+}
+
+/* Banner button */
+
+.banner__button {
+  text-align: center;
+  display: inline-block;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  transition: all .2s;
+}
+
+.banner__button:hover {
+  text-shadow: 0 1px 1px var(--basic-white);
+  box-shadow: 0 0 .5em 0 var(--basic-yellow), 0 0 .8em 0 var(--basic-black);
+}
+
+.banner-button__item + .banner-button__item {
+  padding-left: 14px;
+  margin-left: 14px;
+  position: relative;
+}
+
+.banner-button__item + .banner-button__item::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  background-color: var(--basic-dark);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}

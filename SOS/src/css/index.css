@@ -6,6 +6,8 @@
 
 /* Blocks */
 
+@import "blocks/buttons.css";
 @import "blocks/page.css";
 @import "blocks/header.css";
 @import "blocks/menu.css";
+@import "blocks/banner.css";

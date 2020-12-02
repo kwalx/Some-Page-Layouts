@@ -1,0 +1,44 @@
+/* Banner */
+
+.header__banner {
+  text-align: center;
+  padding-top: 11.65%;
+}
+
+/* Heading */
+
+.banner__heading {
+  font-family: 'Bebas Neue';
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-right: auto;
+  margin-bottom: 8px;
+  margin-left: auto;
+}
+
+@media (width >= 870px) {
+  .banner__heading {
+    font-size: 80px;
+    max-width: 70%;
+  }
+}
+
+.banner__tagline {
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: auto;
+  margin-bottom: 28px;
+  margin-left: auto;
+}
+
+@media (width >= 870px) {
+  .banner__tagline {
+    font-size: 24px;
+    max-width: 75%;
+  }
+}
