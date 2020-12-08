@@ -37,7 +37,8 @@ export const reload_html = () => {
 
 export const libs_css = () => {
   return gulp
-    .src('node_modules/@glidejs/glide/dist/css/glide.core.css')
+    .src('node_modules/swiper/swiper-bundle.css')
+    .pipe(rename('libs.css'))
     .pipe(gulp.dest('src/css/libs'))
     .pipe(sync.stream({ once: true }));
 };
@@ -71,7 +72,7 @@ export const libs_js = () => {
   return gulp
     .src([
       'node_modules/focus-visible/dist/focus-visible.js',
-      'node_modules/@glidejs/glide/dist/glide.js'
+      'node_modules/swiper/swiper-bundle.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(babel())
@@ -104,13 +105,10 @@ export const images = () => {
 // Copy
 
 export const copy = () => {
-  return (
-    gulp
-      // .src([ 'src/fonts/**/*', 'src/img/**/*' ], { base: 'src' })
-      .src([ 'src/fonts/**/*' ], { base: 'src' })
-      .pipe(gulp.dest('dist'))
-      .pipe(sync.stream({ once: true }))
-  );
+  return gulp
+    .src([ 'src/fonts/**/*', 'src/img/**/*.webp' ], { base: 'src' })
+    .pipe(gulp.dest('dist'))
+    .pipe(sync.stream({ once: true }));
 };
 
 // Server
