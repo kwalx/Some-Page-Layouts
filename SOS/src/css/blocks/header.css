@@ -1,7 +1,18 @@
 /* Header */
 
 .header {
-  background: #72572a url(img/bg-header-banner.jpg) center / cover no-repeat;
+  background: #72572a url(img/bg-banner.jpg) center / cover no-repeat;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 0 1.1em .7em var(--basic-black);
 }
 
 .header__inner {
