@@ -1,0 +1,155 @@
+/* Features */
+
+.features {
+  background: var(--basic-black) url(img/bg-features.jpg) top / cover no-repeat
+    fixed;
+  padding-top: 220px;
+  padding-bottom: 220px;
+}
+
+/* Inner */
+
+.features__block {
+  background-color: rgba(0, 0, 0, .5);
+  padding: 10px 10px 20px 20px;
+  border-radius: 5px;
+  max-width: 73%;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+@media (width >= 870px) {
+  .features__block {
+    padding: 20px 20px 20px 30px;
+    max-width: 50%;
+  }
+}
+
+/* Title */
+
+.features__title-block {
+  margin-bottom: 35px;
+}
+
+/* Accordeon item */
+
+.accordeon__item {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.accordeon__item:last-child {
+  margin-bottom: 0;
+}
+
+.accordeon__mark {
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: -14px;
+  transition: all .25s;
+}
+
+.accordeon__item--open .accordeon__mark {
+  background-color: var(--basic-white);
+}
+
+.accordeon__item::before {
+  content: "";
+  width: 2px;
+  background-color: var(--basic-white);
+  position: absolute;
+  top: 18px;
+  bottom: 100%;
+  left: -9px;
+  transition: all .3s;
+}
+
+.accordeon__item--open.accordeon__item::before {
+  bottom: 0;
+}
+
+.accordeon__item::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 50px;
+  position: absolute;
+  top: 6px;
+  left: -14px;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.accordeon__item--open.accordeon__item::after {
+  top: 99%;
+  opacity: 1;
+}
+
+@media (width >= 870px) {
+  .accordeon__mark {
+    top: 11px;
+    left: -19px;
+  }
+
+  .accordeon__item::before {
+    top: 23px;
+    left: -14px;
+  }
+
+  .accordeon__item::after {
+    top: 11px;
+    left: -19px;
+  }
+}
+
+/* Accordeon heading */
+
+.accordeon__heading {
+  font-size: 21px;
+  color: var(--basic-yellow);
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Accordeon link */
+
+.accordeon__link {
+  font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: var(--basic-yellow);
+  padding: 3px;
+}
+
+@media (width >= 870px) {
+  .accordeon__link {
+    font-size: 36px;
+  }
+}
+
+/* Text */
+
+.accordeon__text {
+  font-size: 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .3s;
+}
+
+@media (width >= 870px) {
+  .accordeon__text {
+    font-size: 18px;
+  }
+}
+
+.accordeon__item--open .accordeon__text {
+  margin-top: 20px;
+}

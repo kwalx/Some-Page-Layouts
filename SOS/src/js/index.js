@@ -82,3 +82,26 @@
     }
   });
 })();
+
+// Features accordeon
+
+(() => {
+  const links = document.querySelectorAll('.accordeon__link');
+
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const question = e.target.closest('.accordeon__item');
+
+      if (!question.classList.contains('accordeon__item--open')) {
+        question.classList.add('accordeon__item--open');
+        question.querySelector('.accordeon__text').style.maxHeight =
+          question.querySelector('.accordeon__text').scrollHeight + 'px';
+      } else {
+        question.classList.remove('accordeon__item--open');
+        question.querySelector('.accordeon__text').style.maxHeight = null;
+      }
+    });
+  });
+})();

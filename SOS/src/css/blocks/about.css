@@ -74,15 +74,10 @@
   }
 }
 
-/* Heading */
-
-.about__heading {
-  font-size: 33px;
-}
+/* Title */
 
 @media (width >= 870px) {
-  .about__heading {
-    font-size: 78px;
+  .about__title {
     max-width: 400px;
   }
 }

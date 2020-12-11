@@ -13,13 +13,19 @@ body {
 
 /* Section heading */
 
-.section-heading {
+.section-title {
   font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
   font-size: 33px;
   line-height: 1;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--basic-white);
+}
+
+@media (width >= 870px) {
+  .section-title {
+    font-size: 78px;
+  }
 }
 
 /* Section tagline */
@@ -32,6 +38,12 @@ body {
   text-transform: uppercase;
   color: var(--basic-white);
   margin-bottom: 5px;
+}
+
+@media (width >= 870px) {
+  .section-tagline {
+    font-size: 24px;
+  }
 }
 
 /* Overlay */
