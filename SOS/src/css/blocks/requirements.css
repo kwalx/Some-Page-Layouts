@@ -1,0 +1,48 @@
+/* Requirements */
+
+.requirements {
+  background: #08090b url(img/bg-requirements.jpg) right bottom / contain
+    no-repeat;
+  padding-top: 60px;
+  padding-bottom: 170px;
+}
+
+@media (width >= 870px) {
+  .requirements {
+    padding-top: 140px;
+  }
+}
+
+.requirements__title-block {
+  margin-bottom: 55px;
+}
+
+/* Table */
+
+.requirements__table {
+  table-layout: fixed;
+  border: 1px solid var(--basic-grey);
+  border-collapse: collapse;
+  max-width: 100%;
+}
+
+.r-table__cell {
+  text-align: left;
+  border: 1px solid var(--basic-grey);
+  padding: 13px;
+  vertical-align: top;
+}
+
+.requirements__table th {
+  font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--basic-yellow);
+}
+
+.requirements__table td {
+  font-size: 14px;
+  color: var(--basic-white);
+}
