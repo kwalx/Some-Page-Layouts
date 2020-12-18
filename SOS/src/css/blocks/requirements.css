@@ -26,6 +26,13 @@
   max-width: 100%;
 }
 
+@media (width <= 870px) {
+  .requirements__table {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .r-table__cell {
   text-align: left;
   border: 1px solid var(--basic-grey);
