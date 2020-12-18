@@ -1,0 +1,172 @@
+/* Reviews */
+
+.reviews {
+  background: #000 url(img/bg-reviews.jpg) top left / cover no-repeat;
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+@media (width >= 870px) {
+  .reviews {
+    padding-top: 130px;
+    padding-bottom: 100px;
+  }
+}
+
+/* Inner */
+
+@media (width >= 870px) {
+  .reviews__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+}
+
+/* Block */
+
+.reviews__block {
+  margin-bottom: 30px;
+}
+
+.reviews__title-block {
+  margin-bottom: 45px;
+}
+
+.reviews__info {
+  font-size: 14px;
+  text-align: justify;
+  margin-bottom: 25px;
+}
+
+@media (width >= 870px) {
+  .reviews__info {
+    font-size: inherit;
+  }
+}
+
+/* Reviews list */
+
+.reviews__list {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+/* Button */
+
+.reviews__wrap-btn {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (width >= 870px) {
+  .reviews__wrap-btn {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+.reviews__button {
+  font-size: 14px;
+  display: inline-block;
+}
+
+@media (width >= 870px) {
+  .reviews__button {
+    font-size: 16px;
+  }
+}
+
+/* Comment */
+
+.comment {
+  background-color: rgba(255, 255, 255, .08);
+  max-width: 455px;
+  padding: 10px 15px 15px 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+@media (width <= 870px) {
+  .comment {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (width >= 870px) {
+  .comment:nth-child(3n + 1) {
+    justify-self: center;
+  }
+
+  .comment:nth-child(3n + 2) {
+    justify-self: flex-start;
+  }
+
+  .comment:nth-child(3n + 3) {
+    justify-self: flex-end;
+  }
+}
+
+.comment__header {
+  display: grid;
+  grid-template-columns: 40px 1fr 50px;
+  grid-gap: 20px;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+/* User */
+
+.user__photo {
+  font-size: 12px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 0 var(--basic-yellow);
+  overflow: hidden;
+}
+
+.user__name {
+  font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  color: var(--basic-yellow);
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+
+.user__position {
+  font-size: 14px;
+  font-style: normal;
+  opacity: .5;
+  line-height: 1;
+}
+
+.user-soc__icon {
+  fill: var(--basic-white);
+  opacity: .5;
+  transition: all .2s;
+}
+
+.user-soc__link:focus .user-soc__icon,
+.user-soc__link:hover .user-soc__icon {
+  fill: #1c9cea;
+  opacity: 1;
+}
+
+.comment__text {
+  font-size: 14px;
+}
+
+.user__social {
+  justify-self: flex-end;
+}
+
+.comment__date {
+  font-size: 12px;
+  font-style: normal;
+  opacity: .5;
+}

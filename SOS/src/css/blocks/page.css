@@ -5,6 +5,7 @@ body {
   font-size: 18px;
   line-height: 1.2;
   color: var(--basic-white);
+  background-color: var(--basic-black);
 }
 
 .page--open {
