@@ -1,0 +1,167 @@
+/* Subscribe */
+
+.subscribe {
+  background-color: var(--special-grey);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (width > 870px) {
+  .subscribe {
+    padding-top: 200px;
+    padding-bottom: 150px;
+  }
+}
+
+/* Inner */
+
+.subscribe__inner {
+  --subscribe__img_width: 120px;
+  display: grid;
+  grid-template-areas: "subscribe_img subscribe_text subscribe_text"
+    "subscribe_img subscribe_text subscribe_text"
+    "subscribe_form subscribe_form subscribe_form";
+  grid-template-columns: var(--subscribe__img_width)
+    calc(100% - var(--subscribe__img_width));
+}
+
+@media (width >= 870px) {
+  .subscribe__inner {
+    --subscribe__img_width: 33%;
+    grid-template-areas: "subscribe_img subscribe_text subscribe_text"
+      "subscribe_img subscribe_form subscribe_form";
+    align-items: center;
+  }
+}
+
+/* Block */
+
+.subscribe__block {
+  grid-area: subscribe_text;
+  position: relative;
+}
+
+@media (width >= 870px) {
+  .subscribe__block {
+    align-self: end;
+  }
+}
+
+.subscribe-block__image {
+  grid-area: subscribe_img;
+  align-self: end;
+  transform: scale(1.5);
+  position: relative;
+  left: -20px;
+  z-index: 0;
+}
+
+@media (width >= 870px) {
+  .subscribe-block__image {
+    transform: scale(1);
+  }
+}
+
+/* Title */
+
+.subscribe__title-block {
+  margin-bottom: 25px;
+}
+
+/* Text */
+
+.subscribe__text {
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+@media (width >= 620px) {
+  .subscribe__text {
+    font-size: 18px;
+    margin-bottom: 45px;
+  }
+}
+
+/* Form */
+
+.subscribe__form {
+  grid-area: subscribe_form;
+  position: relative;
+}
+
+@media (width >= 870px) {
+  .subscribe__form {
+    display: grid;
+    grid-template-columns: 1fr 35%;
+    grid-gap: 20px;
+    justify-content: space-between;
+    align-self: start;
+  }
+}
+
+/* Input */
+
+.subscribe__field {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+@media (width >= 870px) {
+  .subscribe__field {
+    height: 60px;
+    margin-bottom: 0;
+  }
+}
+
+.field__name {
+  font-size: 12px;
+  color: var(--basic-white);
+  position: absolute;
+  top: 0;
+  left: 5px;
+  opacity: .5;
+}
+
+@media (width >= 870px) {
+  .field__name {
+    font-size: 14px;
+    top: 4px;
+    left: 20px;
+  }
+}
+
+.subscribe__input {
+  font-size: 14px;
+  color: var(--basic-white);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .08);
+  border: 0;
+  border-radius: 3px;
+  padding: 23px 5px 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media (width >= 870px) {
+  .subscribe__input {
+    font-size: 18px;
+    padding-right: 15px;
+    padding-left: 20px;
+  }
+}
+
+.subscribe__input::placeholder {
+  color: var(--basic-yellow);
+}
+
+/* Button */
+
+.subscribe__button {
+  width: 100%;
+  cursor: pointer;
+}
