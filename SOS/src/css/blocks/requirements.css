@@ -1,8 +1,8 @@
 /* Requirements */
 
 .requirements {
-  background: #08090b url(img/bg-requirements.jpg) right bottom / contain
-    no-repeat;
+  background: var(--special-grey) url(img/bg-requirements.jpg) right bottom /
+    contain no-repeat;
   padding-top: 60px;
   padding-bottom: 170px;
 }
