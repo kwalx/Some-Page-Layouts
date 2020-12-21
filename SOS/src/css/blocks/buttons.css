@@ -6,6 +6,7 @@
   color: var(--basic-dark);
   background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
   padding: 13px;
+  border: 0;
   border-radius: 4px;
 }
 
