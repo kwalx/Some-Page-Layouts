@@ -153,7 +153,7 @@
 
 .user-soc__link:focus .user-soc__icon,
 .user-soc__link:hover .user-soc__icon {
-  fill: #1c9cea;
+  fill: var(--twitter-bg);
   opacity: 1;
 }
 
