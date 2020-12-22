@@ -5,6 +5,7 @@
 /* Global */
 
 @import "fonts.css";
+@import "focus-visible.css";
 @import "box-model.css";
 @import "variables.css";
 
@@ -20,3 +21,4 @@
 @import "blocks/requirements.css";
 @import "blocks/reviews.css";
 @import "blocks/subscribe.css";
+@import "blocks/footer.css";
