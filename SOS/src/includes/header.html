@@ -9,30 +9,32 @@
 
       <nav class="header__menu menu" aria-label="Main menu">
         <button class="menu__button menu-button focus-style--neutral" type="button" aria-expanded="true"
-          aria-controls="menu__list" aria-label="Menu">
+          aria-controls="menu__list" aria-label="Show Menu">
           <span class="menu-button__line menu-button__line--inactive"></span>
           <span class="menu-button__line menu-button__line--inactive"></span>
           <span class="menu-button__line menu-button__line--active"></span>
         </button>
-        <ul class="menu__list" aria-expanded="false">
-          <li class="menu__item"><a href="#"
+        <ul id="menu__list" class="menu__list" aria-expanded="false" role="menu">
+          <li class="menu__item"><a href="#main"
               class="menu__link menu__link--current nav-link focus-style--neutral">MAIN</a></li>
-          <li class="menu__item"><a href="#"
+          <li class="menu__item"><a href="#about"
               class="menu__link menu__link--current nav-link focus-style--neutral">ABOUT</a></li>
-          <li class="menu__item"><a href="#" class="menu__link menu__link--current nav-link focus-style--neutral">GAME
+          <li class="menu__item"><a href="#game_features"
+              class="menu__link menu__link--current nav-link focus-style--neutral">GAME
               FEATURES</a></li>
-          <li class="menu__item"><a href="#" class="menu__link menu__link--current nav-link focus-style--neutral">SYSTEM
+          <li class="menu__item"><a href="#system_requirements"
+              class="menu__link menu__link--current nav-link focus-style--neutral">SYSTEM
               REQUIREMENTS</a>
           </li>
-          <li class="menu__item"><a href="#"
+          <li class="menu__item"><a href="#quotes"
               class="menu__link menu__link--current nav-link focus-style--neutral">QUOTES</a></li>
         </ul>
       </nav>
 
       <div class="lang">
-        <button class="lang__button focus-style--neutral" type="button" aria-expanded="true" aria-label="Language"
-          aria-controls="Language menu">ENG</button>
-        <ul id="language-menu" class="lang__list" aria-expanded="false" role="menu">
+        <button class="lang__button focus-style--neutral" type="button" aria-expanded="true" aria-label="Show Languages"
+          aria-controls="lang__list">ENG</button>
+        <ul id="lang__list" class="lang__list" aria-expanded="false" role="language-menu">
           <li class="lang__item" lang="ru" role="menuitem"><a href="#" class="lang__link focus-style--neutral"
               title="Russian">RUS</a></li>
           <li class="lang__item" lang="fr" role="menuitem"><a href="#" class="lang__link focus-style--neutral"
@@ -54,7 +56,7 @@
       </div>
     </div>
 
-    <div class="header__banner banner">
+    <div id="main" class="header__banner banner">
       <h1 class="banner__heading">SURVIVE AT ALL COSTS</h1>
       <p class="banner__tagline">Experience new social battle royale game</p>
       <a href="#" class="page-button banner__button banner-button focus-style--neutral"><span
