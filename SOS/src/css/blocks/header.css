@@ -52,6 +52,36 @@
   position: relative;
   padding-top: 3.5px;
   padding-bottom: 3.5px;
+  max-width: 100px;
+  vertical-align: middle;
+}
+
+.lang__menu {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--basic-white);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: right;
+  display: block;
+  padding-top: 4px;
+  padding-right: 14px;
+  padding-bottom: 4px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.lang__menu:focus {
+  color: var(--basic-yellow);
+}
+
+.lang__option {
+  color: var(--basic-black);
+  font-size: inherit;
 }
 
 @media (width >= 870px) {
@@ -71,7 +101,7 @@
 }
 
 /* Languages button */
-
+/* 
 .lang__button {
   font-size: 12px;
   font-weight: 700;
@@ -92,30 +122,31 @@
 
 .lang__button:hover {
   color: var(--basic-yellow);
-}
+} */
 
-.lang__button::before {
+/* .lang__button::before { */
+.lang::before {
   content: "";
   background: url(img/ico-lang-menu.svg) no-repeat;
   width: 10px;
   height: 6px;
   position: absolute;
   top: 50%;
-  right: 4px;
+  right: 2px;
   transform: translateY(-50%) rotate(0);
 }
-
+/* 
 .lang__button--open {
   color: var(--basic-yellow);
 }
 
 .lang__button--open.lang__button::before {
   transform: translateY(-50%) rotate(180deg);
-}
+} */
 
 /* List */
 
-.lang__list {
+/* .lang__list {
   display: none;
   width: 100%;
   position: absolute;
@@ -128,11 +159,11 @@
 
 .lang__list--open {
   display: block;
-}
+} */
 
 /* Link */
 
-.lang__link {
+/* .lang__link {
   font-size: 12px;
   font-weight: 700;
   color: var(--basic-white);
@@ -146,7 +177,7 @@
 
 .lang__link:focus {
   color: var(--basic-yellow);
-}
+} */
 
 /* Platforms */
 

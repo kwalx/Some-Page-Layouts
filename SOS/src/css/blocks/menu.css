@@ -89,6 +89,7 @@
 /* Item */
 
 .menu__item {
+  vertical-align: middle;
   margin-bottom: 15px;
 }
 
@@ -107,6 +108,7 @@
   letter-spacing: .1em;
   color: var(--basic-white);
   text-transform: uppercase;
+  display: block;
   padding: 5px 0;
   transition: color .2s;
 }

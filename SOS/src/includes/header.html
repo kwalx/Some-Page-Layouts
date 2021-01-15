@@ -32,14 +32,20 @@
       </nav>
 
       <div class="lang">
-        <button class="lang__button focus-style--neutral" type="button" aria-expanded="true" aria-label="Show Languages"
+        <!-- <button class="lang__button focus-style--neutral" type="button" aria-expanded="true" aria-label="Show Languages"
           aria-controls="lang__list">ENG</button>
         <ul id="lang__list" class="lang__list" aria-expanded="false" role="language-menu">
           <li class="lang__item" lang="ru" role="menuitem"><a href="#" class="lang__link focus-style--neutral"
               title="Russian">RUS</a></li>
           <li class="lang__item" lang="fr" role="menuitem"><a href="#" class="lang__link focus-style--neutral"
               title="French">FRA</a></li>
-        </ul>
+        </ul> -->
+
+        <select name="lang_menu" class="lang__menu focus-style--neutral">
+          <option value="eng" class="lang__option" selected>ENG</option>
+          <option value="rus" class="lang__option">RUS</option>
+          <option value="fra" class="lang__option">FRA</option>
+        </select>
       </div>
 
       <div class="platforms">
