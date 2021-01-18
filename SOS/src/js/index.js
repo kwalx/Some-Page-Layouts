@@ -1,20 +1,3 @@
-// Language menu
-
-(() => {
-  // const languageButton = document.querySelector('.lang__button');
-  // const languageMenu = document.querySelector('.lang__list');
-  // const languageItems = document.querySelectorAll('.lang__link ');
-  // languageButton.addEventListener('click', () => {
-  //   let expanded = languageMenu.getAttribute('aria-expanded') == 'false';
-  //   languageMenu.setAttribute('aria-expanded', expanded);
-  //   languageMenu.classList.toggle('lang__list--open');
-  //   languageButton.classList.toggle('lang__button--open');
-  // });
-  // //
-})();
-
-// Page Navigation
-
 (() => {
   // Navigation menu
 
