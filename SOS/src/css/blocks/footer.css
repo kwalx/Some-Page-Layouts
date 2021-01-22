@@ -212,3 +212,34 @@
 .privacy__link:hover {
   opacity: .7;
 }
+
+/* Author */
+
+.author {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: var(--basic-grey);
+  display: inline-block;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+@media (width <= 870px) {
+  .author {
+    text-align: center;
+  }
+}
+
+.author__link {
+  font-size: inherit;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--basic-grey);
+  transition: color .2s;
+}
+
+.author__link:hover {
+  color: var(--basic-white);
+}
