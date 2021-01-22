@@ -221,8 +221,6 @@
   font-weight: normal;
   text-align: center;
   color: var(--basic-grey);
-  display: inline-block;
-  margin-bottom: 15px;
   margin-top: 10px;
 }
 
