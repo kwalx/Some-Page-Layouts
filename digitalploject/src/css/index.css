@@ -1,0 +1,17 @@
+/* Libs */
+
+@import "libs/libs.css";
+
+/* Global */
+
+@import "fonts.css";
+@import "focus-visible.css";
+@import "box-model.css";
+@import "variables.css";
+
+/* Blocks */
+
+@import "blocks/page.css";
+@import "blocks/header.css";
+@import "blocks/menu.css";
+@import "blocks/footer.css";
