@@ -3,7 +3,7 @@
 }
 
 .focus-style--neutral:focus {
-  outline: 3px solid var(--basic-yellow);
+  outline: 3px solid var(--basic-grey);
   outline-offset: 2px;
   opacity: 1;
 }
