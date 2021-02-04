@@ -1,0 +1,142 @@
+/* Banner */
+
+.banner {
+  margin-bottom: 60px;
+}
+
+@media (width >= 760px) {
+  .banner {
+    margin-bottom: 120px;
+  }
+}
+
+/* Heading */
+
+.banner__heading {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--basic-grey);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+@media (width >= 480px) {
+  .banner__heading {
+    font-size: 4.2vw;
+  }
+}
+
+@media (width >= 760px) {
+  .banner__heading {
+    padding-bottom: 25px;
+  }
+}
+
+.banner__heading--bold {
+  font-weight: bold;
+  color: var(--basic-dark);
+  display: block;
+}
+
+/* Slider */
+
+@media (width >= 760px) {
+  .banner__slide {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+  }
+}
+
+/* Controls */
+
+@media (width >= 760px) {
+  .banner__controls {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+  }
+}
+
+.banner__icon {
+  fill: var(--basic-dark);
+  margin: auto;
+}
+
+.glide__arrow {
+  width: 53px;
+  height: 53px;
+  text-align: center;
+  background-color: var(--basic-white);
+  border: 1px solid var(--special-grey);
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.glide__arrow--prev {
+  margin-right: 23px;
+}
+
+.glide__arrow:hover {
+  background-color: var(--light-grey);
+}
+
+/* Image block */
+
+.banner__image-block {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+@media (width >= 760px) {
+  .banner__image-block {
+    margin-bottom: 0;
+  }
+}
+
+/* Link */
+
+.banner__link-more {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media (width >= 760px) {
+  .banner__link-more {
+    padding: 25px 35px;
+  }
+}
+
+/* Counter */
+
+.slide-counter {
+  font-size: 24px;
+  font-weight: normal;
+  color: var(--basic-grey);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.banner__counter {
+  margin-top: 50px;
+}
+
+.current-slide {
+  padding-right: 25px;
+}
+
+.counter-quantity {
+  padding-left: 25px;
+}
+
+.separator {
+  display: inline-block;
+  width: 2px;
+  height: 26px;
+  background-color: var(--basic-grey);
+  transform: rotate(45deg);
+}
