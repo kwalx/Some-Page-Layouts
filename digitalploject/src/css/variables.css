@@ -3,12 +3,9 @@
 :root {
   --basic-white: #ffffff;
   --basic-black: #000000;
-  --basic-yellow: #ffb548;
-  --basic-grey: #979797;
-  --special-grey: #080a0b;
-  --basic-dark: #1a1917;
-  --facebook-bg: #4267b2;
-  --twitter-bg: #1da1f2;
-  --youtube-bg: #ff1313;
-  --twitch-bg: #6441a5;
+  --basic-grey: #bdbdbd;
+  --light-grey: #f9f9f9;
+  --special-grey: #f2f2f2;
+  --basic-dark: #333333;
+  --basic-dark-50a: rgba(51, 51, 51, .5);
 }
