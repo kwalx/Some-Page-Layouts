@@ -1,0 +1,81 @@
+/* Tasks */
+
+.tasks {
+  margin-bottom: 60px;
+}
+
+@media (width >= 760px) {
+  .tasks {
+    margin-bottom: 120px;
+  }
+}
+
+/* Heading */
+
+.tasks__heading {
+  margin-bottom: 35px;
+}
+
+@media (width >= 760px) {
+  .tasks__heading {
+    margin-bottom: 60px;
+  }
+}
+
+/* List */
+
+@media (width >= 760px) {
+  .tasks__list {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 10%;
+    justify-content: space-between;
+  }
+}
+
+/* Item */
+
+.tasks__item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  justify-items: flex-start;
+  align-items: flex-start;
+  grid-gap: 15px;
+  margin-bottom: 35px;
+}
+
+@media (width >= 760px) {
+  .tasks__item {
+    grid-template-columns: 100px 1fr;
+  }
+}
+
+/* Number */
+
+.tasks__number {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 135px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: .8;
+  color: var(--basic-grey);
+}
+
+@media (width >= 760px) {
+  .tasks__number {
+    font-size: 180px;
+  }
+}
+
+/* Text */
+
+.tasks__text {
+  font-size: 17px;
+  color: var(--basic-dark);
+}
+
+@media (width >= 760px) {
+  .tasks__text {
+    font-size: 20px;
+  }
+}
