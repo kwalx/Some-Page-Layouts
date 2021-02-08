@@ -88,3 +88,32 @@
     currentSlide.textContent = `${bannerSlier.index + 1}`;
   });
 })();
+
+(() => {
+  const inputList = document.querySelectorAll('.input-box__field');
+  const msg = document.querySelector('.input-box__message');
+
+  function inputIsEmpty(item) {
+    if (this.classList.contains('no-empty')) {
+      this.classList.remove('no-empty');
+    }
+
+    if (item.target.value.length > 0) {
+      this.classList.add('no-empty');
+    }
+  }
+
+  inputList.forEach((item) => {
+    item.addEventListener('input', inputIsEmpty);
+
+    // item.addEventListener('input', (e) => {
+    // if (item.classList.contains('no-empty')) {
+    //   item.classList.remove('no-empty');
+    // }
+
+    // if (e.target.value.length > 0) {
+    //   item.classList.add('no-empty');
+    // }
+    // });
+  });
+})();

@@ -1,9 +1,22 @@
 /* Projects section */
 
+.projects-section {
+  margin-bottom: 60px;
+}
+
+@media (width >= 760px) {
+  .projects-section {
+    margin-bottom: 120px;
+  }
+}
+
+/* List */
+
 .projects-section__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1.9vw;
+  margin-bottom: 30px;
 }
 
 @media (width >= 760px) {
@@ -116,5 +129,23 @@
 }
 
 .project-item__arrow-icon {
+  fill: var(--basic-white);
+}
+
+.projects-section__link-more {
+  color: var(--basic-white);
+  background-color: var(--basic-dark);
+}
+
+.projects-section__btn-wrap {
+  text-align: right;
+}
+
+.projects-section__link-more:hover {
+  color: var(--basic-white);
+  text-shadow: 0 0 1px var(--basic-white);
+}
+
+.projects-section__arrow-icon {
   fill: var(--basic-white);
 }
