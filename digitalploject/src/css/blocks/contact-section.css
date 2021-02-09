@@ -15,7 +15,7 @@
 @media (width >= 760px) {
   .contact-section__inner {
     display: grid;
-    grid-template-columns: 35% 1fr;
+    grid-template-columns: 36% 1fr;
     grid-gap: 30px;
     align-items: flex-start;
   }
@@ -30,13 +30,14 @@
 }
 
 .input-box__text {
-  font-size: 14px;
+  font-size: 13px;
   position: absolute;
   top: 50%;
   left: 0;
   padding: 0 5px;
   transform: translateY(-50%);
   transition: all .25s;
+  cursor: text;
 }
 
 .input-box__field:focus + .input-box__text,
@@ -66,7 +67,7 @@
 
 .input-box__message {
   padding-top: 17px;
-  height: 150px;
+  height: 135px;
   resize: none;
 }
 
