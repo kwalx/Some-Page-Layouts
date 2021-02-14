@@ -47,10 +47,10 @@ export const libs_css = () => {
 
 export const styles = () => {
   return gulp
-    .src('src/css/index.css')
+    .src([ 'src/css/index.css', 'src/css/gallery.css' ])
     .pipe(postcss([ pimport, minmax, autoprefixer, csso ]))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(sync.stream());
 };
 
