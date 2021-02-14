@@ -1,0 +1,93 @@
+/* Libs */
+
+@import "libs/libs.css";
+
+/* Global */
+
+@import "fonts.css";
+@import "focus-visible.css";
+@import "box-model.css";
+@import "variables.css";
+
+/* Blocks */
+
+@import "blocks/page.css";
+@import "blocks/header.css";
+@import "blocks/menu.css";
+@import "blocks/footer.css";
+
+/* Header */
+
+.gallery-container {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+@media (width >= 760px) {
+  .gallery-container {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+/* Slider */
+
+.gallery-slide__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-slide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-gap: 1.9vw;
+}
+
+/* Slider item */
+
+.gallery-slide__item {
+  overflow: hidden;
+  cursor: pointer;
+  transition: all .25s;
+}
+
+/* Slide image */
+
+.slide-item__image {
+  transform: scale(1.01);
+  transition: transform .45s;
+}
+
+.gallery-slide__item:hover .slide-item__image {
+  transform: scale(1.1);
+}
+
+/* Description */
+
+.gallery-slide__description {
+  position: absolute;
+  left: 0;
+  bottom: -110vh;
+  width: 100%;
+  background-color: var(--special-grey);
+  padding: 10px;
+  transition: bottom .25s;
+}
+
+.gallery-slide__item:hover .gallery-slide__description {
+  bottom: 0;
+}
+
+/* Slider controls */
+
+.gallery__controls {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.gallery__counter {
+  margin-right: 25px;
+}
