@@ -45,8 +45,6 @@
 
   links.forEach((link) => {
     link.addEventListener('click', (e) => {
-      e.preventDefault();
-
       if (page.classList.contains('page--open')) {
         showHidePanel();
       } else {
@@ -89,6 +87,8 @@
   });
 })();
 
+// Contact form
+
 (() => {
   const inputList = document.querySelectorAll('.input-box__field');
   const msg = document.querySelector('.input-box__message');
@@ -105,15 +105,5 @@
 
   inputList.forEach((item) => {
     item.addEventListener('input', inputIsEmpty);
-
-    // item.addEventListener('input', (e) => {
-    // if (item.classList.contains('no-empty')) {
-    //   item.classList.remove('no-empty');
-    // }
-
-    // if (e.target.value.length > 0) {
-    //   item.classList.add('no-empty');
-    // }
-    // });
   });
 })();
