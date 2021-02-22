@@ -63,28 +63,54 @@
     perView: 1
   };
 
-  const bannerSliderLength = (Glide, Components, Events) => {
-    return {
-      mount() {
-        Events.emit('length', Components.Sizes.length);
-        const bannerQantity = document.querySelector('.counter-quantity');
-        bannerQantity.textContent = `${Components.Sizes.length}`;
-      }
+  let pageSlider;
+
+  if (document.querySelector('.glide')) {
+    const sliderLength = (Glide, Components, Events) => {
+      return {
+        mount() {
+          Events.emit('length', Components.Sizes.length);
+          const bannerQantity = document.querySelector('.counter-quantity');
+          bannerQantity.textContent = `${Components.Sizes.length}`;
+        }
+      };
     };
-  };
 
-  const bannerSlier = new Glide('.glide', config);
+    pageSlider = new Glide('.glide', config);
 
-  bannerSlier.mount({
-    bannerSliderLength
-  });
+    pageSlider.mount({
+      sliderLength
+    });
 
-  const currentSlide = document.querySelector('.current-slide');
-  currentSlide.textContent = `${bannerSlier.index + 1}`;
+    pageSlider.on('build.after', function() {
+      glideHandleHeight();
+    });
 
-  bannerSlier.on('move', function(event) {
-    currentSlide.textContent = `${bannerSlier.index + 1}`;
-  });
+    pageSlider.on('run.after', function() {
+      glideHandleHeight();
+    });
+
+    const currentSlide = document.querySelector('.current-slide');
+    currentSlide.textContent = `${pageSlider.index + 1}`;
+
+    pageSlider.on('move', function(event) {
+      currentSlide.textContent = `${pageSlider.index + 1}`;
+    });
+
+    function glideHandleHeight() {
+      const activeSlide = document.querySelector('.glide__slide--active');
+      const activeSlideHeight = activeSlide ? activeSlide.offsetHeight : 0;
+
+      const glideTrack = document.querySelector('.glide__track');
+      const glideTrackHeight = glideTrack ? glideTrack.offsetHeight : 0;
+
+      if (activeSlideHeight !== glideTrackHeight) {
+        glideTrack.style.height = `${activeSlideHeight}px`;
+      }
+    }
+  } else {
+    pageSlider = false;
+  }
 })();
 
 // Contact form
