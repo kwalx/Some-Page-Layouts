@@ -6,6 +6,17 @@ body {
   line-height: 1.56;
   color: var(--basic-dark);
   background-color: var(--basic-white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 .page--open {
@@ -16,7 +27,7 @@ body {
 
 .main-heading {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-size: 21px;
+  font-size: 25px;
   font-weight: normal;
   line-height: 1;
   color: var(--basic-grey);
@@ -26,13 +37,19 @@ body {
 
 @media (width >= 480px) {
   .main-heading {
-    font-size: 4.2vw;
+    font-size: calc(1em + 2vw);
   }
 }
 
 @media (width >= 760px) {
   .main-heading {
     padding-bottom: 25px;
+  }
+}
+
+@media (width >= 1440px) {
+  .main-heading {
+    font-size: 64px;
   }
 }
 
@@ -46,7 +63,7 @@ body {
 
 .section-heading {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-size: 26px;
+  font-size: 22px;
   font-style: normal;
   font-weight: normal;
   line-height: 1.2;
@@ -56,7 +73,13 @@ body {
 
 @media (width >= 640px) {
   .section-heading {
-    font-size: 4.2vw;
+    font-size: calc(1em + 1.6vw);
+  }
+}
+
+@media (width >= 1440px) {
+  .section-heading {
+    font-size: 53px;
   }
 }
 
@@ -94,7 +117,21 @@ body {
   transform: translateX(5px);
 }
 
+/* Slider */
+
+.glide__track {
+  transition: height 250ms ease-in-out;
+}
+
 /* Slider controls */
+
+.slider-controls--horizontal {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 30px;
+}
 
 .arrows-block {
   display: flex;
@@ -133,6 +170,10 @@ body {
   line-height: 1;
   display: flex;
   align-items: center;
+}
+
+.slider-counter--horizontal {
+  margin-right: 25px;
 }
 
 .current-slide {
