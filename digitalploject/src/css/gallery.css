@@ -77,17 +77,3 @@
 .gallery-slide__item:hover .gallery-slide__description {
   bottom: 0;
 }
-
-/* Slider controls */
-
-.gallery__controls {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.gallery__counter {
-  margin-right: 25px;
-}
