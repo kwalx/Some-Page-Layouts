@@ -1,0 +1,88 @@
+/* Libs */
+
+@import "libs/libs.css";
+
+/* Global */
+
+@import "fonts.css";
+@import "focus-visible.css";
+@import "box-model.css";
+@import "variables.css";
+
+/* Blocks */
+
+@import "blocks/page.css";
+@import "blocks/header.css";
+@import "blocks/menu.css";
+@import "blocks/footer.css";
+
+/* Projects */
+
+.projects-container {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+@media (width >= 760px) {
+  .projects-container {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+/* Project */
+
+.project {
+  margin-bottom: 60px;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+@media (width >= 640px) {
+  .project {
+    display: grid;
+    grid-template-columns: 8fr 7fr;
+  }
+}
+
+/* Image */
+
+@media (width >= 640px) {
+  .project__img img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Project description */
+
+.project__description {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: flex-start;
+  background-color: var(--light-grey);
+  padding: 10px;
+}
+
+@media (width >= 760px) {
+  .project__description {
+    padding: 20px 20px 20px 30px;
+  }
+}
+
+/* Project heading */
+
+@media (width >= 1440px) {
+  .project__section-heading {
+    font-size: 40px;
+  }
+}
+
+/* Button */
+
+.project__button {
+  align-self: flex-end;
+  margin-top: 10px;
+}

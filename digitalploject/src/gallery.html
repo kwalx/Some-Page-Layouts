@@ -29,7 +29,7 @@
         <ul id="menu__list" class="menu__list" aria-expanded="false">
           <li class="menu__item"><a href="index.html" class="menu__link focus-style--neutral">ГЛАВНАЯ</a></li>
           <li class="menu__item"><a href="gallery.html" class="menu__link focus-style--neutral active">ГАЛЕРЕЯ</a></li>
-          <li class="menu__item"><a href="" class="menu__link focus-style--neutral">ПРОЕКТЫ</a></li>
+          <li class="menu__item"><a href="projects.html" class="menu__link focus-style--neutral">ПРОЕКТЫ</a></li>
           <li class="menu__item"><a href="" class="menu__link focus-style--neutral">СЕРТИФИКАТЫ</a></li>
           <li class="menu__item"><a href="" class="menu__link focus-style--neutral">КОНТАКТЫ</a></li>
         </ul>
@@ -39,7 +39,7 @@
   <!-- /Header -->
 
   <!-- Main -->
-  <main class="main ">
+  <main class="main">
     <div class="page-container gallery-container">
       <h1 class="main-heading">ГАЛЕРЕЯ <span class="main-heading--bold">ФОТОГРАФИЙ</span></h1>
 
@@ -214,16 +214,6 @@
             <li class="glide__slide gallery-slide gallery-slide">
               <div class="gallery-slide__item slide-item">
                 <picture>
-                  <source srcset="img/img-gallery-3.webp, img/img-gallery-3-840.webp 840w" type="image/webp">
-                  <img srcset="img/img-gallery-3.jpg, img/img-gallery-3-840.jpg 840w" src="img/img-gallery-3.jpg"
-                    width="420" height="520" alt="Greenhouse photo" class="slide-item__image">
-                </picture>
-                <div class="gallery-slide__description">
-                  <p>Описание или пояснение к изображению.</p>
-                </div>
-              </div>
-              <div class="gallery-slide__item slide-item">
-                <picture>
                   <source srcset="img/img-gallery-5.webp, img/img-gallery-5-840.webp 840w" type="image/webp">
                   <img srcset="img/img-gallery-5.jpg, img/img-gallery-5-840.jpg 840w" src="img/img-gallery-5.jpg"
                     width="420" height="520" alt="Castle ruins" class="slide-item__image">
@@ -272,43 +262,33 @@
                   <p>Описание или пояснение к изображению.</p>
                 </div>
               </div>
-              <div class="gallery-slide__item slide-item">
-                <picture>
-                  <source srcset="img/img-gallery-1.webp, img/img-gallery-1-840.webp 840w" type="image/webp">
-                  <img srcset="img/img-gallery-1.jpg, img/img-gallery-1-840.jpg 840w" src="img/img-gallery-1.jpg"
-                    width="420" height="520" alt="Office photo" class="slide-item__image">
-                </picture>
-                <div class="gallery-slide__description">
-                  <p>Описание или пояснение к изображению.</p>
-                </div>
-              </div>
             </li>
           </ul>
         </div>
-        <div class="slider-controls gallery__controls">
+        <div class="slider-controls slider-controls--horizontal">
           <div class="glide__arrows" data-glide-el="controls">
             <button type="button"
               class="glide__arrow glide__arrow--prev slider-arrow slider-arrow--prev focus-style--neutral"
               data-glide-dir="<" aria-label="prev">
-              <svg class="banner__icon" width="18" height="8" aria-hidden="true">
+              <svg width="18" height="8" aria-hidden="true">
                 <use class="controls-prev" href="img/sprite.svg#arrow-left"></use>
               </svg>
             </button><button type="button" class="glide__arrow glide__arrow--next slider-arrow focus-style--neutral"
               data-glide-dir=">" aria-label="next">
-              <svg class="banner__icon" width="18" height="8" aria-hidden="true">
+              <svg width="18" height="8" aria-hidden="true">
                 <use class="controls-next" href="img/sprite.svg#arrow-right"></use>
               </svg>
             </button>
           </div>
-          <div class="slider-counter gallery__counter">
+          <div class="slider-counter slider-counter--horizontal">
             <span class="current-slide"></span>
             <span class="separator"></span>
             <span class="counter-quantity"></span>
           </div>
         </div>
       </div>
+      <!-- /Gallery -->
     </div>
-    <!-- /Gallery -->
 
   </main>
   <!-- /Main -->
@@ -331,7 +311,7 @@
           <li class="footer-info__item"><a href="gallery.html"
               class="footer-link footer-info__link focus-style--neutral">Галерея</a>
           </li>
-          <li class="footer-info__item"><a href="#"
+          <li class="footer-info__item"><a href="projects.html"
               class="footer-link footer-info__link focus-style--neutral">Проекты</a>
           </li>
           <li class="footer-info__item"><a href="#"
