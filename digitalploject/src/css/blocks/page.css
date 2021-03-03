@@ -111,6 +111,7 @@ body {
 .link-more:hover {
   color: var(--basic-black);
   text-shadow: 0 0 1px var(--basic-dark);
+  box-shadow: 2px 2px 4px 0 var(--basic-dark-50a);
 }
 
 .link-more:hover > .arrow-icon {
@@ -131,6 +132,10 @@ body {
   justify-content: flex-end;
   align-items: center;
   margin-top: 30px;
+}
+
+.slider-controls--horizontal-right {
+  justify-content: flex-start;
 }
 
 .arrows-block {
@@ -216,6 +221,7 @@ body {
 
 .page-button:hover {
   text-shadow: 0 0 1px var(--basic-white);
+  box-shadow: 2px 2px 4px 0 var(--basic-dark-50a);
 }
 
 .page-button:hover .arrow-icon {
