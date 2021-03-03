@@ -60,7 +60,15 @@
   const config = {
     type: 'carousel',
     startAt: 0,
-    perView: 1
+    perView: 1,
+    breakpoints: {
+      760: {
+        perView: 1
+      },
+      580: {
+        perView: 1
+      }
+    }
   };
 
   let pageSlider;
@@ -75,6 +83,15 @@
         }
       };
     };
+
+    if (
+      document.querySelector('.glide').classList.contains('glide-certificates')
+    ) {
+      config.perView = 3;
+      config.breakpoints[760].perView = 2;
+    } else {
+      config.perView = 1;
+    }
 
     pageSlider = new Glide('.glide', config);
 
@@ -111,25 +128,4 @@
   } else {
     pageSlider = false;
   }
-})();
-
-// Contact form
-
-(() => {
-  const inputList = document.querySelectorAll('.input-box__field');
-  const msg = document.querySelector('.input-box__message');
-
-  function inputIsEmpty(item) {
-    if (this.classList.contains('no-empty')) {
-      this.classList.remove('no-empty');
-    }
-
-    if (item.target.value.length > 0) {
-      this.classList.add('no-empty');
-    }
-  }
-
-  inputList.forEach((item) => {
-    item.addEventListener('input', inputIsEmpty);
-  });
 })();
