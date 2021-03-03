@@ -129,3 +129,102 @@
     pageSlider = false;
   }
 })();
+
+// Contact form
+
+(() => {
+  const inputList = document.querySelectorAll('.input-box__field');
+  const msg = document.querySelector('.input-box__message');
+
+  function inputIsEmpty(item) {
+    if (this.classList.contains('no-empty')) {
+      this.classList.remove('no-empty');
+    }
+
+    if (item.target.value.length > 0) {
+      this.classList.add('no-empty');
+    }
+  }
+
+  inputList.forEach((item) => {
+    item.addEventListener('input', inputIsEmpty);
+  });
+})();
+
+// Google map
+
+(() => {
+  if (document.getElementById('map')) {
+    let map;
+
+    const script = document.createElement('script');
+    script.src =
+      'https://maps.googleapis.com/maps/api/js?key=AIzaSyByjuCe8OusYTWxO8UHqXUTQ6AbbD3GjrU&callback=initMap';
+    script.async = true;
+
+    window.initMap = function() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 49.80459256091793, lng: 73.11039856793721 },
+        zoom: 8
+      });
+    };
+
+    document.head.appendChild(script);
+  }
+})();
+
+// Modal
+
+(() => {
+  if (document.querySelector('.modal-wrap')) {
+    getModal();
+    getModalSuccess();
+  }
+
+  function getModal() {
+    const page = document.querySelector('.page');
+    const modal = document.querySelector('.modal-wrap');
+    const modalOpen = document.querySelector('.contacts__button');
+    const modalClose = document.querySelector('.modal-form__close');
+
+    modalOpen.addEventListener('click', () => {
+      modal.classList.add('active');
+      page.classList.add('page--open');
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.classList.remove('active');
+      page.classList.remove('page--open');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target == modal) {
+        modal.classList.remove('active');
+        page.classList.remove('page--open');
+      } else {
+        return false;
+      }
+    });
+  }
+
+  function getModalSuccess() {
+    const form = document.querySelector('.form');
+    const modal = document.querySelector('.modal-wrap');
+    const buttonBack = document.querySelector('.success__button');
+    const page = document.querySelector('.page');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modal.classList.add('success');
+    });
+
+    buttonBack.addEventListener('click', () => {
+      if (modal.classList.contains('success')) {
+        modal.classList.remove('active');
+        page.classList.remove('page--open');
+      } else {
+        return false;
+      }
+    });
+  }
+})();

@@ -1,0 +1,338 @@
+/* Libs */
+
+@import "libs/libs.css";
+
+/* Global */
+
+@import "fonts.css";
+@import "focus-visible.css";
+@import "box-model.css";
+@import "variables.css";
+
+/* Blocks */
+
+@import "blocks/page.css";
+@import "blocks/header.css";
+@import "blocks/menu.css";
+@import "blocks/footer.css";
+
+/* Contacts */
+
+.page-contacts {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+@media (width >= 760px) {
+  .page-contacts {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (width >= 760px) {
+  .contacts {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    grid-gap: 30px;
+  }
+}
+
+.contacts__item {
+  margin-bottom: 30px;
+}
+
+@media (width >= 760px) {
+  .contacts__item {
+    margin-bottom: 0;
+  }
+}
+
+/* Info */
+
+.contacts__info {
+  font-style: normal;
+}
+
+.contacts__name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contacts__address {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.contacts__phone,
+.contacts__email {
+  margin-bottom: 20px;
+}
+
+@media (width >= 760px) {
+  .contacts__address,
+  .contacts__phone {
+    margin-bottom: 40px;
+  }
+
+  .contacts__email {
+    margin-bottom: 30px;
+  }
+}
+
+.contacts-phone__link {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--basic-dark);
+  transition: opacity .2s;
+}
+
+.contacts-phone__link:hover {
+  opacity: .75;
+}
+
+.contacts-email__link {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--basic-dark);
+  transition: all .4s;
+}
+
+.contacts-email__link:hover {
+  opacity: .75;
+}
+
+.contacts__button {
+}
+
+/* Map */
+
+#map {
+  min-height: 250px;
+}
+
+/* Modal form */
+
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  z-index: 5;
+}
+
+.modal-wrap.active {
+  display: flex;
+}
+
+.modal-form {
+  min-width: 280px;
+  max-width: 480px;
+  min-height: 200px;
+  padding: 1.5em;
+  margin: auto;
+  background-color: var(--basic-white);
+  position: relative;
+}
+
+/* Close */
+
+.modal-form__close {
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  position: absolute;
+  top: 2.1em;
+  right: 1.6em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.modal-form__close::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: var(--basic-dark);
+  display: block;
+  transform: rotate(-45deg);
+}
+
+.modal-form__close::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: var(--basic-dark);
+  display: block;
+  transform: rotate(45deg);
+}
+
+/* Heading */
+
+.modal-form__heading {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+/* Placeholder */
+
+.input-box {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input-box__text {
+  font-size: 13px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 0 5px;
+  transform: translateY(-50%);
+  transition: all .25s;
+  cursor: text;
+}
+
+.input-box__field:focus + .input-box__text,
+.input-box__field.no-empty + .input-box__text {
+  font-size: 9px;
+  top: 0;
+  transform: translateY(0);
+}
+
+/* Input */
+
+.input-box__field {
+  display: block;
+  width: 100%;
+  height: 45px;
+  line-height: 1;
+  background-color: var(--light-grey);
+  border: none;
+  padding: 5px;
+}
+
+.input-box__text--red {
+  color: var(--alert-red);
+}
+
+/* Message */
+
+.input-box__message {
+  padding-top: 17px;
+  height: 135px;
+  resize: none;
+}
+
+.input-box__message + .input-box__text {
+  top: 15px;
+  transform: translateY(0);
+}
+
+/* Checkbox */
+
+.form-checkbox {
+  font-size: 14px;
+  line-height: 1.2;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  grid-gap: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.form-checkbox__box {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-color: var(--light-grey);
+  border: 2px solid var(--basic-grey);
+  border-radius: 3px;
+  margin-top: 2px;
+}
+
+.form-checkbox__check {
+  fill: var(--basic-dark);
+}
+
+.form-checkbox__input:focus + .form-checkbox__box {
+  box-shadow: 0 0 1px 1px var(--basic-grey);
+}
+
+.form-checkbox__box .check-icon {
+  display: none;
+  margin: auto;
+}
+
+.form-checkbox__input:checked + .form-checkbox__box .check-icon {
+  display: block;
+}
+
+/* Modal button */
+
+.modal-form__button {
+  width: 100%;
+  text-align: center;
+}
+
+/* Success */
+
+.modal-form__success {
+  display: none;
+  text-align: center;
+}
+
+.modal-wrap.success .modal-form__success {
+  display: block;
+}
+
+.modal-wrap.success .form {
+  display: none;
+}
+
+.success__top {
+  display: inline-block;
+  padding: 22px;
+  border: 1px solid var(--basic-grey);
+  margin-bottom: 25px;
+  border-radius: 50%;
+}
+
+.success__box {
+  width: 82px;
+  height: 82px;
+  display: flex;
+  background-color: var(--basic-green);
+  border-radius: 50%;
+}
+
+.success__svg {
+  margin: auto;
+}
+
+.success__icon {
+  fill: var(--basic-white);
+}
+
+.success__heading {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.success__text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--special-dark);
+  margin-bottom: 25px;
+}
