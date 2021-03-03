@@ -121,11 +121,12 @@
   display: block;
   padding: 6px 0 6px;
   position: relative;
-  transition: color .25s;
+  transition: all .2s;
 }
 
 .menu__link:hover {
   color: var(--basic-grey);
+  text-shadow: 0 0 .05em var(--basic-black);
 }
 
 @media (width >= 760px) {
