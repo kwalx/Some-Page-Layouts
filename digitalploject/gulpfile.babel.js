@@ -47,7 +47,13 @@ export const libs_css = () => {
 
 export const styles = () => {
   return gulp
-    .src([ 'src/css/index.css', 'src/css/gallery.css', 'src/css/projects.css' ])
+    .src([
+      'src/css/index.css',
+      'src/css/gallery.css',
+      'src/css/projects.css',
+      'src/css/certificates.css',
+      'src/css/contacts.css'
+    ])
     .pipe(postcss([ pimport, minmax, autoprefixer, csso ]))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/css'))
