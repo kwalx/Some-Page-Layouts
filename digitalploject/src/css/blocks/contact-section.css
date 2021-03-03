@@ -82,19 +82,24 @@
   font-size: 14px;
   line-height: 1.2;
   display: grid;
-  grid-template-columns: 14px 1fr;
+  grid-template-columns: 24px 1fr;
   grid-gap: 8px;
   margin-bottom: 20px;
   cursor: pointer;
 }
 
 .form-checkbox__box {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-color: var(--light-grey);
   border: 2px solid var(--basic-grey);
   border-radius: 3px;
   margin-top: 2px;
+}
+
+.form-checkbox__check {
+  fill: var(--basic-dark);
 }
 
 .form-checkbox__input:focus + .form-checkbox__box {
@@ -103,6 +108,7 @@
 
 .form-checkbox__box .check-icon {
   display: none;
+  margin: auto;
 }
 
 .form-checkbox__input:checked + .form-checkbox__box .check-icon {
