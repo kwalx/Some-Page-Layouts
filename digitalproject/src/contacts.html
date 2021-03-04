@@ -179,40 +179,42 @@
     <div class="modal-form">
       <button class="modal-form__close focus-style--neutral" type="button"></button>
       <form class="form" name="form_feedback" action="#" method="get">
-        <legend class="modal-form__heading">Задать вопрос</legend>
-        <label class="input-box">
-          <input type="text" name="user_name" class="input-box__field focus-style--neutral">
-          <span class="input-box__text">Имя</span>
-        </label>
-        <label class="input-box">
-          <input type="tel" name="user__phone" class="input-box__field focus-style--neutral" required>
-          <span class="input-box__text">Номер телефона<span class="input-box__text--red">*</span></span>
-        </label>
-        <label class="input-box">
-          <input type="email" name="user_email" class="input-box__field focus-style--neutral" required>
-          <span class="input-box__text">E-mail<span class="input-box__text--red">*</span></span>
-        </label>
-        <label class="input-box">
-          <input type="text" name="user_product" class="input-box__field focus-style--neutral">
-          <span class="input-box__text">Интересующий товар/услуга</span>
-        </label>
-        <label class="input-box">
-          <textarea name="user_message" cols="30" rows="30"
-            class="input-box__field input-box__message focus-style--neutral" required></textarea>
-          <span class="input-box__text">Сообщение<span class="input-box__text--red">*</span></span>
-        </label>
-        <label class="form-checkbox">
-          <input type="checkbox" class="form-checkbox__input visually-hidden focus-style--neutral" checked required>
-          <span class="form-checkbox__box">
-            <svg class="check-icon" width="14" height="10" aria-hidden="true">
-              <use class="form-checkbox__check" href="img/sprite.svg#check"></use>
-            </svg>
-          </span>
-          Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
-        </label>
-        <button class="page-button modal-form__button focus-style--neutral" type="submit">
-          <span>ОТПРАВИТЬ</span>
-        </button>
+        <fieldset>
+          <legend class="modal-form__heading">Задать вопрос</legend>
+          <label class="input-box">
+            <input type="text" name="user_name" class="input-box__field focus-style--neutral">
+            <span class="input-box__text">Имя</span>
+          </label>
+          <label class="input-box">
+            <input type="tel" name="user__phone" class="input-box__field focus-style--neutral" required>
+            <span class="input-box__text">Номер телефона<span class="input-box__text--red">*</span></span>
+          </label>
+          <label class="input-box">
+            <input type="email" name="user_email" class="input-box__field focus-style--neutral" required>
+            <span class="input-box__text">E-mail<span class="input-box__text--red">*</span></span>
+          </label>
+          <label class="input-box">
+            <input type="text" name="user_product" class="input-box__field focus-style--neutral">
+            <span class="input-box__text">Интересующий товар/услуга</span>
+          </label>
+          <label class="input-box">
+            <textarea name="user_message" cols="30" rows="30"
+              class="input-box__field input-box__message focus-style--neutral" required></textarea>
+            <span class="input-box__text">Сообщение<span class="input-box__text--red">*</span></span>
+          </label>
+          <label class="form-checkbox">
+            <input type="checkbox" class="form-checkbox__input visually-hidden focus-style--neutral" checked required>
+            <span class="form-checkbox__box">
+              <svg class="check-icon" width="14" height="10" aria-hidden="true">
+                <use class="form-checkbox__check" href="img/sprite.svg#check"></use>
+              </svg>
+            </span>
+            Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
+          </label>
+          <button class="page-button modal-form__button focus-style--neutral" type="submit">
+            <span>ОТПРАВИТЬ</span>
+          </button>
+        </fieldset>
       </form>
 
       <div class="modal-form__success success">
