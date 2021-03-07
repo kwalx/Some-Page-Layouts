@@ -179,6 +179,7 @@
   if (document.querySelector('.modal-wrap')) {
     getModal();
     getModalSuccess();
+    inputClean();
   }
 
   function getModal() {
@@ -225,6 +226,17 @@
       } else {
         return false;
       }
+    });
+  }
+
+  function inputClean() {
+    const formFeedback = document.querySelector('.form-feedback');
+    const inputList = document.querySelectorAll('.input-box__field');
+
+    formFeedback.addEventListener('submit', () => {
+      inputList.forEach((item) => {
+        item.value = '';
+      });
     });
   }
 })();
