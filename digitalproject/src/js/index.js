@@ -179,7 +179,6 @@
   if (document.querySelector('.modal-wrap')) {
     getModal();
     getModalSuccess();
-    inputClean();
   }
 
   function getModal() {
@@ -229,14 +228,9 @@
     });
   }
 
-  function inputClean() {
-    const formFeedback = document.querySelector('.form-feedback');
-    const inputList = document.querySelectorAll('.input-box__field');
-
-    formFeedback.addEventListener('submit', () => {
-      inputList.forEach((item) => {
-        item.value = '';
-      });
+  document
+    .querySelector('.form-feedback')
+    .addEventListener('submit', function() {
+      this.reset();
     });
-  }
 })();
