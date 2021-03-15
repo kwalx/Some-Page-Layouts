@@ -179,6 +179,12 @@
   if (document.querySelector('.modal-wrap')) {
     getModal();
     getModalSuccess();
+
+    document
+      .querySelector('.form-feedback')
+      .addEventListener('submit', function() {
+        this.reset();
+      });
   }
 
   function getModal() {
@@ -228,9 +234,9 @@
     });
   }
 
-  document
-    .querySelector('.form-feedback')
-    .addEventListener('submit', function() {
-      this.reset();
-    });
+  // document
+  //   .querySelector('.form-feedback')
+  //   .addEventListener('submit', function() {
+  //     this.reset();
+  //   });
 })();
