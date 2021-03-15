@@ -1,0 +1,28 @@
+/* red-hat-display-700 - latin */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/red-hat-display-v4-latin-700.woff2') format('woff2');
+}
+
+/* roboto-regular - latin */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/roboto-v20-latin-regular.woff2') format('woff2');
+}
+
+/* roboto-500 - latin */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/roboto-v20-latin-500.woff2') format('woff2');
+}

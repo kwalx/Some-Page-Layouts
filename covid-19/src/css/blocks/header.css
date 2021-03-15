@@ -1,0 +1,45 @@
+/* Header */
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 2;
+}
+
+@media (width >= 760px) {
+  .header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.header__inner {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+
+.logo,
+.logo__link {
+  display: inline-block;
+}
+
+/* Cart */
+
+.cart {
+  color: var(--basic-white);
+}
+
+/* Header bottom */
+
+.header__bottom {
+  display: flex;
+  height: 90vh;
+}

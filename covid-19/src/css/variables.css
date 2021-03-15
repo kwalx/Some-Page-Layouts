@@ -1,0 +1,10 @@
+/* Variables */
+
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --basic-dark: #4b4f51;
+  --special-dark: #035755;
+  --basic-red: #fa5652;
+  --light-red: rgba(250, 86, 82, .15);
+}

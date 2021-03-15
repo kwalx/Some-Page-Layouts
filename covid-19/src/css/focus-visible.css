@@ -1,0 +1,9 @@
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.focus-style--neutral:focus {
+  outline: 3px solid var(--basic-red);
+  outline-offset: 2px;
+  opacity: 1;
+}
