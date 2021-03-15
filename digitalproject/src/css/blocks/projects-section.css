@@ -94,6 +94,12 @@
   transition: transform .25s;
 }
 
+@media (width >= 1080px) {
+  .project-item__cover {
+    padding: 1.5vw;
+  }
+}
+
 .project-item:hover .project-item__cover {
   transform: translateX(0);
 }
@@ -112,6 +118,12 @@
   }
 }
 
+@media (width >= 1080px) {
+  .project-item__heading {
+    font-size: 28px;
+  }
+}
+
 /* Link more */
 
 .project-item__link-more {
@@ -126,6 +138,7 @@
 .project-item__link-more:hover {
   color: var(--basic-white);
   text-shadow: 0 0 1px var(--basic-white);
+  box-shadow: none;
 }
 
 .project-item__arrow-icon {
