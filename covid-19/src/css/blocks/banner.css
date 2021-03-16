@@ -2,10 +2,11 @@
 
 .banner {
   display: flex;
-  background: linear-gradient(0deg, #fff 0%, #fff8f8 45.66%, #f3e0e0 100%);
+  background: linear-gradient(0deg, #ffffff 0%, #fff8f8 45%, #f3e0e0 100%);
   min-height: 100vh;
   padding-top: 95px;
   padding-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 @media (width >= 760px) {
@@ -17,6 +18,7 @@
 
 .banner-container {
   margin: auto;
+  position: relative;
 }
 
 @media (width >= 760px) {
