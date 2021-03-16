@@ -89,7 +89,7 @@ body {
 
 @media (width >= 1440px) {
   .section-heading {
-    font-size: 53px;
+    font-size: 50px;
   }
 }
 
@@ -100,6 +100,18 @@ body {
   font-size: 18px;
   color: var(--basic-red);
   line-height: 1.2;
+}
+
+@media (width >= 480px) {
+  .section-tagline {
+    font-size: calc(1em + 1.2vw);
+  }
+}
+
+@media (width >= 1440px) {
+  .section-tagline {
+    font-size: 29px;
+  }
 }
 
 /* Button */
