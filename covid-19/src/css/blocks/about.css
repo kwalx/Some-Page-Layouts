@@ -1,0 +1,37 @@
+/* About */
+
+.about {
+  position: relative;
+}
+
+@media (width >= 760px) {
+  .about__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+/* Text */
+
+.about__text-block {
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+@media (width >= 760px) {
+  .about__text-block {
+    font-size: 20px;
+    order: 1;
+    padding-right: 25%;
+  }
+}
+
+/* Decoration */
+
+.about__decoration {
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  width: 6vw;
+}
