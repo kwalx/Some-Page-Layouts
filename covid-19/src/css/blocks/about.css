@@ -2,6 +2,7 @@
 
 .about {
   position: relative;
+  margin-bottom: 35px;
 }
 
 @media (width >= 760px) {
@@ -9,6 +10,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -23,6 +25,11 @@
   .about__text-block {
     font-size: 20px;
     order: 1;
+  }
+}
+
+@media (width >= 860px) {
+  .about__text-block {
     padding-right: 25%;
   }
 }
@@ -34,4 +41,10 @@
   right: 0;
   bottom: 10%;
   width: 6vw;
+}
+
+@media (width <= 860px) {
+  .about__decoration {
+    display: none;
+  }
 }
