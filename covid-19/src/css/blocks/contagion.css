@@ -1,12 +1,12 @@
 /* Contagion */
 
 .contagion {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 
 @media (width >= 760px) {
   .contagion {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 }
 
@@ -95,7 +95,7 @@
 
 .card__heading {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--special-dark);
   margin-bottom: 10px;
@@ -118,9 +118,15 @@
 
 .card__text {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--basic-dark);
+}
+
+@media (width >= 760px) {
+  .card__text {
+    font-size: 18px;
+  }
 }
 
 /* Decoration */
