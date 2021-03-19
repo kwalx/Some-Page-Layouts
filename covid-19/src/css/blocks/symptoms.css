@@ -1,0 +1,61 @@
+/* Symptoms */
+
+.symptoms {
+  margin-bottom: 50px;
+}
+
+@media (width >= 760px) {
+  .symptoms {
+    margin-bottom: 100px;
+  }
+}
+
+.symptoms__container {
+  position: relative;
+}
+
+.symptoms__top {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 760px) {
+  .symptoms__top {
+    max-width: 740px;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-left: auto;
+  }
+}
+
+.symptoms__bottom {
+  width: 80%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Decoration */
+
+.symptomps__decoration--right {
+  width: 10vw;
+  max-width: 200px;
+  position: absolute;
+  right: 1vw;
+  bottom: 0;
+}
+
+.symptomps__decoration--left {
+  width: 10vw;
+  max-width: 160px;
+  position: absolute;
+  bottom: 15%;
+  left: 1vw;
+}
+
+@media (width <= 860px) {
+  .symptomps__decoration--right,
+  .symptomps__decoration--left {
+    display: none;
+  }
+}
