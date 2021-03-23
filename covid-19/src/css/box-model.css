@@ -17,6 +17,7 @@ img {
 
 body,
 ul,
+ol,
 h1,
 ul,
 h2,
@@ -36,7 +37,8 @@ p {
   margin-bottom: 10px;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
