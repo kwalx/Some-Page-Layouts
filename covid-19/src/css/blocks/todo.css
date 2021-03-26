@@ -2,6 +2,13 @@
 
 .todo {
   position: relative;
+  margin-bottom: 50px;
+}
+
+@media (width >= 760px) {
+  .todo {
+    margin-bottom: 100px;
+  }
 }
 
 .todo__top {
