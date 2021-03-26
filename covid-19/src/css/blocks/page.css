@@ -139,8 +139,9 @@ body {
 }
 
 .page-button:hover {
-  text-shadow: 0 0 1px var(--basic-white);
-  box-shadow: 2px 2px 4px 0 var(--basic-dark-50a);
+  color: var(--basic-dark);
+  background-color: var(--basic-white);
+  box-shadow: 0 0 0 2px var(--basic-dark);
 }
 
 /* Link more */
