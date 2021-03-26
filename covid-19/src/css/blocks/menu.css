@@ -158,7 +158,9 @@
   }
 
   .menu-link-contact:hover {
-    color: var(--basic-white);
-    background-color: var(--basic-red);
+    color: var(--basic-dark);
+    background-color: var(--basic-white);
+    box-shadow: 0 0 0 2px var(--basic-dark), 0px 8px 8px rgba(0, 0, 0, .2),
+      0px 0px 10px rgba(0, 0, 0, .5);
   }
 }
