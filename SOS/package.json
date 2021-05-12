@@ -30,6 +30,6 @@
   },
   "dependencies": {
     "focus-visible": "^5.2.0",
-    "swiper": "^6.3.5"
+    "swiper": "^6.5.1"
   }
 }
